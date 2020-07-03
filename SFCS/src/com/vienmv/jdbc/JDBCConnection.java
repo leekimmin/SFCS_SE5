@@ -12,7 +12,7 @@ public class JDBCConnection {
 		    String hostName = "localhost";
 		    String dbName = "SFCS";
 		    String userName = "root";
-		    String password = "Ngocquy20";
+		    String password = "kiencon70127012";
 		    String connectionURL = "jdbc:mysql://" + hostName + ":3306/" + dbName;
 
 		    connection = DriverManager.getConnection(connectionURL, userName,
