@@ -327,7 +327,8 @@ h5.modal-title {
 }
   
 .btn-danger:hover {
-    background-color: #cf1414;
+    background-color: #d10000 #e44040;
+    color: #2cd5b6 #ffe180 #72c02c 
 }
   
 .cart-quantity-input {
