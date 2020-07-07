@@ -127,18 +127,18 @@ CREATE TABLE `SFCS`.`products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 INSERT INTO products (name, price, quantity, discount, category_id, stall_id, image) 
 VALUES 
-	('Phở Bò Tái Chín', 60000, 50, 20, 1, 2, '../img/phobo.jpg'),
-	('Cơm Gà Xối Mỡ', 25000, 40, DEFAULT, 1, 1, '../img/comga.jpg'),
-    ('Kimbap', 35000, 40, DEFAULT, 6, 8, '../img/kimbap.jpg'),
-    ('Lẩu Cua Cà Ri', 73000, 20, 10, 3, 3, '../img/laucua.jpg'),
-    ('Bò Ba Chỉ Với Trứng', 99000, 30, 25, 6, 7, '../img/bobachi.jpg'),
-    ('Combo Gà Giòn Cay', 81000, 30, 10, 2, 4, '../img/gagion.jpg'),
-    ('Pizza Hải Sản', 53000, 35, 15, 2, 5, '../img/pizza.jpg'),
-    ('Burger Bò Phô Mai', 40000, 60, DEFAULT, 2, 6, '../img/burger.jpg'),
-    ('Bánh Crepe Chuối', 39000, 35, DEFAULT, 4, 9, '../img/crepe.jpg'),
-    ('Trà Đào Cam Sả', 45000, 40, DEFAULT, 5, 10, '../img/tradaocamsa.jpg'),
-    ('Trà Sữa Phúc Long (Lạnh)', 45000, 60, DEFAULT, 5, 11, '../img/trasuaphuclong.jpg'),
-    ('Sữa Tươi Trân Châu Đường Hổ', 49000, 45, 28, 5, 12, '../img/suatuoitoco.jpg');
+	('Phở Bò Tái Chín', 60000, 50, 20, 1, 2, 'phobo.jpg'),
+	('Cơm Gà Xối Mỡ', 25000, 40, DEFAULT, 1, 1, 'comga.jpg'),
+    ('Kimbap', 35000, 40, DEFAULT, 6, 8, 'kimbap.jpg'),
+    ('Lẩu Cua Cà Ri', 73000, 20, 10, 3, 3, 'laucua.jpg'),
+    ('Bò Ba Chỉ Với Trứng', 99000, 30, 25, 6, 7, 'bobachi.jpg'),
+    ('Combo Gà Giòn Cay', 81000, 30, 10, 2, 4, 'gagion.jpg'),
+    ('Pizza Hải Sản', 53000, 35, 15, 2, 5, 'pizza.jpg'),
+    ('Burger Bò Phô Mai', 40000, 60, DEFAULT, 2, 6, '/burger.jpg'),
+    ('Bánh Crepe Chuối', 39000, 35, DEFAULT, 4, 9, 'crepe.jpg'),
+    ('Trà Đào Cam Sả', 45000, 40, DEFAULT, 5, 10, 'tradaocamsa.jpg'),
+    ('Trà Sữa Phúc Long (Lạnh)', 45000, 60, DEFAULT, 5, 11, 'trasuaphuclong.jpg'),
+    ('Sữa Tươi Trân Châu Đường Hổ', 49000, 45, 28, 5, 12, 'suatuoitoco.jpg');
     
 -- ----------------------------------------------------------------------------
 -- Table SFCS.order_statuses

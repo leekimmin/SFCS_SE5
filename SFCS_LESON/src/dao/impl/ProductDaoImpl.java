@@ -39,14 +39,13 @@ public class ProductDaoImpl extends JDBCConnection implements ProductDao {
 
 	@Override
 	public void edit(Product product) {
-		String sql = "UPDATE products SET products.name = ? , price = ?, image = ?,category_id=?, description=?  WHERE product_id = ?";
+		String sql = "UPDATE products SET products.name = ? , products.price = ?, products.image = ?, products.category_id=?, products.description=?  WHERE products.product_id = ?";
 		Connection con = super.getJDBCConnection();
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, product.getName());
-			ps.setDouble(2, product.getPrice());
-			;
+			ps.setLong(2, product.getPrice());
 			ps.setString(3, product.getImage());
 			ps.setInt(4, product.getCategory().getId());
 			ps.setString(5, product.getDes());
@@ -218,11 +217,11 @@ public class ProductDaoImpl extends JDBCConnection implements ProductDao {
 			while (rs.next()) {
 				Category category = categortService.get(rs.getInt("c_id"));
 				Product product = new Product();
-				product.setId(rs.getInt("id"));
+				product.setId(rs.getInt("product_id"));
 				product.setName(rs.getString("p_name"));
 				product.setPrice(rs.getLong("price"));
 				product.setImage(rs.getString("image"));
-				product.setDes(rs.getString("des"));
+				product.setDes(rs.getString("description"));
 				product.setCategory(category);
 
 				product.setCategory(category);

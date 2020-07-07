@@ -6,7 +6,7 @@
 <head>
 <c:url value="/view/client/static" var="url"></c:url>
 <meta charset="UTF-8">
-<title>Product Details</title>
+<title>Chi tiết sản phẩm</title>
 <!-- Favicon -->
 <link rel="shortcut icon" href="favicon.ico">
 
@@ -72,8 +72,8 @@
 			<div class="container">
 				<ul class="breadcrumb-v5">
 					<li><a href="index.html"><i class="fa fa-home"></i></a></li>
-					<li><a href="#">Products</a></li>
-					<li class="active">Detail</li>
+					<li><a href="#">Sản phẩm</a></li>
+					<li class="active">Chi tiết</li>
 				</ul>
 			</div>
 			<!-- End Breadcrumbs v5 -->
@@ -188,38 +188,26 @@
 
 		<!--=== Content Medium ===-->
 		<div class="content-md container">
-			<!--=== Product Service ===-->
 			<div class="row margin-bottom-60">
-				<div class="col-md-4 product-service md-margin-bottom-30">
+				<div class="col-md-6 product-service md-margin-bottom-30">
 					<div class="product-service-heading">
 						<i class="fa fa-truck"></i>
 					</div>
 					<div class="product-service-in">
-						<h3>Free Delivery</h3>
-						<p>Integer mattis lacinia felis vel molestie. Ut eu euismod
-							erat, tincidunt pulvinar semper veliUt porta, leo...</p>
+						<h3>Đặt hàng nhanh chóng, tiện lợi</h3>
+						<p> Chỉ với 1 cú click chuột tại nhà, SCFC sẽ đem đến
+						cho bạn những bữa ăn ngon miệng với tốc độ sấm sét...</p>
 						<a href="#">+Read More</a>
 					</div>
 				</div>
-				<div class="col-md-4 product-service md-margin-bottom-30">
+				<div class="col-md-6 product-service md-margin-bottom-30">
 					<div class="product-service-heading">
 						<i class="icon-earphones-alt"></i>
 					</div>
 					<div class="product-service-in">
-						<h3>Customer Service</h3>
-						<p>Integer mattis lacinia felis vel molestie. Ut eu euismod
-							erat, tincidunt pulvinar semper veliUt porta, leo...</p>
-						<a href="#">+Read More</a>
-					</div>
-				</div>
-				<div class="col-md-4 product-service">
-					<div class="product-service-heading">
-						<i class="icon-refresh"></i>
-					</div>
-					<div class="product-service-in">
-						<h3>Free Returns</h3>
-						<p>Integer mattis lacinia felis vel molestie. Ut eu euismod
-							erat, tincidunt pulvinar semper veliUt porta, leo...</p>
+						<h3>Chăm sóc khách hàng</h3>
+						<p>Phương châm của SCFS là khách hàng còn hơn cả thượng đế. Chúng tôi
+						luôn sẵn sàng lắng nghe những ý kiến đóng góp của quý khách hàng...</p>
 						<a href="#">+Read More</a>
 					</div>
 				</div>
@@ -230,8 +218,8 @@
 			<div class="tab-v5">
 				<ul class="nav nav-tabs" role="tablist">
 					<li class="active"><a href="#description" role="tab"
-						data-toggle="tab">Description</a></li>
-					<li><a href="#reviews" role="tab" data-toggle="tab">Reviews
+						data-toggle="tab">Mô tả</a></li>
+					<li><a href="#reviews" role="tab" data-toggle="tab">Nhận xét
 							(1)</a></li>
 				</ul>
 
@@ -291,12 +279,11 @@
 									src="${url}/img/team/01.jpg" alt="">
 								<div class="product-comment-dtl">
 									<h4>
-										Mickel <small>22 days ago</small>
+										Amelia <small>22 ngày trước</small>
 									</h4>
-									<p>I like the green colour, it's very likeable and reminds
-										me of Hollister. A little loose though but I am very skinny</p>
+									<p>Giao diện của trang nhìn rất đẹp</p>
 									<ul class="list-inline product-ratings">
-										<li class="reply"><a href="#">Reply</a></li>
+										<li class="reply"><a href="#">Phản hồi</a></li>
 										<li class="pull-right">
 											<ul class="list-inline">
 												<li><i class="rating-selected fa fa-star"></i></li>
@@ -310,12 +297,12 @@
 								</div>
 							</div>
 						</div>
-						<h3 class="heading-md margin-bottom-30">Add a review</h3>
+						<h3 class="heading-md margin-bottom-30">Thêm nhận xét</h3>
 						<form action="${url}/php/demo-contacts-process.php" method="post"
 							id="sky-form3" class="sky-form sky-changes-4">
 							<fieldset>
 								<div class="margin-bottom-30">
-									<label class="label-v2">Name</label> <label class="input">
+									<label class="label-v2">Tên</label> <label class="input">
 										<input type="text" name="name" id="name">
 									</label>
 								</div>
@@ -327,14 +314,14 @@
 								</div>
 
 								<div class="margin-bottom-30">
-									<label class="label-v2">Review</label> <label class="textarea">
+									<label class="label-v2">Nhận xét</label> <label class="textarea">
 										<textarea rows="7" name="message" id="message"></textarea>
 									</label>
 								</div>
 							</fieldset>
 
 							<footer class="review-submit">
-								<label class="label-v2">Review</label>
+								<label class="label-v2">Đánh giá</label>
 								<div class="stars-ratings">
 									<input type="radio" name="stars-rating" id="stars-rating-5">
 									<label for="stars-rating-5"><i class="fa fa-star"></i></label>
@@ -348,7 +335,7 @@
 									<label for="stars-rating-1"><i class="fa fa-star"></i></label>
 								</div>
 								<button type="button"
-									class="btn-u btn-u-sea-shop btn-u-sm pull-right">Submit</button>
+									class="btn-u btn-u-sea-shop btn-u-sm pull-right">Gửi</button>
 							</footer>
 						</form>
 					</div>

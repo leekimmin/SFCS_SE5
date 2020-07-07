@@ -135,14 +135,14 @@
 					<div class="col-md-5">
 						<form id="sky-form4" class="log-reg-block sky-form"
 							action="register" method="post">
-							<h2>Đăng ký thành viên</h2>
+							<h2>Đăng ký tài khoản</h2>
 							<h3 style="color: red;"> ${alertMsg}</h3>
 
 							<div class="login-input reg-input">
 								<div class="row">
 									<div class="col-md-6 md-margin-bottom-50">
 										<section>
-											<label class="input"> <input type="text"
+											<label class="input" > <input type="text"
 												name="firstname" placeholder="Họ" class="form-control">
 											</label>
 										</section>
@@ -161,11 +161,9 @@
 									</label>
 								</section>
 								<section>
-									<label>Giới tính</label>
-										<label> <input type="radio" value="M" name="gender"/> Nam
-										</label>
-										<label> <input type="radio" value="F" name="gender"/> Nữ
-										</label>
+									<label class="input"> <input type="email" name="email"
+										placeholder="Địa chỉ Email" class="form-control">
+									</label>
 								</section>
 								<section>
 									<label class="input"> <input type="password"
@@ -177,6 +175,17 @@
 									<label class="input"> <input type="password"
 										name="passwordConfirm" placeholder="Nhập lại mật khẩu"
 										class="form-control">
+									</label>
+								</section>
+								<section>
+									<label>Giới tính</label>
+									<input type="radio" value="M" name="gender"/> Nam
+									<input type="radio" value="F" name="gender"/> Nữ
+								</section>
+								<section>
+									<label>Ngày tháng năm sinh</label><br>
+									<label class="input"> <input type="date"
+										name="birthday" class="form-control">
 									</label>
 								</section>
 							</div>

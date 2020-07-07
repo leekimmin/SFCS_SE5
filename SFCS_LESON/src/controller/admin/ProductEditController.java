@@ -60,12 +60,10 @@ public class ProductEditController extends HttpServlet {
 					product.setId(Integer.parseInt(item.getString()));
 				} else if (item.getFieldName().equals("name")) {
 					product.setName(item.getString());
-					;
 				} else if (item.getFieldName().equals("cate")) {
 					product.setCategory(categoryService.get(item.getString()));
 				} else if (item.getFieldName().equals("des")) {
 					product.setDes(item.getString());
-					;
 				} else if (item.getFieldName().equals("price")) {
 					product.setPrice(Long.parseLong(item.getString()));
 				} else if (item.getFieldName().equals("image")) {
@@ -85,11 +83,12 @@ public class ProductEditController extends HttpServlet {
 						product.setImage(fileName);
 
 					} else {
-
 						product.setImage(null);
 					}
 				}
 			}
+
+			System.out.println("tét"+product.getCategory().getId());
 			productService.edit(product);
 
 			resp.sendRedirect(req.getContextPath() + "/admin/product/list");

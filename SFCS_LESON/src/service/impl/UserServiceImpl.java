@@ -78,11 +78,11 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public boolean register(String username, String firstName, String lastName, String gender, String password) {
+	public boolean register(String username, String firstname, String lastname, String mail, String birthday, String gender, String password) {
 		if (userDao.checkExistUsername(username)) {
 			return false;
 		}
-		userDao.insert(new User(username, firstName, lastName, gender, password));
+		userDao.insert(new User(username, firstname, lastname, mail, birthday, gender, password));
 		return true;
 	}
 	

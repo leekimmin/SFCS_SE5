@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 import model.User;
 
 import javax.servlet.http.HttpServletRequest;
-//import org.apache.catalina.servlet4preview.http.HttpServletRequest;
+
 @WebFilter(urlPatterns="/member/*")
 public class MemberSecurity implements Filter {
 
@@ -32,7 +32,7 @@ public class MemberSecurity implements Filter {
 		HttpSession session = req.getSession();
 		Object obj=session.getAttribute("account");
 		User user=(User) obj;
-		if(obj!=null ) {
+		if(user!=null ) {
 			chain.doFilter(request, response);
 			return; //
 		}else {

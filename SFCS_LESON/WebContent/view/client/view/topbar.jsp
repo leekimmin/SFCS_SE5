@@ -37,7 +37,7 @@
 	<!--/container-->
 	<div class="search-open">
 		<div class="container">
-			<input type="text" class="form-control" placeholder="Search">
+			<input type="text" class="form-control" placeholder="Tìm kiếm...">
 			<div class="search-close">
 				<i class="icon-close"></i>
 			</div>

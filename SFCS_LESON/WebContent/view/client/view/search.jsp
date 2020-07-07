@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <div class="col-md-3 filter-by-block md-margin-bottom-60">
-	<h1>Filter By</h1>
+	<h1>Tìm kiếm</h1>
 	<div class="panel-group" id="accordion">
 		<div class="panel panel-default">
 			<div class="panel-heading">

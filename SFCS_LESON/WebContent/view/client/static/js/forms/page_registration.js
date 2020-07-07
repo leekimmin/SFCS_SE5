@@ -39,6 +39,14 @@ var Registration = function () {
 	                {
 	                    required: true
 	                },
+	                gender:
+	                {
+	                    required: true
+	                },
+	                birthday:
+	                {
+	                    required: true
+	                },
 	                terms:
 	                {
 	                    required: true
@@ -74,9 +82,17 @@ var Registration = function () {
 	                {
 	                    required: 'Vui lòng nhập họ!'
 	                },
+	                
 	                lastname:
 	                {
 	                    required: 'Vui lòng nhập tên!'
+	                },
+	                gender:
+	                {
+	                    required: 'Vui lòng chọn giới tính!'
+	                },
+	                birthday:{
+	                    required: 'Vui lòng nhập ngày tháng năm sinh!'
 	                },
 	                terms:
 	                {

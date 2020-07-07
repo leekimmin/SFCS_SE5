@@ -326,7 +326,7 @@
 		<div class="parallaxBg twitter-block margin-bottom-60">
 			<div class="container">
 				<div class="heading heading-v1 margin-bottom-20">
-					<h2>Latest Tweets</h2>
+					<h2>Tin mới</h2>
 				</div>
 
 				<div id="carousel-example-generic-v5" class="carousel slide"
@@ -344,26 +344,14 @@
 					<div class="carousel-inner">
 						<div class="item active">
 							<p>
-								Unify has reached 10000 plus sales and we just want to thank you
-								to our all customers for being part of the Unify Template
-								success <a href="http://bit.ly/1c0UN3Y">http://bit.ly/1c0UN3Y</a>
+								SFCS đang sắp sửa có chương trình khuyến mãi lớn nhất trong năm
+								từ ngày 21/07 đến 31/07 nhân dịp bước vào mùa thi cuối kì khắc
+								nghiệt của trường Đại học Bách khoa Thành phố Hồ Chí Minh :D
+							    
 							<p>
+							
 							<p>
-								<a href="https://twitter.com/htmlstream">@htmlstream</a>
-							</p>
-							<ul class="list-inline twitter-icons">
-								<li><a href="#"><i class="fa fa-reply"></i></a></li>
-								<li><a href="#"><i class="fa fa-retweet"></i></a></li>
-								<li><a href="#"><i class="fa fa-star"></i></a></li>
-							</ul>
-						</div>
-						<div class="item">
-							<p>the majority have suffered #alteration in some form, by
-								injected humour, or randomised words which don't look even
-								slightly believable. If you are going to use a passage of Lorem
-								Ipsum</p>
-							<p>
-								<a href="https://twitter.com/htmlstream">@twbootstrap</a>
+								<a href="#">#cập nhật ngày 01/07</a>
 							</p>
 							<ul class="list-inline twitter-icons">
 								<li><a href="#"><i class="fa fa-reply"></i></a></li>
@@ -373,11 +361,25 @@
 						</div>
 						<div class="item">
 							<p>
-								New 100% Free Stock Photos. Every. Single. Day. Everything you
-								need for your creative projects. <a href="#">http://publicdomainarchive.com</a>
+								SCFS sẽ tiến hành bảo trì trong ngày Chủ nhật (27/06) sắp tới. Xin
+								lỗi bạn vì sự bất tiện này. Hệ thống sẽ hoạt động trở lại bình
+								thường kể từ ngày tiếp theo (28/06)
+							<p>
+								<a href="#">#cập nhật ngày 24/06</a>
+							</p>
+							<ul class="list-inline twitter-icons">
+								<li><a href="#"><i class="fa fa-reply"></i></a></li>
+								<li><a href="#"><i class="fa fa-retweet"></i></a></li>
+								<li><a href="#"><i class="fa fa-star"></i></a></li>
+							</ul>
+						</div>
+						<div class="item">
+							<p>
+								Chào mừng bạn đến với hệ thống Quán ăn thông minh (SFCS) của trường Đại học
+								Bách Khoa Thành phố Hồ Chí Minh.
 							</p>
 							<p>
-								<a href="https://twitter.com/htmlstream">@wrapbootstrap</a>
+								<a href="#">#cập nhật ngày 01/06</a>
 							</p>
 							<ul class="list-inline twitter-icons">
 								<li><a href="#"><i class="fa fa-reply"></i></a></li>
@@ -404,36 +406,26 @@
 		<div class="container">
 			<!--=== Product Service ===-->
 			<div class="row margin-bottom-60">
-				<div class="col-md-4 product-service md-margin-bottom-30">
+				<div class="col-md-6 product-service md-margin-bottom-30">
 					<div class="product-service-heading">
 						<i class="fa fa-truck"></i>
 					</div>
 					<div class="product-service-in">
-						<h3>Free Delivery</h3>
-						<p>Integer mattis lacinia felis vel molestie. Ut eu euismod
-							erat, tincidunt pulvinar semper veliUt porta, leo...</p>
+						<h3>Đặt hàng nhanh chóng, tiện lợi</h3>
+						<p>Chỉ với 1 cú click chuột tại nhà, SCFC sẽ đem đến
+						cho bạn những bữa ăn ngon miệng với tốc độ sấm sét...</p>
 						<a href="#">+Read More</a>
 					</div>
 				</div>
-				<div class="col-md-4 product-service md-margin-bottom-30">
+				<div class="col-md-6 product-service md-margin-bottom-30">
 					<div class="product-service-heading">
 						<i class="icon-earphones-alt"></i>
 					</div>
 					<div class="product-service-in">
-						<h3>Customer Service</h3>
-						<p>Integer mattis lacinia felis vel molestie. Ut eu euismod
-							erat, tincidunt pulvinar semper veliUt porta, leo...</p>
-						<a href="#">+Read More</a>
-					</div>
-				</div>
-				<div class="col-md-4 product-service">
-					<div class="product-service-heading">
-						<i class="icon-refresh"></i>
-					</div>
-					<div class="product-service-in">
-						<h3>Free Returns</h3>
-						<p>Integer mattis lacinia felis vel molestie. Ut eu euismod
-							erat, tincidunt pulvinar semper veliUt porta, leo...</p>
+						<h3>Chăm sóc khách hàng</h3>
+						<p>Phương châm của SCFS là khách hàng còn hơn cả thượng đế. Chúng tôi
+						luôn sẵn sàng lắng nghe những ý kiến đóng góp của quý khách hàng...
+						</p>
 						<a href="#">+Read More</a>
 					</div>
 				</div>
@@ -442,176 +434,46 @@
 			<!--=== End Product Service ===-->
 
 			<!--=== Illustration v3 ===-->
+			
+			<div class="heading heading-v1 margin-bottom-20">
+					<h2>Thương hiệu nổi bật</h2>
+			</div>
 			<div class="row illustration-v4 margin-bottom-40">
 				<div class="col-md-4">
-					<div class="heading heading-v1 margin-bottom-20">
-						<h2>Top Rated</h2>
-					</div>
 					<div class="thumb-product">
-						<img class="thumb-product-img" src="${url}/img/thumb/08.jpg"
+						<img class="thumb-product-img" src="${url}/img/thumb/mcdonald.png"
 							alt="">
 						<div class="thumb-product-in">
 							<h4>
-								<a href="shop-ui-inner.html">Yuketen</a> – <a
-									href="shop-ui-inner.html">Derby Shoe</a>
+								<a href="shop-ui-inner.html">McDonald's</a>
 							</h4>
-							<span class="thumb-product-type">Footwear - Oxfords</span>
+							<span class="thumb-product-type">Một trong những cửa hàng được giới trẻ yêu thích nhất hiện nay</span>
 						</div>
-						<ul class="list-inline overflow-h">
-							<li class="thumb-product-price line-through">$75.00</li>
-							<li class="thumb-product-price">$65.00</li>
-							<li class="thumb-product-purchase"><a href="#"><i
-									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
-									class="fa fa-heart"></i></a></li>
-						</ul>
-					</div>
-					<div class="thumb-product">
-						<img class="thumb-product-img" src="${url}/img/thumb/09.jpg"
-							alt="">
-						<div class="thumb-product-in">
-							<h4>
-								<a href="shop-ui-inner.html">Yuketen</a> – <a
-									href="shop-ui-inner.html">Derby Shoe</a>
-							</h4>
-							<span class="thumb-product-type">Footwear - Oxfords</span>
-						</div>
-						<ul class="list-inline overflow-h">
-							<li class="thumb-product-price">$75.00</li>
-							<li class="thumb-product-purchase"><a href="#"><i
-									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
-									class="fa fa-heart"></i></a></li>
-						</ul>
-					</div>
-					<div class="thumb-product">
-						<img class="thumb-product-img" src="${url}/img/thumb/03.jpg"
-							alt="">
-						<div class="thumb-product-in">
-							<h4>
-								<a href="shop-ui-inner.html">Yuketen</a> – <a
-									href="shop-ui-inner.html">Derby Shoe</a>
-							</h4>
-							<span class="thumb-product-type">Footwear - Oxfords</span>
-						</div>
-						<ul class="list-inline overflow-h">
-							<li class="thumb-product-price">$75.00</li>
-							<li class="thumb-product-purchase"><a href="#"><i
-									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
-									class="fa fa-heart"></i></a></li>
-						</ul>
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="heading heading-v1 margin-bottom-20">
-						<h2>Best Sellers</h2>
-					</div>
 					<div class="thumb-product">
-						<img class="thumb-product-img" src="${url}/img/thumb/02.jpg"
+						<img class="thumb-product-img" src="${url}/img/thumb/kfc.png"
 							alt="">
 						<div class="thumb-product-in">
 							<h4>
-								<a href="shop-ui-inner.html">Yuketen</a> – <a
-									href="shop-ui-inner.html">Derby Shoe</a>
+								<a href="shop-ui-inner.html">KFC</a>
 							</h4>
-							<span class="thumb-product-type">Footwear - Oxfords</span>
+							<span class="thumb-product-type">Vị ngon trên từng ngón tay</span>
 						</div>
-						<ul class="list-inline overflow-h">
-							<li class="thumb-product-price">$75.00</li>
-							<li class="thumb-product-purchase"><a href="#"><i
-									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
-									class="fa fa-heart"></i></a></li>
-						</ul>
-					</div>
-					<div class="thumb-product">
-						<img class="thumb-product-img" src="${url}/img/thumb/10.jpg"
-							alt="">
-						<div class="thumb-product-in">
-							<h4>
-								<a href="shop-ui-inner.html">Yuketen</a> – <a
-									href="shop-ui-inner.html">Derby Shoe</a>
-							</h4>
-							<span class="thumb-product-type">Footwear - Oxfords</span>
-						</div>
-						<ul class="list-inline overflow-h">
-							<li class="thumb-product-price">$75.00</li>
-							<li class="thumb-product-purchase"><a href="#"><i
-									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
-									class="fa fa-heart"></i></a></li>
-						</ul>
-					</div>
-					<div class="thumb-product">
-						<img class="thumb-product-img" src="${url}/img/thumb/06.jpg"
-							alt="">
-						<div class="thumb-product-in">
-							<h4>
-								<a href="shop-ui-inner.html">Yuketen</a> – <a
-									href="shop-ui-inner.html">Derby Shoe</a>
-							</h4>
-							<span class="thumb-product-type">Footwear - Oxfords</span>
-						</div>
-						<ul class="list-inline overflow-h">
-							<li class="thumb-product-price line-through">$75.00</li>
-							<li class="thumb-product-price">$65.00</li>
-							<li class="thumb-product-purchase"><a href="#"><i
-									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
-									class="fa fa-heart"></i></a></li>
-						</ul>
 					</div>
 				</div>
+				
 				<div class="col-md-4 padding">
-					<div class="heading heading-v1 margin-bottom-20">
-						<h2>Sale Items</h2>
-					</div>
 					<div class="thumb-product">
-						<img class="thumb-product-img" src="${url}/img/thumb/07.jpg"
+						<img class="thumb-product-img" src="${url}/img/thumb/toco.png"
 							alt="">
 						<div class="thumb-product-in">
 							<h4>
-								<a href="shop-ui-inner.html">Yuketen</a> – <a
-									href="shop-ui-inner.html">Derby Shoe</a>
+								<a href="shop-ui-inner.html">Toco Toco</a>
 							</h4>
-							<span class="thumb-product-type">Footwear - Oxfords</span>
+							<span class="thumb-product-type">Nhấp nhô từng nhịp</span>
 						</div>
-						<ul class="list-inline overflow-h">
-							<li class="thumb-product-price line-through">$75.00</li>
-							<li class="thumb-product-price">$65.00</li>
-							<li class="thumb-product-purchase"><a href="#"><i
-									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
-									class="fa fa-heart"></i></a></li>
-						</ul>
-					</div>
-					<div class="thumb-product">
-						<img class="thumb-product-img" src="${url}/img/thumb/04.jpg"
-							alt="">
-						<div class="thumb-product-in">
-							<h4>
-								<a href="shop-ui-inner.html">Yuketen</a> – <a
-									href="shop-ui-inner.html">Derby Shoe</a>
-							</h4>
-							<span class="thumb-product-type">Footwear - Oxfords</span>
-						</div>
-						<ul class="list-inline overflow-h">
-							<li class="thumb-product-price">$75.00</li>
-							<li class="thumb-product-purchase"><a href="#"><i
-									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
-									class="fa fa-heart"></i></a></li>
-						</ul>
-					</div>
-					<div class="thumb-product">
-						<img class="thumb-product-img" src="${url}/img/thumb/05.jpg"
-							alt="">
-						<div class="thumb-product-in">
-							<h4>
-								<a href="shop-ui-inner.html">Yuketen</a> – <a
-									href="shop-ui-inner.html">Derby Shoe</a>
-							</h4>
-							<span class="thumb-product-type">Footwear - Oxfords</span>
-						</div>
-						<ul class="list-inline overflow-h">
-							<li class="thumb-product-price">$75.00</li>
-							<li class="thumb-product-purchase"><a href="#"><i
-									class="fa fa-shopping-cart"></i></a> | <a href="#"><i
-									class="fa fa-heart"></i></a></li>
-						</ul>
 					</div>
 				</div>
 			</div>
@@ -624,25 +486,27 @@
 		<div class="collection-banner">
 			<div class="container">
 				<div class="col-md-7 md-margin-bottom-50">
-					<h2>Makeup collection</h2>
+					<h2>Ưu đãi cực sốc</h2>
 					<p>
-						Duis in posuere risus. Vivamus sed dignissim tellus. In vehicula
-						justo tempor commodo. <br> Nunc lobortis dapibus neque quis
-						lacinia
+						Tưng bừng chào đón mùa thi cuối kì sắp tới :D
+						<br> SFCS công bố chương trình ưu đãi
+						"sales sấp mặt" lên đến 50% dành cho các món ăn mới
+						trên hệ thống. Các bạn sẽ được thưởng thức những món
+						ngon hơn, bổ dưỡng hơn đi kèm với mức giá vô cùng phải chăng
 					</p>
 					<br> <a href="#"
-						class="btn-u btn-brd btn-brd-hover btn-u-light">Shop Now</a>
+						class="btn-u btn-brd btn-brd-hover btn-u-light">Đặt hàng ngay</a>
 				</div>
 				<div class="col-md-5">
 					<div class="overflow-h">
 						<span class="percent-numb">50</span>
 						<div class="percent-off">
 							<span class="discount-percent">%</span> <span
-								class="discount-off">off</span>
+								class="discount-off">ưu đãi</span>
 						</div>
 						<div class="new-offers shop-bg-green rounded-x">
-							<p>new</p>
-							<span>Products</span>
+							<p>món</p>
+							<span>MỚI</span>
 						</div>
 					</div>
 				</div>
@@ -650,47 +514,7 @@
 		</div>
 		<!--=== End Collection Banner ===-->
 
-		<!--=== Sponsors ===-->
-		<div class="container content">
-			<div class="heading heading-v1 margin-bottom-40">
-				<h2>Sponsors</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-					odio elit, ultrices vel cursus sed, placerat ut leo. Phasellus in
-					magna erat. Etiam gravida convallis augue non tincidunt. Nunc
-					lobortis dapibus neque quis lacinia. Nam dapibus tellus sit amet
-					odio venenatis</p>
-			</div>
-
-			<ul class="list-inline owl-slider-v2">
-				<li class="item first-child"><img
-					src="${url}/img/clients/07.png" alt=""></li>
-				<li class="item"><img src="${url}/img/clients/08.png" alt="">
-				</li>
-				<li class="item"><img src="${url}/img/clients/10.png" alt="">
-				</li>
-				<li class="item"><img src="${url}/img/clients/11.png" alt="">
-				</li>
-				<li class="item"><img src="${url}/img/clients/09.png" alt="">
-				</li>
-				<li class="item"><img src="${url}/img/clients/12.png" alt="">
-				</li>
-				<li class="item"><img src="${url}/img/clients/07.png" alt="">
-				</li>
-				<li class="item"><img src="${url}/img/clients/08.png" alt="">
-				</li>
-				<li class="item"><img src="${url}/img/clients/09.png" alt="">
-				</li>
-				<li class="item"><img src="${url}/img/clients/10.png" alt="">
-				</li>
-				<li class="item"><img src="${url}/img/clients/11.png" alt="">
-				</li>
-				<li class="item"><img src="${url}/img/clients/12.png" alt="">
-				</li>
-			</ul>
-			<!--/end owl-carousel-->
-		</div>
-		<!--=== End Sponsors ===-->
-
+		
 		<!--=== Shop Suvbscribe ===-->
 		<div class="shop-subscribe">
 			<div class="container">

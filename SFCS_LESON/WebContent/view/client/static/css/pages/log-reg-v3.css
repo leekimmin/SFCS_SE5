@@ -163,9 +163,9 @@
 	min-width: 25px;
 }
 
-.log-reg-v3 .login-input input {
-	height: 40px;
-}
+/* .log-reg-v3 .login-input input { */
+/* 	height: 40px; */
+/* } */
 
 .log-reg-v3 .login-input span,
 .log-reg-v3 .login-input input {

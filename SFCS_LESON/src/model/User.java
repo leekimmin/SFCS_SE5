@@ -1,34 +1,40 @@
 package model;
 
 import java.io.Serializable;
+import java.sql.Date;
 
 public class User implements Serializable {
 	private int id;
 	private String email;
 	private String username;
-	private String firstName;
-	private String lastName;
+	private String firstname;
+	private String lastname;
 	private String password;
 	private String avatar;
 	private String gender;
+	private String birthday;
+	private String phone;
+	private String address;
 	private int roleId;
 	public User() {
 		super();
 	}
-	public User(String username, String firstName, String lastName, String gender, String password) {
+	public User(String username, String firstname, String lastname, String email, String birthday, String gender, String password) {
 		super();
 		this.username = username;
-		this.firstName = firstName;
-		this.lastName = lastName;
+		this.firstname = firstname;
+		this.lastname = lastname;
 		this.gender = gender;
+		this.email = email;
+		this.birthday = birthday;
 		this.password = password;
 	}
-	public User(int id, String email, String firstName, String lastName, String password, String avatar, int roleId) {
+	public User(int id, String email, String firstname, String lastname, String password, String avatar, int roleId) {
 		super();
 		this.id = id;
 		this.email = email;
-		this.firstName = firstName;
-		this.lastName = lastName;
+		this.firstname = firstname;
+		this.lastname = lastname;
 		this.password = password;
 		this.avatar = avatar;
 		this.roleId = roleId;
@@ -45,17 +51,17 @@ public class User implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getFirstName() {
-		return firstName;
+	public String getFirstname() {
+		return firstname;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
-	public String getLastName() {
-		return lastName;
+	public String getLastname() {
+		return lastname;
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 	public String getUsername() {
 		return username;
@@ -80,6 +86,24 @@ public class User implements Serializable {
 	}
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getBirthday() {
+		return birthday;
+	}
+	public void setBirthday(String birthday) {
+		this.birthday = birthday;
 	}
 	public int getRoleId() {
 		return roleId;
