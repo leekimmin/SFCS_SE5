@@ -341,8 +341,8 @@
 											<h4 class="title-price">
 												<a href="${pageContext.request.contextPath }/product/detail?id=${p.id}">Double-breasted</a>
 											</h4>
-											<span class="gender text-uppercase">Men</span> <span
-												class="gender">Suits - Blazers</span>
+											<span class="category text-uppercase">Men</span> <span
+												class="category">Suits - Blazers</span>
 										</div>
 										<div class="product-price">
 											<span class="title-price">$ ${p.price }.0</span> <span
@@ -384,8 +384,8 @@
 											<h4 class="title-price">
 												<a href="shop-ui-inner.html">Double-breasted</a>
 											</h4>
-											<span class="gender text-uppercase">Men</span> <span
-												class="gender">Suits - Blazers</span>
+											<span class="category text-uppercase">Men</span> <span
+												class="category">Suits - Blazers</span>
 										</div>
 										<div class="product-price">
 											<span class="title-price">$95.00</span>
@@ -419,8 +419,8 @@
 											<h4 class="title-price">
 												<a href="shop-ui-inner.html">Double-breasted</a>
 											</h4>
-											<span class="gender text-uppercase">Men</span> <span
-												class="gender">Suits - Blazers</span>
+											<span class="category text-uppercase">Men</span> <span
+												class="category">Suits - Blazers</span>
 										</div>
 										<div class="product-price">
 											<span class="title-price">$60.00</span> <span
@@ -455,8 +455,8 @@
 											<h4 class="title-price">
 												<a href="shop-ui-inner.html">Double-breasted</a>
 											</h4>
-											<span class="gender text-uppercase">Men</span> <span
-												class="gender">Suits - Blazers</span>
+											<span class="category text-uppercase">Men</span> <span
+												class="category">Suits - Blazers</span>
 										</div>
 										<div class="product-price">
 											<span class="title-price">$95.00</span>
@@ -494,8 +494,8 @@
 											<h4 class="title-price">
 												<a href="shop-ui-inner.html">Double-breasted</a>
 											</h4>
-											<span class="gender text-uppercase">Men</span> <span
-												class="gender">Suits - Blazers</span>
+											<span class="category text-uppercase">Men</span> <span
+												class="category">Suits - Blazers</span>
 										</div>
 										<div class="product-price">
 											<span class="title-price">$60.00</span> <span
@@ -530,8 +530,8 @@
 											<h4 class="title-price">
 												<a href="shop-ui-inner.html">Double-breasted</a>
 											</h4>
-											<span class="gender text-uppercase">Men</span> <span
-												class="gender">Suits - Blazers</span>
+											<span class="category text-uppercase">Men</span> <span
+												class="category">Suits - Blazers</span>
 										</div>
 										<div class="product-price">
 											<span class="title-price">$60.00</span> <span
@@ -566,8 +566,8 @@
 											<h4 class="title-price">
 												<a href="shop-ui-inner.html">Double-breasted</a>
 											</h4>
-											<span class="gender text-uppercase">Men</span> <span
-												class="gender">Suits - Blazers</span>
+											<span class="category text-uppercase">Men</span> <span
+												class="category">Suits - Blazers</span>
 										</div>
 										<div class="product-price">
 											<span class="title-price">$95.00</span>

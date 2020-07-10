@@ -107,7 +107,7 @@
 }
 
 .wizard > .steps .disabled .number {
-  color: #18ba9b;
+  color: #d10000;
 }
 
 /*Current*/
@@ -115,7 +115,7 @@
 .wizard > .steps .current a:hover,
 .wizard > .steps .current a:active {
   color: #fff;
-    background: #18ba9b;
+    background: #d10000;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -263,7 +263,7 @@
     min-width: 126px;
     padding: 8px 10px;
     text-align: center;
-    background: #18ba9b;
+    background: #d10000;
     text-decoration: none;
     text-transform: uppercase;
 }

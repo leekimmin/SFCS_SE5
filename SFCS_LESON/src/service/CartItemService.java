@@ -2,7 +2,6 @@ package service;
 
 import java.util.List;
 
-import model.Cart;
 import model.CartItem;
 
 public interface CartItemService {

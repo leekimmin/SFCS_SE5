@@ -5,7 +5,6 @@ import java.util.List;
 import dao.CategoryDao;
 import dao.impl.CategoryDaoImpl;
 import model.Category;
-import model.User;
 import service.CategoryService;
 
 public class CategoryServiceImpl implements CategoryService {

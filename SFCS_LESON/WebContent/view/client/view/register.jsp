@@ -178,7 +178,7 @@
 									</label>
 								</section>
 								<section>
-									<label>Giới tính</label>
+									<label class="input">Giới tính</label>
 									<input type="radio" value="M" name="gender"/> Nam
 									<input type="radio" value="F" name="gender"/> Nữ
 								</section>

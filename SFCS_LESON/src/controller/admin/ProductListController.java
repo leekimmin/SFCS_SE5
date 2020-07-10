@@ -33,6 +33,9 @@ public class ProductListController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html; charset=UTF-8");
+		req.setCharacterEncoding("UTF-8");
+		
 		List<Product> proList = productService.getAll();
 		req.setAttribute("proList", proList);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/view/list-product.jsp");

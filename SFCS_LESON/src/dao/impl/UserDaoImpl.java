@@ -30,14 +30,14 @@ public class UserDaoImpl extends JDBCConnection implements UserDao {
 			ps.setDate(6, Date.valueOf(user.getBirthday()));
 			ps.setString(7, user.getGender());
 			try {
-				if(user.getRoleId()==1) {
-					roleId=1;
-				}else {
+				if(user.getRoleId()==2) {
 					roleId=2;
+				}else {
+					roleId=1;
 				}
 
 			} catch (Exception e) {
-				roleId=2;
+				roleId=1;
 			}
 			ps.setInt(8, roleId);
 			;

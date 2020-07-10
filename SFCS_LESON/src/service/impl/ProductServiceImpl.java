@@ -4,13 +4,9 @@ import java.io.File;
 import java.util.List;
 
 import dao.ProductDao;
-import dao.UserDao;
 import dao.impl.ProductDaoImpl;
-import dao.impl.UserDaoImpl;
 import model.Product;
-import model.User;
 import service.ProductService;
-import service.UserService;
 
 public class ProductServiceImpl implements ProductService {
 	ProductDao productDao = new ProductDaoImpl();
@@ -28,6 +24,7 @@ public class ProductServiceImpl implements ProductService {
 		oldProduct.setName(newProduct.getName());
 		oldProduct.setPrice(newProduct.getPrice());
 		oldProduct.setCategory(newProduct.getCategory());
+		oldProduct.setDes(newProduct.getDes());
 		if (newProduct.getImage() != null) {
 			// XOA ANH CU DI
 			String fileName = oldProduct.getImage();
@@ -68,6 +65,11 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public List<Product> searchByCategory(int cate_id) {
 		return productDao.searchByCategory(cate_id);
+	}
+	
+	@Override
+	public List<Product> searchByStall(int stall_id) {
+		return productDao.searchByStall(stall_id);
 	}
 
 	@Override

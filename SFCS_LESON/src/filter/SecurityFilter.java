@@ -25,7 +25,6 @@ public class SecurityFilter implements Filter {
 	@Override
 	public void destroy() {
 		
-		
 	}
 
 	@Override
@@ -37,9 +36,9 @@ public class SecurityFilter implements Filter {
 		Object obj=session.getAttribute("account");
 		User user=(User) obj;
 		
-		if(user !=null && user.getRoleId()==1 ) {
+		if(user !=null && user.getRoleId()==2 ) {
 			chain.doFilter(request, response);
-			return; //
+			return;
 		}else {
 			resq.sendRedirect(req.getContextPath()+ "/logout");
 		}

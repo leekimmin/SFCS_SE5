@@ -255,7 +255,7 @@
 											<li><i class="fa fa-caret-right"></i>Thickness: <span>Thin</span></li>
 											<li><i class="fa fa-caret-right"></i>Model Number: <span>TM-11013
 											</span></li>
-											<li><i class="fa fa-caret-right"></i>Gender: <span>Men</span></li>
+											<li><i class="fa fa-caret-right"></i>category: <span>Men</span></li>
 											<li><i class="fa fa-caret-right"></i>MATERIAL: <span>80%COTTON+10%NYLON</span></li>
 										</ul>
 									</div>

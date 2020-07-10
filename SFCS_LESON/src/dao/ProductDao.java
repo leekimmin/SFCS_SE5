@@ -19,5 +19,7 @@ public interface ProductDao {
 	
 	List<Product> searchByCategory(int cate_id);
 	
+	List<Product> searchByStall(int stall_id);
+	
 	List<Product> searchByName(String productName);
 }

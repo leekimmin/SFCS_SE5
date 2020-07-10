@@ -81,21 +81,6 @@
 						<!-- MAIN IMAGE --> <img src="${url}/img/1.jpg" alt="darkblurbg"
 						data-bgfit="cover" data-bgposition="left top"
 						data-bgrepeat="no-repeat">
-
-						<div class="tp-caption revolution-ch1 sft start" data-x="center"
-							data-hoffset="0" data-y="100" data-speed="1500" data-start="500"
-							data-easing="Back.easeInOut" data-endeasing="Power1.easeIn"
-							data-endspeed="300">
-							The New <br> <strong>Collection</strong><br> is here
-						</div> <!-- LAYER -->
-						<div class="tp-caption sft" data-x="center" data-hoffset="0"
-							data-y="380" data-speed="1600" data-start="1800"
-							data-easing="Power4.easeOut" data-endspeed="300"
-							data-endeasing="Power1.easeIn" data-captionhidden="off"
-							style="z-index: 6">
-							<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Shop
-								Now</a>
-						</div>
 					</li>
 					<!-- END SLIDE -->
 
@@ -274,46 +259,93 @@
 			<div class="row margin-bottom-50">
 				<div class="col-md-4 md-margin-bottom-30">
 					<div class="overflow-h">
-						<a class="illustration-v2 illustration-img1"
+						<a class="illustration-v2 illustration-img1 upper"
 							href="${pageContext.request.contextPath }/product/category?cate_id=1">
-							<span class="illustration-bg"> <span
-								class="illustration-ads"> <span
-									class="illustration-v2-category"> <span
-										class="product-category">Bữa Trưa</span> <span
-										class="product-amount">+50 Món</span>
+							<span class="illustration-bg"> 
+								<span class="illustration-ads"> 
+									<span class="illustration-v2-category">
+									 	<span class="product-category">Ẩm Thực Việt</span> 
+										<span class="product-amount">+5 Món Mới</span>
+									</span>
 								</span>
 							</span>
-						</span>
 						</a>
 					</div>
 				</div>
 				<div class="col-md-4 md-margin-bottom-30">
 					<div class="overflow-h">
-						<a class="illustration-v2 illustration-img2"
+						<a class="illustration-v2 illustration-img2 upper"
 							href="${pageContext.request.contextPath }/product/category?cate_id=2">
-							<span class="illustration-bg"> <span
-								class="illustration-ads"> <span
-									class="illustration-v2-category"> <span
-										class="product-category">Bữa Tối</span> <span
-										class="product-amount">+40 Món</span>
+							<span class="illustration-bg"> 								
+								<span class="illustration-ads"> 
+									<span class="illustration-v2-category">								 	
+										<span class="product-category">Thức Ăn Nhanh</span> 
+										<span class="product-amount">+10 Món Mới</span>
+									</span>
 								</span>
 							</span>
-						</span>
 						</a>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="overflow-h">
-						<a class="illustration-v2 illustration-img3"
+						<a class="illustration-v2 illustration-img3 upper"
 							href="${pageContext.request.contextPath }/product/category?cate_id=3">
-							<span class="illustration-bg"> <span
-								class="illustration-ads"> <span
-									class="illustration-v2-category"> <span
-										class="product-category">Đồ Uống</span> <span
-										class="product-amount">+30 Món</span>
+							<span class="illustration-bg"> 								
+								<span class="illustration-ads"> 
+									<span class="illustration-v2-category">
+										<span class="product-category">Lẩu & Nướng</span> 
+										<span class="product-amount">+4 Món Mới</span>
+									</span>
 								</span>
 							</span>
-						</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row margin-bottom-50">
+				<div class="col-md-4 md-margin-bottom-30">
+					<div class="overflow-h">
+						<a class="illustration-v2 illustration-img4"
+							href="${pageContext.request.contextPath }/product/category?cate_id=4">
+							<span class="illustration-bg">								
+								<span class="illustration-ads"> 
+									<span class="illustration-v2-category">
+									 	<span class="product-category">Món Tráng Miệng</span> 
+										<span class="product-amount">+7 Món Mới</span>
+									</span>
+								</span>
+							</span>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4 md-margin-bottom-30">
+					<div class="overflow-h">
+						<a class="illustration-v2 illustration-img5"
+							href="${pageContext.request.contextPath }/product/category?cate_id=5">
+							<span class="illustration-bg"> 								
+								<span class="illustration-ads"> 
+									<span class="illustration-v2-category">									 	
+										<span class="product-category">Thức Uống</span> 
+										<span class="product-amount">+12 Món Mới</span>
+									</span>
+								</span>
+							</span>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="overflow-h">
+						<a class="illustration-v2 illustration-img6"
+							href="${pageContext.request.contextPath }/product/category?cate_id=6">
+							<span class="illustration-bg"> 								
+								<span class="illustration-ads"> 
+									<span class="illustration-v2-category">
+										<span class="product-category">Món Khác</span> 
+										<span class="product-amount">+9 Món Mới</span>
+									</span>
+								</span>
+							</span>
 						</a>
 					</div>
 				</div>

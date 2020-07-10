@@ -5,38 +5,35 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 
 import java.util.List;
-import java.util.concurrent.ThreadPoolExecutor.CallerRunsPolicy;
 
 import dao.CartDao;
-import dao.CategoryDao;
-import dao.ProductDao;
 import jdbc.JDBCConnection;
 import model.Cart;
-import model.Category;
-import model.Product;
+import model.OrderStatus;
 import model.User;
-import service.CategoryService;
+import service.OrderStatusService;
 import service.UserService;
-import service.impl.CategoryServiceImpl;
+import service.impl.OrderStatusServiceImpl;
 import service.impl.UserServiceImpl;
 
 public class CartDaoImpl extends JDBCConnection implements CartDao {
 	UserService userS = new UserServiceImpl();
+	OrderStatusService statusS = new OrderStatusServiceImpl();
 
 	@Override
 	public void insert(Cart cart) {
-		String sql = "INSERT INTO Cart(id,u_id, buyDate) VALUES (?,?,?)";
+		String sql = "INSERT INTO orders(order_id, user_id, order_date, status) VALUES (?,?,?,?)";
 		Connection con = super.getJDBCConnection();
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1, cart.getId());
+			ps.setInt(1, cart.getId());
 			ps.setInt(2, cart.getBuyer().getId());
 			ps.setDate(3, new Date(cart.getBuyDate().getTime()));
+			ps.setInt(4, cart.getStatus().getId()); 
 			ps.executeUpdate();
 			
 		} catch (SQLException e) {
@@ -46,14 +43,15 @@ public class CartDaoImpl extends JDBCConnection implements CartDao {
 
 	@Override
 	public void edit(Cart cart) {
-		String sql = "UPDATE cart SET id_user = ?, buyDate = ? WHERE id = ?";
+		String sql = "UPDATE orders SET user_id = ?, order_date = ?, status = ? WHERE order_id = ?";
 		Connection con = super.getJDBCConnection();
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, cart.getBuyer().getId());
 			ps.setDate(2, new Date(cart.getBuyDate().getTime()));
-			ps.setString(3, cart.getId());
+			ps.setInt(3, cart.getStatus().getId()); 
+			ps.setInt(4, cart.getId());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -62,7 +60,7 @@ public class CartDaoImpl extends JDBCConnection implements CartDao {
 
 	@Override
 	public void delete(int id) {
-		String sql = "DELETE FROM cart WHERE id = ?";
+		String sql = "DELETE FROM orders WHERE order_id = ?";
 		Connection con = super.getJDBCConnection();
 
 		try {
@@ -76,8 +74,9 @@ public class CartDaoImpl extends JDBCConnection implements CartDao {
 
 	@Override
 	public Cart get(int id) {
-		String sql = "SELECT cart.id, cart.buyDate, User.email, user.username, user.id AS user_id "
-				+ "FROM cart INNER JOIN user " + "ON cart.id_user = user.id WHERE cart.id=?";
+		String sql = "SELECT o.order_id, o.order_date, u.user_id, u.username, u.email, os.order_status_id, os.name "
+				+ "FROM orders o, users u, order_statuses os "
+				+ "WHERE o.user_id = u.user_id AND o.status = os.order_status_id AND o.order_id = ?";
 		Connection con = super.getJDBCConnection();
 
 		try {
@@ -87,10 +86,12 @@ public class CartDaoImpl extends JDBCConnection implements CartDao {
 
 			while (rs.next()) {
 				User user = userS.get(rs.getInt("user_id"));
+				OrderStatus status = statusS.get(rs.getInt("order_status_id"));
 
 				Cart cart = new Cart();
-				cart.setId(rs.getString("id"));
-				cart.setBuyDate(rs.getDate("buyDate"));
+				cart.setId(rs.getInt("order_id"));
+				cart.setBuyDate(rs.getDate("order_date"));
+				cart.setStatus(status);
 				cart.setBuyer(user);
 
 				return cart;
@@ -105,8 +106,9 @@ public class CartDaoImpl extends JDBCConnection implements CartDao {
 	@Override
 	public List<Cart> getAll() {
 		List<Cart> cartList = new ArrayList<Cart>();
-		String sql = "SELECT cart.id, cart.buyDate, User.email, user.username, user.id AS user_id "
-				+ "FROM cart INNER JOIN user " + "ON cart.id_user = user.id";
+		String sql = "SELECT o.order_id, o.order_date, u.user_id, u.username, u.email, os.order_status_id, os.name "
+				+ "FROM orders o, users u, order_statuses os "
+				+ "WHERE o.user_id = u.user_id AND o.status = os.order_status_id";
 		Connection con = super.getJDBCConnection();
 
 		try {
@@ -115,10 +117,12 @@ public class CartDaoImpl extends JDBCConnection implements CartDao {
 
 			while (rs.next()) {
 				User user = userS.get(rs.getInt("user_id"));
+				OrderStatus status = statusS.get(rs.getInt("order_status_id"));
 
 				Cart cart = new Cart();
-				cart.setId(rs.getString("id"));
-				cart.setBuyDate(rs.getDate("buyDate"));
+				cart.setId(rs.getInt("order_id"));
+				cart.setBuyDate(rs.getDate("order_date"));
+				cart.setStatus(status);
 				cart.setBuyer(user);
 
 				cartList.add(cart);
@@ -132,8 +136,9 @@ public class CartDaoImpl extends JDBCConnection implements CartDao {
 
 	public List<Cart> search(String name) {
 		List<Cart> cartList = new ArrayList<Cart>();
-		String sql = "SELECT cart.id, cart.buyDate, User.email, user.username, user.id AS user_id "
-				+ "FROM cart INNER JOIN user " + "ON cart.id_user = user.id LIKE User.email = ?";
+		String sql = "SELECT o.order_id, o.order_date, u.user_id, u.username, u.email, os.order_status_id, os.name "
+				+ "FROM orders o, users u, order_statuses os "
+				+ "WHERE o.user_id = u.user_id AND o.status = os.order_status_id AND u.email LIKE ?";
 		Connection con = super.getJDBCConnection();
 
 		try {
@@ -142,10 +147,12 @@ public class CartDaoImpl extends JDBCConnection implements CartDao {
 
 			while (rs.next()) {
 				User user = userS.get(rs.getInt("user_id"));
+				OrderStatus status = statusS.get(rs.getInt("order_status_id"));
 
 				Cart cart = new Cart();
-				cart.setId(rs.getString("id"));
-				cart.setBuyDate(rs.getDate("buyDate"));
+				cart.setId(rs.getInt("order_id"));
+				cart.setBuyDate(rs.getDate("order_date"));
+				cart.setStatus(status);
 				cart.setBuyer(user);
 
 				cartList.add(cart);

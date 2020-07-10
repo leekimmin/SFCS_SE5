@@ -34,7 +34,7 @@ public class MemberSecurity implements Filter {
 		User user=(User) obj;
 		if(user!=null ) {
 			chain.doFilter(request, response);
-			return; //
+			return;
 		}else {
 			resq.sendRedirect(req.getContextPath()+"/login");
 		}

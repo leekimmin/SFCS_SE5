@@ -15,8 +15,7 @@ public class JDBCConnection {
 		    String password = "123456a@";
 		    String connectionURL = "jdbc:mysql://" + hostName + ":3306/" + dbName+"?useUnicode=true&characterEncoding=UTF-8";
 		   
-		    connection = DriverManager.getConnection(connectionURL, userName,
-		            password);
+		    connection = DriverManager.getConnection(connectionURL, userName, password);
 			System.out.println("thanh cong");
 			
 		} catch (ClassNotFoundException | SQLException ex) {

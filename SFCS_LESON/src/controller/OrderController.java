@@ -42,7 +42,7 @@ public class OrderController extends HttpServlet {
 		Cart cart = new Cart();
 		cart.setBuyer(buyer);
 		cart.setBuyDate(new java.sql.Date(time));
-		cart.setId(RandomUUID.getRandomID());
+		cart.setId(Integer.parseInt(RandomUUID.getRandomID()));
 		cartService.insert(cart);
 
 		Object objCart = session.getAttribute("cart");
@@ -52,7 +52,7 @@ public class OrderController extends HttpServlet {
 
 			for (CartItem cartItem : map.values()) {
 				cartItem.setCart(cart);
-				cartItem.setId(RandomUUID.getRandomID());
+				cartItem.setId(Integer.parseInt(RandomUUID.getRandomID()));
 //				SendMail sm = new SendMail();
 //				sm.sendMail(cart.getBuyer().getEmail(), "SFCS", "Payment success. We will contact you soon ! ");
 				cartItemService.insert(cartItem);

@@ -25,11 +25,11 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 1px solid #18ba9b;
+  border-bottom: 1px solid #d10000;
 }
 
 .tab-v5 .nav-tabs > li > a:hover {
-  border-bottom: 1px solid #18ba9b;
+  border-bottom: 1px solid #d10000;
 }
 
 .tab-v5 .nav-tabs > li > a:focus {
@@ -92,7 +92,7 @@
   line-height: 12px;
   margin-right: 10px;
   text-align: center;
-  background: #18ba9b;
+  background: #d10000;
   display: inline-block;
   font-family: FontAwesome;
 }
@@ -173,7 +173,7 @@
 
 .breadcrumbs-v4 .breadcrumb-v4-in li.active,
 .breadcrumbs-v4 .breadcrumb-v4-in li a:hover {
-  color: #d10000;
+  color: #ffc400;
   text-decoration: none;
 }
 
@@ -240,6 +240,10 @@
 /*Shop Color Red*/
 .shop-red {
   color: #d10000;
+}
+
+.shop-yellow {
+  color: #ffc400;
 }
 
 /*Shop Background Red*/

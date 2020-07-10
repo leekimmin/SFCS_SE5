@@ -1,15 +1,16 @@
 package model;
 
 public class CartItem {
-	private String id;
+	private int id;
 	private int quantity;
-	private long unitPrice;
+	private int unitPrice;
 	private Product product;
 	private Cart cart;
+	
 	public CartItem() {
 		super();
 	}
-	public CartItem(String id, int quantity, long unitPrice, Product product, Cart cart) {
+	public CartItem(int id, int quantity, int unitPrice, Product product, Cart cart) {
 		super();
 		this.id = id;
 		this.quantity = quantity;
@@ -17,10 +18,10 @@ public class CartItem {
 		this.product = product;
 		this.cart = cart;
 	}
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public int getQuantity() {
@@ -29,10 +30,10 @@ public class CartItem {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	public long getUnitPrice() {
+	public int getUnitPrice() {
 		return unitPrice;
 	}
-	public void setUnitPrice(long unitPrice) {
+	public void setUnitPrice(int unitPrice) {
 		this.unitPrice = unitPrice;
 	}
 	public Product getProduct() {

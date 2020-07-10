@@ -66,7 +66,7 @@
 												<div class="checkbox">
 													<select name="cate">
 														<c:forEach items="${categories}" var="c">
-															<option value="${c.name}">${c.name}</option>
+															<option value="${c.id}">${c.name}</option>
 														</c:forEach>
 													</select>
 												</div>

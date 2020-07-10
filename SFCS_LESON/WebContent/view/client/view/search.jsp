@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class="col-md-3 filter-by-block md-margin-bottom-60">
 	<h1>Tìm kiếm</h1>
 	<div class="panel-group" id="accordion">
@@ -14,17 +14,17 @@
 			<div id="collapseOne" class="panel-collapse collapse in">
 				<div class="panel-body">
 					<ul class="list-unstyled checkbox-list">
-						<form action="${pageContext.request.contextPath }/product/search" method="get">
+						<li><form action="${pageContext.request.contextPath }/product/search" method="get">
 							<input type="text" name="name" />
 							<input type="submit" value="Tìm Kiếm" >
-						</form>
+						</form></li>
 					</ul>	
 				</div>
 			</div>
 		</div>
 	</div>
 	<!--/end panel group-->
-		
+	
 	<div class="panel-group" id="accordion-v2">
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -37,11 +37,12 @@
 			<div id="collapseTwo" class="panel-collapse collapse in">
 				<div class="panel-body">
 					<ul class="list-unstyled checkbox-list">
-						<a href="${pageContext.request.contextPath}/product/category?cate_id=1">BỮA TRƯA</a>
-						<br>
-						<a href="${pageContext.request.contextPath}/product/category?cate_id=2">BỮA TỐI</a>
-						<br>
-						<a href="${pageContext.request.contextPath}/product/category?cate_id=3">ĐỒ UỐNG</a>
+						<li><a href="${pageContext.request.contextPath}/product/category?cate_id=1">ẨM THỰC VIỆT</a></li>
+						<li><a href="${pageContext.request.contextPath}/product/category?cate_id=2">THỨC ĂN NHANH</a></li>	
+						<li><a href="${pageContext.request.contextPath}/product/category?cate_id=3">LẨU & NƯỚNG</a></li>	
+						<li><a href="${pageContext.request.contextPath}/product/category?cate_id=4">MÓN TRÁNG MIỆNG</a></li>
+						<li><a href="${pageContext.request.contextPath}/product/category?cate_id=5">THỨC UỐNG</a></li>
+						<li><a href="${pageContext.request.contextPath}/product/category?cate_id=6">MÓN KHÁC</a></li>
 					</ul>
 				</div>
 			</div>
@@ -61,7 +62,8 @@
 			<div id="collapseThree" class="panel-collapse collapse in">
 				<div class="panel-body">
 					<ul class="list-unstyled checkbox-list">
-						<li><label class="checkbox"> <input type="checkbox" name="checkbox"/><i></i> 
+						
+						<li><label class="checkbox"> <input type="checkbox" name="checkbox" /> <i></i> 
 							Nguyên Ký <small><a href="#">(6)</a></small>
 						</label></li>
 						<li><label class="checkbox"> <input type="checkbox" name="checkbox" checked /> <i></i> 

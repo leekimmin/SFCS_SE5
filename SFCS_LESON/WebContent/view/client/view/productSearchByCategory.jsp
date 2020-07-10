@@ -1,6 +1,6 @@
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt"%> 
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,7 +62,7 @@
 		<div class="breadcrumbs-v4">
 			<div class="container">
 				<span class="page-name">TRANG THỰC ĐƠN</span>
-				<h1>TẬN HƯỞNG CÙNG <span class="shop-red">SFCS</span></h1>
+				<h1>TẬN HƯỞNG CÙNG <span class="shop-yellow">SFCS</span></h1>
 				<ul class="breadcrumb-v4-in">
 					<li><a href="${pageContext.request.contextPath }">Trang Chủ</a></li>
 					<li><a href="${pageContext.request.contextPath }/product/list">Thực Đơn</a></li>
@@ -102,10 +102,10 @@
 									<h3>Hiển thị :</h3>
 									<div class="btn-group">
 										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 
-											20 <span class="caret"></span>
+											Tất cả <span class="caret"></span>
 										</button>
 										<ul class="dropdown-menu" role="menu">
-											<li><a href="#">Tất Cả</a></li>
+											<li><a href="#">20</a></li>
 											<li><a href="#">10</a></li>
 											<li><a href="#">5</a></li>
 											<li><a href="#">3</a></li>
@@ -116,7 +116,9 @@
 						</div>
 					</div>
 					<!--/end result category-->
+					
 					<c:forEach items="${productSearchByCategory }" var="p" >
+					<f:setLocale value="vi_VN"/>
 					<div class="filter-results">
 						<div class="list-product-description product-description-brd margin-bottom-30">
 							<div class="row">
@@ -129,37 +131,45 @@
 									<div class="overflow-h margin-bottom-5">
 										<ul class="list-inline overflow-h">
 											<li><h4 class="title-price">
-													<a href=""${pageContext.request.contextPath }/product/detail?id=${p.id}"">${p.name }</a>	
-												</h4></li>
-											<li><span class="gender text-uppercase">${p.category.name }</span></li>
+													<a href="${pageContext.request.contextPath }/product/detail?id=${p.id}">${p.name}</a>	
+												</h4>
+											</li>
+											<li><span class="category text-uppercase">${p.category.name}</span></li>
 											<li class="pull-right">
 												<ul class="list-inline product-ratings">
 													<li><i class="rating-selected fa fa-star"></i></li>
 													<li><i class="rating-selected fa fa-star"></i></li>
 													<li><i class="rating-selected fa fa-star"></i></li>
-													<li><i class="rating fa fa-star"></i></li>
+													<li><i class="rating-selected fa fa-star"></i></li>
 													<li><i class="rating fa fa-star"></i></li>
 												</ul>
 											</li>
 										</ul>
 										<div class="margin-bottom-10">
-											<span class="title-price margin-right-10">${p.price } đ</span> 
-												<span class="title-price line-through">${p.price *1.25 } đ</span>
+											<span class="title-price margin-right-10">
+												<f:formatNumber value="${p.price * (100 - p.discount) / 100}" type="currency"/>
+											</span> 
+											<span class="title-price line-through">
+												<f:formatNumber value="${p.price}" type="currency"/>
+											</span>
 										</div>
-										<p class="margin-bottom-20">${p.des }</p>
+										<p class="margin-bottom-20 stall-name">${p.stall.name}</p>
+										<p class="margin-bottom-20">${p.des}</p>
 										<ul class="list-inline add-to-wishlist margin-bottom-20">
 											<li class="wishlist-in"><i class="fa fa-heart"></i> 
-												<a href=""${pageContext.request.contextPath }/product/detail?id=${p.id}"">Thêm Vào Yêu Thích</a></li>
+												<a href=""${pageContext.request.contextPath }/product/detail?id=${p.id}"">Thêm Vào Yêu Thích</a>
+											</li>
 										</ul>
-										<a href="${pageContext.request.contextPath }/product/detail?id=${p.id}" ><button type="button" class="btn-u btn-u-sea-shop">
-											Thêm Vào Giỏ Hàng</button></a>
+										<a href="${pageContext.request.contextPath }/product/detail?id=${p.id}" >
+											<button type="button" class="btn-u btn-u-sea-shop">Thêm Vào Giỏ Hàng</button>
+										</a>
 									</div>
 								</div>								
 							</div>					
 						</div>
 					</div>
 					</c:forEach>
-					<!--/end filter resilts-->
+					<!--/end filter results-->
 
 					<div class="text-center">
 						<ul class="pagination pagination-v2">

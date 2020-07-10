@@ -26,12 +26,12 @@ p {
 }
 
 a {
-   color: #18ba9b;
+   color: #d10000;
    text-decoration: none;  
 }
 
 a:hover {
-   color: #18ba9b;
+   color: #d10000;
    text-decoration: underline;
 }
 
@@ -392,7 +392,7 @@ li:first-child {
 }
 
 .twitter-block .item a {
-	color: #18ba9b;
+	color: #d10000;
 }
 
 .twitter-block .twitter-icons i {
@@ -426,7 +426,7 @@ li:first-child {
 .product-service .product-service-heading {
 	padding: 10px 0;
 	text-align: center;
-	background: #18ba9b;
+	background: #d10000;
 }
 
 .product-service:hover .product-service-heading {
@@ -640,7 +640,7 @@ li:first-child {
 }
 
 .illustration-v4 .thumb-product-in h4 a:hover {
-	color: #18ba9b;
+	color: #d10000;
 }
 
 .illustration-v4 .thumb-product-in span {
@@ -679,7 +679,7 @@ li:first-child {
 }
 
 .illustration-v4 .thumb-product-purchase a:hover {
-	color: #18ba9b;
+	color: #d10000;
 	text-decoration: none;
 }
 
@@ -741,7 +741,7 @@ li:first-child {
 ------------------------------------*/
 .shop-subscribe {
 	padding: 20px 0;
-	background: #18ba9b;
+	background: #d10000;
 }
 
 .shop-subscribe h2 {
@@ -830,7 +830,7 @@ li:first-child {
 }
 
 .shop-product .shop-product-social li i:hover {
-	color: #18ba9b;
+	color: #d10000;
 	text-decoration: none;
 }
 
@@ -846,7 +846,7 @@ li:first-child {
 }
 
 .shop-product .product-review-list a:hover {
-	color: #18ba9b;
+	color: #d10000;
 }
 
 /*Shop Product Prices*/
@@ -908,14 +908,14 @@ li:first-child {
 }
 
 .shop-product .product-size label:hover {
-	color: #18ba9b;
+	color: #d10000;
 	cursor: pointer;
-	border-color: #18ba9b;
+	border-color: #d10000;
 }
 
 .shop-product .product-size input:checked ~ label {
-	color: #18ba9b;
-	border-color: #18ba9b;
+	color: #d10000;
+	border-color: #d10000;
 }
 
 /*Product Color*/
@@ -954,11 +954,11 @@ li:first-child {
 
 .shop-product .product-color label:hover {
 	cursor: pointer;
-	border: 2px solid #18ba9b;
+	border: 2px solid #d10000;
 }
 
 .shop-product .product-color input:checked ~ label {
-	border: 2px solid #18ba9b;
+	border: 2px solid #d10000;
 }
 
 /*Product Quantity*/
@@ -1025,7 +1025,7 @@ li:first-child {
 .add-to-wishlist a:hover,
 .add-to-wishlist .wishlist-in:hover i,
 .add-to-wishlist .compare-in:hover i {
-	color: #18ba9b;
+	color: #d10000;
 	text-decoration: none;
 }
 
@@ -1038,7 +1038,7 @@ li:first-child {
 }
 
 .wishlist-category a {
-	color: #18ba9b;
+	color: #d10000;
 }
 
 /*Headline Left*/
@@ -1176,11 +1176,11 @@ li:first-child {
 
 .stars-ratings input + label:hover,
 .stars-ratings input + label:hover ~ label {
-	color: #18ba9b;
+	color: #d10000;
 }
 
 .stars-ratings input:checked ~ label {
-	color: #18ba9b;
+	color: #d10000;
 }
 
 .review-submit button.btn-u.pull-right {
@@ -1206,7 +1206,7 @@ li:first-child {
 .owl-slider-v3.owl-theme .owl-controls .owl-page.active span,
 .owl-slider-v3.owl-theme .owl-controls.clickable .owl-page:hover span {
 	opacity: 1;
-	background: #18ba9b;
+	background: #d10000;
 	filter: Alpha(Opacity=100);/*IE7 fix*/
 }
 
@@ -1243,7 +1243,7 @@ li:first-child {
 	padding: 7px 10px;
 	text-align: center;
 	margin-bottom: 5px;
-	background: #18ba9b;
+	background: #d10000;
 	text-transform: uppercase;
 }
 
@@ -1357,18 +1357,18 @@ li:first-child {
 }
 
 .checkbox-list .checkbox:hover i {
-	border-color: #18ba9b;
+	border-color: #d10000;
 }
 
 .checkbox-list .checkbox input:focus + i {
-	border-color: #18ba9b;
+	border-color: #d10000;
 }
 
 .checkbox-list .checkbox input + i:after {
-	color: #18ba9b;
+	color: #d10000;
 }
 .checkbox-list .checkbox input:checked + i {
-	border-color: #18ba9b;	
+	border-color: #d10000;	
 }
 
 .checkbox-list .checkbox small {
@@ -1376,7 +1376,7 @@ li:first-child {
 }
 
 .checkbox-list .checkbox small a {
-	color: #18ba9b;
+	color: #d10000;
 	font-size: 12px;
 }
 
@@ -1392,7 +1392,7 @@ li:first-child {
 }
 
 .slider-snap.noUi-connect {
-	background: #18ba9b;
+	background: #d10000;
 }
 
 .slider-snap.noUi-horizontal {
@@ -1506,7 +1506,7 @@ li:first-child {
 	font-size: 18px;
 	line-height: 20px;
 	text-align: center;
-	background: #18ba9b;
+	background: #d10000;
 	display: inline-block;
 }
 
@@ -1590,8 +1590,8 @@ li:first-child {
 .pagination.pagination-v2 > .active > span:hover, 
 .pagination.pagination-v2 > .active > a:focus, 
 .pagination.pagination-v2 > .active > span:focus {
-	background: #18ba9b;
-	border-color: #18ba9b;
+	background: #d10000;
+	border-color: #d10000;
 }
 
 /*Info Block v2
@@ -1605,7 +1605,7 @@ li:first-child {
 
 .info-block-v2 i {
 	float: right;
-	color: #18ba9b;
+	color: #d10000;
 	font-size: 30px;
 	margin: 7px 0 0 15px;
 }
@@ -1884,13 +1884,13 @@ li:first-child {
 
 .cus-form-horizontal .input-small-field a {
 	top: 5px;
-	color: #18ba9b;
+	color: #d10000;
 	position: relative;
 	text-decoration: underline;
 }
 
 .cus-form-horizontal .input-small-field a:hover {
-	color: #18ba9b;
+	color: #d10000;
 	text-decoration: none;
 }
 

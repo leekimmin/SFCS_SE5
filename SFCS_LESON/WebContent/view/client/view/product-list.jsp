@@ -140,7 +140,7 @@
 														<a href=""
 															${pageContext.request.contextPath }/product/detail?id=${p.id}"">${p.name }</a>
 													</h4></li>
-												<li><span class="gender text-uppercase">${p.category.name }</span></li>
+												<li><span class="category text-uppercase">${p.category.name }</span></li>
 												<li class="pull-right">
 													<ul class="list-inline product-ratings">
 														<li><i class="rating-selected fa fa-star"></i></li>

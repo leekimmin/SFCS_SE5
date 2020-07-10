@@ -9,6 +9,9 @@ var Login = function () {
 	            // Rules for form validation
 	            rules:
 	            {
+					username:{
+						required: true
+					},
 	                email:
 	                {
 	                    required: true,
@@ -25,6 +28,9 @@ var Login = function () {
 	            // Messages for form validation
 	            messages:
 	            {
+					username:{
+						required: 'Vui lòng nhập tên đăng nhập!'
+					},
 	                email:
 	                {
 	                    required: 'Please enter your email address',
@@ -32,7 +38,7 @@ var Login = function () {
 	                },
 	                password:
 	                {
-	                    required: 'Please enter your password'
+	                    required: 'Vui lòng nhập mật khẩu!'
 	                }
 	            },                  
 	            

@@ -20,7 +20,9 @@ public class RegisterController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+		resp.setContentType("text/html; charset=UTF-8");
+		req.setCharacterEncoding("UTF-8");
+		
 		HttpSession session = req.getSession(false);
 		if (session != null && session.getAttribute("username") != null) {
 			resp.sendRedirect(req.getContextPath() + "/admin");
@@ -44,6 +46,9 @@ public class RegisterController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html; charset=UTF-8");
+		req.setCharacterEncoding("UTF-8");
+		
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 		String firstname = req.getParameter("firstname");

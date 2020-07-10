@@ -2,9 +2,7 @@ package dao;
 
 import java.util.List;
 
-import model.Cart;
 import model.CartItem;
-import model.Category;
 
 public interface CartItemDao {
 	void insert(CartItem cartItem);

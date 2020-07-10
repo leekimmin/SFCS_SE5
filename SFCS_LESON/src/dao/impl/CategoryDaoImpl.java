@@ -58,7 +58,7 @@ public class CategoryDaoImpl extends JDBCConnection implements CategoryDao {
 
 	@Override
 	public Category get(int id) {
-		String sql = "SELECT * FROM categories WHERE category_id = ? ";
+		String sql = "SELECT * FROM categories WHERE category_id = ?";
 		Connection con = super.getJDBCConnection();
 
 		try {
@@ -110,7 +110,7 @@ public class CategoryDaoImpl extends JDBCConnection implements CategoryDao {
 	@Override
 	public List<Category> search(String keyword) {
 		List<Category> categories = new ArrayList<Category>();
-		String sql = "SELECT * FROM categories WHERE name LIKE ? ";
+		String sql = "SELECT * FROM categories WHERE name LIKE ?";
 		Connection conn = super.getJDBCConnection();
 
 		try {
@@ -136,7 +136,7 @@ public class CategoryDaoImpl extends JDBCConnection implements CategoryDao {
 
 	@Override
 	public Category get(String name) {
-		String sql = "SELECT * FROM categories WHERE name = ? ";
+		String sql = "SELECT * FROM categories WHERE name LIKE ?";
 		Connection con = super.getJDBCConnection();
 
 		try {

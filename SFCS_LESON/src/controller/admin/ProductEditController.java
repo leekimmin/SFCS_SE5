@@ -33,6 +33,9 @@ public class ProductEditController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html; charset=UTF-8");
+		req.setCharacterEncoding("UTF-8");
+		
 		String id = req.getParameter("id");
 		Product product = productService.get(Integer.parseInt(id));
 		List<Category> categories = categoryService.getAll();
@@ -47,7 +50,9 @@ public class ProductEditController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+		resp.setContentType("text/html; charset=UTF-8");
+		req.setCharacterEncoding("UTF-8");
+		
 		Product product = new Product();
 		DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
 		ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
@@ -61,11 +66,11 @@ public class ProductEditController extends HttpServlet {
 				} else if (item.getFieldName().equals("name")) {
 					product.setName(item.getString());
 				} else if (item.getFieldName().equals("cate")) {
-					product.setCategory(categoryService.get(item.getString()));
+					product.setCategory(categoryService.get(Integer.parseInt(item.getString())));
 				} else if (item.getFieldName().equals("des")) {
 					product.setDes(item.getString());
 				} else if (item.getFieldName().equals("price")) {
-					product.setPrice(Long.parseLong(item.getString()));
+					product.setPrice(Integer.parseInt(item.getString()));
 				} else if (item.getFieldName().equals("image")) {
 					if (item.getSize() > 0) {// neu co file d
 						String root = getServletContext().getRealPath("/");
@@ -79,16 +84,14 @@ public class ProductEditController extends HttpServlet {
 						String fileName = System.currentTimeMillis() + "." + ext;
 						File file = new File(path + "/" + fileName);
 						item.write(file);
-
+						
 						product.setImage(fileName);
-
 					} else {
 						product.setImage(null);
 					}
 				}
 			}
 
-			System.out.println("tét"+product.getCategory().getId());
 			productService.edit(product);
 
 			resp.sendRedirect(req.getContextPath() + "/admin/product/list");
