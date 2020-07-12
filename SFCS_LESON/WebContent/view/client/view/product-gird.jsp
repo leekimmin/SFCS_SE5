@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt"%> 
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,14 +61,12 @@
 		<!--=== Breadcrumbs v4 ===-->
 		<div class="breadcrumbs-v4">
 			<div class="container">
-				<span class="page-name">Product Filter Page</span>
-				<h1>
-					Maecenas <span class="shop-green">enim</span> sapien
-				</h1>
+				<span class="page-name">TRANG THỰC ĐƠN</span>
+				<h1>TẬN HƯỞNG CÙNG <span class="shop-red">SFCS</span></h1>
 				<ul class="breadcrumb-v4-in">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="">Product</a></li>
-					<li class="active">Product Filter Page</li>
+					<li><a href="${pageContext.request.contextPath }">Trang Chủ</a></li>
+					<li><a href="${pageContext.request.contextPath }/product/list">Thực Đơn</a></li>
+					<li class="active">Danh Sách Món Ăn</li>
 				</ul>
 			</div>
 			<!--/end container-->
@@ -79,39 +77,80 @@
 		<div class="content container">
 			<div class="row">
 				<div class="col-md-3 filter-by-block md-margin-bottom-60">
-					<h1>Filter By</h1>
+					<h1>Sắp xếp theo :</h1>
 					<div class="panel-group" id="accordion">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h2 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordion"
-										href="#collapseOne"> Brands <i class="fa fa-angle-down"></i>
+										href="#collapseOne"> Thương Hiệu <i class="fa fa-angle-down"></i>
 									</a>
 								</h2>
 							</div>
 							<div id="collapseOne" class="panel-collapse collapse in">
 								<div class="panel-body">
 									<ul class="list-unstyled checkbox-list">
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" checked /> <i></i> Calvin
-												Klein <small><a href="#">(23)</a></small>
+										<li><label class="checkbox"> 
+											<input type="checkbox" name="checkbox" checked /> <i></i>CƠM NGUYÊN KÝ<small><a href="#">(5)</small>
 										</label></li>
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" checked /> <i></i> Gucci <small><a
-													href="#">(4)</a></small>
+										<li><label class="checkbox"> 
+											<input type="checkbox" name="checkbox" checked /> <i></i>PHỞ 10 LÝ QUỐC SƯ<small><a href="#">(10)</small>
 										</label></li>
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" /> <i></i> Adidas <small><a
-													href="#">(11)</a></small>
+										<li><label class="checkbox"> 
+											<input type="checkbox" name="checkbox" checked /> <i></i>HOÀNG YẾN CUISINE<small><a href="#">(15)</small>
 										</label></li>
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" /> <i></i> Puma <small><a
-													href="#">(3)</a></small>
+										<li><label class="checkbox"> 
+											<input type="checkbox" name="checkbox" checked /> <i></i>KFC<small><a href="#">(20)</small>
 										</label></li>
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" /> <i></i> Zara <small><a
-													href="#">(87)</a></small>
+										<li><label class="checkbox"> 
+											<input type="checkbox" name="checkbox" checked /> <i></i>PIZZA HUT<small><a href="#">(18)</small>
 										</label></li>
+										<li><label class="checkbox"> 
+											<input type="checkbox" name="checkbox" checked /> <i></i>MCDONALD'S<small><a href="#">(11)</small>
+										</label></li>
+										<li><label class="checkbox"> 
+											<input type="checkbox" name="checkbox" checked /> <i></i>HOTTO<small><a href="#">(22)</small>
+										</label></li>
+										<li><label class="checkbox"> 
+											<input type="checkbox" name="checkbox" checked /> <i></i>HANURI<small><a href="#">(22)</small>
+										</label></li>
+										<li><label class="checkbox"> 
+											<input type="checkbox" name="checkbox" checked /> <i></i>TOUS LES JOURS<small><a href="#">(37)</small>
+										</label></li>
+										<li><label class="checkbox"> 
+											<input type="checkbox" name="checkbox" checked /> <i></i>THE ROYAL TEA<small><a href="#">(32)</small>
+										</label></li>
+										<li><label class="checkbox"> 
+											<input type="checkbox" name="checkbox" checked /> <i></i>PHÚC LONG COFFEE & TEA<small><a href="#">(35)</small>
+										</label></li>
+										<li><label class="checkbox"> 
+											<input type="checkbox" name="checkbox" checked /> <i></i>TRÀ SỮA TOCO TOCO<small><a href="#">(30)</small>
+										</label></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/end panel group-->
+					
+					<div class="panel-group" id="accordion-v2">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h2 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion-v2" href="#collapseTwo">
+										Phân Loại <i class="fa fa-angle-down"></i>
+									</a>
+								</h2>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse in">
+								<div class="panel-body">
+									<ul class="list-unstyled checkbox-list">
+										<li><a href="${pageContext.request.contextPath}/product/category?cate_id=1">ẨM THỰC VIỆT</a></li>
+										<li><a href="${pageContext.request.contextPath}/product/category?cate_id=2">THỨC ĂN NHANH</a></li>	
+										<li><a href="${pageContext.request.contextPath}/product/category?cate_id=3">LẨU & NƯỚNG</a></li>	
+										<li><a href="${pageContext.request.contextPath}/product/category?cate_id=4">MÓN TRÁNG MIỆNG</a></li>
+										<li><a href="${pageContext.request.contextPath}/product/category?cate_id=5">THỨC UỐNG</a></li>
+										<li><a href="${pageContext.request.contextPath}/product/category?cate_id=6">MÓN KHÁC</a></li>
 									</ul>
 								</div>
 							</div>
@@ -123,67 +162,32 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion-v2"
-										href="#collapseTwo"> Categories <i
-										class="fa fa-angle-down"></i>
+									<a data-toggle="collapse" data-parent="#accordion-v2" href="#collapseTwo">
+										Thương Hiệu <i class="fa fa-angle-down"></i>
 									</a>
 								</h2>
 							</div>
 							<div id="collapseTwo" class="panel-collapse collapse in">
 								<div class="panel-body">
 									<ul class="list-unstyled checkbox-list">
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" checked /> <i></i> Clothes
-												<small><a href="#">(23)</a></small>
-										</label></li>
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" checked /> <i></i> Glasses
-												<small><a href="#">(4)</a></small>
-										</label></li>
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" /> <i></i> Shoes <small><a
-													href="#">(11)</a></small>
-										</label></li>
+										<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=1">CƠM NGUYÊN KÝ</a><small>(5)</small></li>
+										<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=2">PHỞ 10 LÝ QUỐC SƯ</a><small>(10)</small></li>	
+										<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=3">HOÀNG YẾN CUISINE</a><small>(15)</small></li>	
+										<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=4">KFC</a><small>(20)</small></li>
+										<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=5">PIZZA HUT</a><small>(18)</small></li>
+										<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=6">MCDONALD'S</a><small>(11)</small></li>		
+										<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=7">HOTTO</a><small>(22)</small></li>
+										<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=8">HANURI</a><small>(22)</small></li>					
+										<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=9">TOUS LES JOURS</a><small>(37)</small></li>	
+										<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=10">THE ROYAL TEA</a><small>(32)</small></li>
+										<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=11">PHÚC LONG COFFEE & TEA</a><small>(35)</small></li>
+										<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=12">TRÀ SỮA TOCO TOCO</a><small>(30)</small></li>	
 									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!--/end panel group-->
-
-					<div class="panel-group" id="accordion-v3">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion-v3"
-										href="#collapseThree"> Size <i class="fa fa-angle-down"></i>
-									</a>
-								</h2>
-							</div>
-							<div id="collapseThree" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<ul class="list-unstyled checkbox-list">
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" /> <i></i> S <small><a
-													href="#">(23)</a></small>
-										</label></li>
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" checked /> <i></i> M <small><a
-													href="#">(4)</a></small>
-										</label></li>
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" /> <i></i> L <small><a
-													href="#">(11)</a></small>
-										</label></li>
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" /> <i></i> XL <small><a
-													href="#">(3)</a></small>
-										</label></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
+	
 					<!--/end panel group-->
 
 					<div class="panel-group" id="accordion-v4">
@@ -191,7 +195,7 @@
 							<div class="panel-heading">
 								<h2 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordion-v4"
-										href="#collapseFour"> Price <i class="fa fa-angle-down"></i>
+										href="#collapseFour"> Giá Tiền <i class="fa fa-angle-down"></i>
 									</a>
 								</h2>
 							</div>
@@ -208,45 +212,12 @@
 					</div>
 					<!--/end panel group-->
 
-					<div class="panel-group" id="accordion-v5">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion-v5"
-										href="#collapseFive"> Color <i class="fa fa-angle-down"></i>
-									</a>
-								</h2>
-							</div>
-							<div id="collapseFive" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<ul class="list-inline product-color-list">
-										<li><a href="#"><img src="${url}/img/colors/01.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="${url}/img/colors/02.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="${url}/img/colors/03.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="${url}/img/colors/04.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="${url}/img/colors/05.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="${url}/img/colors/06.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="${url}/img/colors/07.jpg"
-												alt=""></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--/end panel group-->
-
 					<div class="panel-group margin-bottom-30" id="accordion-v6">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h2 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordion-v6"
-										href="#collapseSix"> Rating <i class="fa fa-angle-down"></i>
+										href="#collapseSix"> Xếp Hạng <i class="fa fa-angle-down"></i>
 									</a>
 								</h2>
 							</div>
@@ -276,8 +247,8 @@
 				<div class="col-md-9">
 					<div class="row margin-bottom-5">
 						<div class="col-sm-4 result-category">
-							<h2>Men</h2>
-							<small class="shop-bg-red badge-results">45 Results</small>
+							<h2>Ẩm Thực Việt</h2>
+							<small class="shop-bg-red badge-results">45 Kết Quả</small>
 						</div>
 						<div class="col-sm-8">
 							<ul class="list-inline clear-both">
@@ -302,51 +273,52 @@
 									<h3>Hiển thị :</h3>
 									<div class="btn-group">
 										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 
-											20 <span class="caret"></span>
+											Tất cả <span class="caret"></span>
 										</button>
 										<ul class="dropdown-menu" role="menu">
-											<li><a href="#">Tất Cả</a></li>
+											<li><a href="#">20</a></li>
 											<li><a href="#">10</a></li>
 											<li><a href="#">5</a></li>
 											<li><a href="#">3</a></li>
+										</ul>
 									</div>
 								</li>
 							</ul>
 						</div>
 					</div>
 					<!--/end result category-->
-
+					
+					<f:setLocale value="vi_VN"/>
 					<div class="filter-results">
 						<div class="row illustration-v2 margin-bottom-30">
-						
-						
-						
-						
 						<c:forEach items="${productList }" var="p" >						
 							<c:url value="/image?fname=${p.image }" var="imgUrl"></c:url>
-							
 							<div class="col-md-4">
 								<div class="product-img product-img-brd">
-									<a href="${pageContext.request.contextPath }/product/detail?id=${p.id}"><img class="full-width img-responsive"
-										src="${p.image}" alt=""></a> <a
-										class="product-review" href="${pageContext.request.contextPath }/product/detail?id=${p.id}">Quick
-										review</a> <a class="add-to-cart" href="#"><i
-										class="fa fa-shopping-cart"></i>Add to cart</a>
-									<div class="shop-rgba-dark-green rgba-banner">New</div>
+									<a href="${pageContext.request.contextPath }/product/detail?id=${p.id}">
+										<img class="full-width img-responsive" src="${p.image}" alt="">
+									</a> 
+									<a class="product-review" href="${pageContext.request.contextPath }/product/detail?id=${p.id}">Nhận xét nhanh</a> 
+									<a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Thêm Vào Giỏ Hàng</a>
+									<div class="shop-rgba-dark-green rgba-banner">Món Mới</div>
 								</div>
-								<div
-									class="product-description product-description-brd margin-bottom-30">
+								<div class="product-description product-description-brd margin-bottom-30">
 									<div class="overflow-h margin-bottom-5">
 										<div class="pull-left">
 											<h4 class="title-price">
-												<a href="${pageContext.request.contextPath }/product/detail?id=${p.id}">Double-breasted</a>
+												<a href="${pageContext.request.contextPath }/product/detail?id=${p.id}">${p.name }</a>
 											</h4>
-											<span class="category text-uppercase">Men</span> <span
-												class="category">Suits - Blazers</span>
+											<span class="category text-uppercase">Ẩm Thực Việt</span>
 										</div>
 										<div class="product-price">
-											<span class="title-price">$ ${p.price }.0</span> <span
-												class="title-price line-through">$ ${p.price *1.25 }</span>
+											<span class="title-price">
+												<f:formatNumber value="${p.price * (100 - p.discount) / 100}" type="currency"/>
+											</span> 
+											<c:if test="${p.discount != '0'}">
+												<span class="title-price line-through">	
+													<f:formatNumber value="${p.price}" type="currency"/>
+												</span>
+											</c:if>
 										</div>
 									</div>
 									<ul class="list-inline product-ratings">
@@ -355,37 +327,29 @@
 										<li><i class="rating-selected fa fa-star"></i></li>
 										<li><i class="rating fa fa-star"></i></li>
 										<li><i class="rating fa fa-star"></i></li>
-										<li class="like-icon"><a
-											data-original-title="Add to wishlist" data-toggle="tooltip"
-											data-placement="left" class="tooltips" href="#"><i
-												class="fa fa-heart"></i></a></li>
+										<li class="like-icon">
+											<a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left" class="tooltips" href="#">
+												<i class="fa fa-heart"></i>
+											</a>
+										</li>
 									</ul>
 								</div>
 							</div>
-							
-							
-							</c:forEach>
-							
-							
-
+						</c:forEach>
 						<div class="row illustration-v2 margin-bottom-30">
 							<div class="col-md-4">
 								<div class="product-img product-img-brd">
-									<a href="#"><img class="full-width img-responsive"
-										src="${url}/img/blog/21.jpg" alt=""></a> <a
-										class="product-review" href="shop-ui-inner.html">Quick
-										review</a> <a class="add-to-cart" href="#"><i
-										class="fa fa-shopping-cart"></i>Add to cart</a>
+									<a href="#"><img class="full-width img-responsive" src="${url}/img/blog/21.jpg" alt=""></a> 
+									<a class="product-review" href="shop-ui-inner.html">Nhận xét nhanh</a>
+									<a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Thêm Vào Giỏ Hàng</a>
 								</div>
-								<div
-									class="product-description product-description-brd margin-bottom-30">
+								<div class="product-description product-description-brd margin-bottom-30">
 									<div class="overflow-h margin-bottom-5">
 										<div class="pull-left">
 											<h4 class="title-price">
-												<a href="shop-ui-inner.html">Double-breasted</a>
+												<a href="shop-ui-inner.html"></a>
 											</h4>
-											<span class="category text-uppercase">Men</span> <span
-												class="category">Suits - Blazers</span>
+											<span class="category text-uppercase">Men</span>
 										</div>
 										<div class="product-price">
 											<span class="title-price">$95.00</span>
@@ -397,10 +361,11 @@
 										<li><i class="rating-selected fa fa-star"></i></li>
 										<li><i class="rating fa fa-star"></i></li>
 										<li><i class="rating fa fa-star"></i></li>
-										<li class="like-icon"><a
-											data-original-title="Add to wishlist" data-toggle="tooltip"
-											data-placement="left" class="tooltips" href="#"><i
-												class="fa fa-heart"></i></a></li>
+										<li class="like-icon">
+											<a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left" class="tooltips" href="#">
+												<i class="fa fa-heart"></i>
+											</a>
+										</li>
 									</ul>
 								</div>
 							</div>

@@ -51,6 +51,12 @@ public class UserEditController extends HttpServlet {
 					user.setUsername(item.getString());
 				} else if (item.getFieldName().equals("password")) {
 					user.setPassword(item.getString());
+				} else if (item.getFieldName().equals("firstname")) {
+					user.setFirstname(item.getString());
+				} else if (item.getFieldName().equals("lastname")) {
+					user.setLastname(item.getString());
+				} else if (item.getFieldName().equals("gender")) {
+					user.setGender(item.getString());
 				} else if (item.getFieldName().equals("role")) {
 					user.setRoleId(Integer.parseInt(item.getString()));
 				} else if (item.getFieldName().equals("avatar")) {

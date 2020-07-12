@@ -6,7 +6,9 @@
 <head>
 <c:url value="/view/client/static" var="url"></c:url>
 <meta charset="UTF-8">
-<title>Danh Sách Món Ăn</title>
+<c:forEach items="${productSearchByCategory }" var="p" >
+	<title>${p.category.name }</title>
+</c:forEach>
 <!-- Favicon -->
 <link rel="shortcut icon" href="favicon.ico">
 
@@ -140,7 +142,7 @@
 													<li><i class="rating-selected fa fa-star"></i></li>
 													<li><i class="rating-selected fa fa-star"></i></li>
 													<li><i class="rating-selected fa fa-star"></i></li>
-													<li><i class="rating-selected fa fa-star"></i></li>
+													<li><i class="rating fa fa-star"></i></li>
 													<li><i class="rating fa fa-star"></i></li>
 												</ul>
 											</li>
@@ -149,9 +151,11 @@
 											<span class="title-price margin-right-10">
 												<f:formatNumber value="${p.price * (100 - p.discount) / 100}" type="currency"/>
 											</span> 
-											<span class="title-price line-through">
-												<f:formatNumber value="${p.price}" type="currency"/>
-											</span>
+											<c:if test="${p.discount != '0'}">
+												<span class="title-price line-through">	
+													<f:formatNumber value="${p.price}" type="currency"/>
+												</span>
+											</c:if>
 										</div>
 										<p class="margin-bottom-20 stall-name">${p.stall.name}</p>
 										<p class="margin-bottom-20">${p.des}</p>

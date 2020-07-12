@@ -37,10 +37,8 @@ public class CategoryAddController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String name = req.getParameter("name");
 		
-	
 		Category category = new Category();
 		category.setName(name);
-		
 
 		cateService.insert(category);
 

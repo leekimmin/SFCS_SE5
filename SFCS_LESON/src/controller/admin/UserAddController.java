@@ -47,11 +47,17 @@ public class UserAddController extends HttpServlet {
 			List<FileItem> items = servletFileUpload.parseRequest(req);
 			for (FileItem item : items) {
 				if (item.getFieldName().equals("email")) {
-					user.setEmail(item.getString());;
+					user.setEmail(item.getString());
 				} else if (item.getFieldName().equals("username")) {
 					user.setUsername(item.getString());
 				} else if (item.getFieldName().equals("password")) {
 					user.setPassword(item.getString());
+				} else if (item.getFieldName().equals("firstname")) {
+					user.setFirstname(item.getString());
+				} else if (item.getFieldName().equals("lastname")) {
+					user.setLastname(item.getString());
+				} else if (item.getFieldName().equals("gender")) {
+					user.setGender(item.getString());
 				} else if (item.getFieldName().equals("role")) {
 					user.setRoleId(Integer.parseInt(item.getString()));;
 				} else if (item.getFieldName().equals("avatar")) {

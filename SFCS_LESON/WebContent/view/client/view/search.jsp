@@ -30,7 +30,7 @@
 			<div class="panel-heading">
 				<h2 class="panel-title">
 					<a data-toggle="collapse" data-parent="#accordion-v2" href="#collapseTwo">
-						Phân Loại<i class="fa fa-angle-down"></i>
+						Phân Loại <i class="fa fa-angle-down"></i>
 					</a>
 				</h2>
 			</div>
@@ -50,48 +50,36 @@
 	</div>
 	<!--/end panel group-->
 
-	<div class="panel-group" id="accordion-v3">
+	<div class="panel-group" id="accordion-v2">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h2 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion-v3" href="#collapseThree">
-						Nhãn Hàng <i class="fa fa-angle-down"></i>
+					<a data-toggle="collapse" data-parent="#accordion-v2" href="#collapseTwo">
+						Thương Hiệu <i class="fa fa-angle-down"></i>
 					</a>
 				</h2>
 			</div>
-			<div id="collapseThree" class="panel-collapse collapse in">
+			<div id="collapseTwo" class="panel-collapse collapse in">
 				<div class="panel-body">
 					<ul class="list-unstyled checkbox-list">
-						
-						<li><label class="checkbox"> <input type="checkbox" name="checkbox" /> <i></i> 
-							Nguyên Ký <small><a href="#">(6)</a></small>
-						</label></li>
-						<li><label class="checkbox"> <input type="checkbox" name="checkbox" checked /> <i></i> 
-							Phúc Long <small><a href="#">(27)</a></small>
-						</label></li>
-						<li><label class="checkbox"> <input type="checkbox" name="checkbox" /> <i></i> 
-							KFC <small><a href="#">(14)</a></small>
-						</label></li>
-						<li><label class="checkbox"> <input type="checkbox" name="checkbox" /> <i></i> 
-							Pizza Hut <small><a href="#">(7)</a></small>
-						</label></li>
-						<li><label class="checkbox"> <input type="checkbox" name="checkbox" checked /> <i></i> 
-							McDonald's <small><a href="#">(23)</a></small>
-						</label></li>
-						<li><label class="checkbox"> <input type="checkbox" name="checkbox" /> <i></i> 
-							Hotto <small><a href="#">(12)</a></small>
-						</label></li>
-						<li><label class="checkbox"> <input type="checkbox" name="checkbox" /> <i></i> 
-							The Royal Tea <small><a href="#">(20)</a></small>
-						</label></li>
-						<li><label class="checkbox"> <input type="checkbox" name="checkbox" /> <i></i> 
-							Phở 10 Lý Quốc Sư <small><a href="#">(18)</a></small>
-						</label></li>
+						<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=1">CƠM NGUYÊN KÝ</a><small>(5)</small></li>
+						<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=2">PHỞ 10 LÝ QUỐC SƯ</a><small>(10)</small></li>	
+						<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=3">HOÀNG YẾN CUISINE</a><small>(15)</small></li>	
+						<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=4">KFC</a><small>(20)</small></li>
+						<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=5">PIZZA HUT</a><small>(18)</small></li>
+						<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=6">MCDONALD'S</a><small>(11)</small></li>		
+						<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=7">HOTTO</a><small>(22)</small></li>
+						<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=8">HANURI</a><small>(22)</small></li>	
+						<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=9">TOUS LES JOURS</a><small>(37)</small></li>	
+						<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=10">THE ROYAL TEA</a><small>(32)</small></li>
+						<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=11">PHÚC LONG COFFEE & TEA</a><small>(35)</small></li>
+						<li><a href="${pageContext.request.contextPath}/product/stall?stall_id=12">TRÀ SỮA TOCO TOCO</a><small>(30)</small></li>	
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
+	
 	<!--/end panel group-->
 
 	<div class="panel-group" id="accordion-v4">

@@ -42,73 +42,51 @@
                                             <div class="row">
                                                 <div class="col-md-2 col-sm-6">
                                                     <h3 class="mega-menu-heading">Ẩm thực Việt</h3>
+                                                    
                                                     <ul class="list-unstyled style-list">
-                                                        <li><a href="#">New in</a></li>
-                                                        <li><a href="#">Coats &amp; Jackets</a></li>
-                                                        <li><a href="#">Jeans</a></li>
-                                                        <li><a href="#">Dresses</a></li>
-                                                        <li><a href="#">Shorts</a> <span class="label label-danger-shop">New</span></li>
-                                                        <li><a href="#">Skirts</a></li>
-                                                        <li><a href="#">T-Shirts</a></li>
+                                                        <li><a href="${pageContext.request.contextPath }/product/detail?id=2">Cơm Gà Xối Mỡ</a><span class="label label-danger-shop">Mới</span></li>
+                                                        <li><a href="${pageContext.request.contextPath }/product/detail?id=1">Phở Bò Tái Chín</a></li>
+                                                        
                                                     </ul>
                                                 </div>
 
                                                 <div class="col-md-2 col-sm-6">
                                                     <h3 class="mega-menu-heading">Thức ăn nhanh</h3>
                                                     <ul class="list-unstyled style-list">
-                                                        <li><a href="#">All accessories</a></li>
-                                                        <li><a href="#">Bags &amp; Purses</a></li>
-                                                        <li><a href="#">Scarvs &amp; Hats</a></li>
-                                                        <li><a href="#">Jewellery</a></li>
-                                                        <li><a href="#">Fragrance &amp; Beauty</a></li>
+                                                         <li><a href="${pageContext.request.contextPath }/product/detail?id=6">Combo Gà Giòn Cay</a><span class="label label-danger-shop">Mới</span></li>
+                                                         <li><a href="${pageContext.request.contextPath }/product/detail?id=7">Pizza Hải Sản</a></li>
+                                                         <li><a href="${pageContext.request.contextPath }/product/detail?id=8">Burger Bò Phô Mai</a></li>
                                                     </ul>                                                  
                                                 </div>
 
                                                 <div class="col-md-2 col-sm-6">
                                                     <h3 class="mega-menu-heading">Lẩu & Nướng</h3>
                                                     <ul class="list-unstyled style-list">
-                                                        <li><a href="#">New in</a></li>
-                                                        <li><a href="#">Coats &amp; Jackets</a> <span class="label label-danger-shop">New</span></li>
-                                                        <li><a href="#">Jeans</a></li>
-                                                        <li><a href="#">Dresses</a></li>
+                                                        <li><a href="${pageContext.request.contextPath }/product/detail?id=4">Lẩu Cua Cà Ri</a></li>
                                                     </ul>
                                                 </div>        
 
                                                 <div class="col-md-2 col-sm-6">
                                                     <h3 class="mega-menu-heading">Thức uống</h3>
                                                     <ul class="list-unstyled style-list">
-                                                        <li><a href="#">New in</a></li>
-                                                        <li><a href="#">Coats &amp; Jackets</a></li>
-                                                        <li><a href="#">Jeans</a></li>
-                                                        <li><a href="#">Dresses</a></li>
-                                                        <li><a href="#">Shorts</a> <span class="label label-danger-shop">New</span></li>
-                                                        <li><a href="#">Skirts</a></li>
-                                                        <li><a href="#">T-shirts</a></li>
+                                                       <li><a href="${pageContext.request.contextPath }/product/detail?id=10">Trà Đào Cam Sả</a><span class="label label-danger-shop">Mới</span></li>
+                                                       <li><a href="${pageContext.request.contextPath }/product/detail?id=11">Trà Sữa Phúc Long (Lạnh)</a></li>
+                                                       <li><a href="${pageContext.request.contextPath }/product/detail?id=12">Sữa Tươi Trân Châu Đường Hổ</a></li>
                                                     </ul>
                                                 </div>
 
                                                 <div class="col-md-2 col-sm-6">
                                                     <h3 class="mega-menu-heading">Tráng miệng</h3>
                                                     <ul class="list-unstyled style-list">
-                                                        <li><a href="#">All accessories</a></li>
-                                                        <li><a href="#">Bags &amp; Purses</a></li>
-                                                        <li><a href="#">Scarvs &amp; Hats</a></li>
-                                                        <li><a href="#">Jewellery</a></li>
-                                                        <li><a href="#">Fragrance &amp; Beauty</a></li>
+                                                        <li><a href="${pageContext.request.contextPath }/product/detail?id=9">Bánh Crepe Chuối</a></li>
                                                     </ul>                                                    
                                                 </div>
 
                                                 <div class="col-md-2 col-sm-6">
                                                     <h3 class="mega-menu-heading">Các món khác</h3>
                                                     <ul class="list-unstyled style-list">
-                                                        <li><a href="#">New in</a></li>
-                                                        <li><a href="#">Coats &amp; Jackets</a> <span class="label label-danger-shop">New</span></li>
-                                                        <li><a href="#">Jeans</a></li>
-                                                        <li><a href="#">Dresses</a></li>
-                                                        <li><a href="#">Shorts</a></li>
-                                                        <li><a href="#">Sports</a></li>
-                                                        <li><a href="#">Socks</a></li>
-                                                        <li><a href="#">Tights</a> <span class="label label-danger-shop">New</span></li>
+                                                        <li><a href="${pageContext.request.contextPath }/product/detail?id=3">Kimbap</a><span class="label label-danger-shop">Mới</span></li>
+                                                        <li><a href="${pageContext.request.contextPath }/product/detail?id=5">Bò Ba Chỉ Với Trứng</a></li>
                                                     </ul>
                                                 </div>
                                             </div><!--/end row-->
@@ -125,8 +103,8 @@
                         <!-- End Khuyến mãi -->
                         
                         <!-- Về chúng tôi -->
-                        <li><a href="${pageContext.request.contextPath }">Về chúng tôi</a></li>
-                        <!-- Aend Về chúng tôi -->
+                        <li><a href="${pageContext.request.contextPath }">Giới thiệu</a></li>
+                        <!-- End Giới thiệu -->
                     </ul>
                     <!-- End Nav Menu -->                    
                 </div>

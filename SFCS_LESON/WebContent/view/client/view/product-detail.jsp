@@ -1,12 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt"%> 
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <c:url value="/view/client/static" var="url"></c:url>
 <meta charset="UTF-8">
-<title>Chi tiết sản phẩm</title>
+<title>Chi Tiết Món Ăn</title>
 <!-- Favicon -->
 <link rel="shortcut icon" href="favicon.ico">
 
@@ -72,12 +72,13 @@
 			<div class="container">
 				<ul class="breadcrumb-v5">
 					<li><a href="index.html"><i class="fa fa-home"></i></a></li>
-					<li><a href="#">Sản phẩm</a></li>
+					<li><a href="#">Món Ăn</a></li>
 					<li class="active">Chi tiết</li>
 				</ul>
 			</div>
 			<!-- End Breadcrumbs v5 -->
-
+			
+			<f:setLocale value="vi_VN"/>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 md-margin-bottom-50">
@@ -86,12 +87,8 @@
 							<div class="master-slider ms-skin-default" id="masterslider">
 								<div class="ms-slide">
 									<c:url value="/image?fname=${product.image }" var="imgUrl"></c:url>
-									<img class="ms-brd" src="${url}/img/blank.gif"
-										data-src="${imgUrl}" alt="${product.name }">
-
+									<img class="ms-brd" src="${url}/img/blank.gif" data-src="${imgUrl}" alt="${product.name }">
 								</div>
-
-
 							</div>
 							<!-- End Master Slider -->
 						</div>
@@ -102,82 +99,71 @@
 							<h2>${product.name }</h2>
 							<ul class="list-inline shop-product-social">
 								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fa fa-youtube"></i></a></li>
 							</ul>
 						</div>
 						<!--/end shop product social-->
 
-						<ul class="list-inline product-ratings margin-bottom-30">
+						<ul class="list-inline product-ratings margin-bottom-20">
 							<li><i class="rating-selected fa fa-star"></i></li>
 							<li><i class="rating-selected fa fa-star"></i></li>
 							<li><i class="rating-selected fa fa-star"></i></li>
 							<li><i class="rating fa fa-star"></i></li>
 							<li><i class="rating fa fa-star"></i></li>
-							<li class="product-review-list"><span>(1) <a href="#">Review</a>
-									| <a href="#"> Add Review</a></span></li>
+							<li class="product-review-list"><span>(1) <a href="#">Đánh Giá</a> | <a href="#"> Thêm Đánh Giá</a></span></li>
 						</ul>
 						<!--/end shop product ratings-->
-						${product.des } <br>
-						<ul class="list-inline shop-product-prices margin-bottom-30">
-							<li class="shop-red">$ ${product.price }.0</li>
-							<li class="line-through">${product.price * 1.25 }</li>
-							<li><small class="shop-bg-red time-day-left"> Best
-									Sale </small></li>
+						
+						<span class="stall-name"> ${product.stall.name } </span> <br>
+						<span class="deriptoion"> ${product.des } </span> <br> <br>
+						<ul class="list-inline margin-bottom-20">
+							<li class="shop-product-prices shop-red"><f:formatNumber value="${product.price * (100 - product.discount) / 100}" type="currency"/></li>
+							<c:if test="${product.discount != '0'}">
+								<li class="line-through"><f:formatNumber value="${product.price}" type="currency"/></li>			
+							</c:if>
+							<li><small class="shop-bg-red time-day-left"> Bán Chạy Nhất </small></li>
 						</ul>
 						<!--/end shop product prices-->
-
-						<h3 class="shop-product-title">Size</h3>
-						<ul class="list-inline product-size margin-bottom-30">
-							<li><input type="radio" id="size-1" name="size"> <label
-								for="size-1">S</label></li>
-							<li><input type="radio" id="size-2" name="size"> <label
-								for="size-2">M</label></li>
-							<li><input type="radio" id="size-3" name="size" checked>
-								<label for="size-3">L</label></li>
-							<li><input type="radio" id="size-4" name="size"> <label
-								for="size-4">XL</label></li>
-						</ul>
-						<!--/end product size-->
-
-						<h3 class="shop-product-title">Color</h3>
-						<ul class="list-inline product-color margin-bottom-30">
-							<li><input type="radio" id="color-1" name="color"> <label
-								class="color-one" for="color-1"></label></li>
-							<li><input type="radio" id="color-2" name="color" checked>
-								<label class="color-two" for="color-2"></label></li>
-							<li><input type="radio" id="color-3" name="color"> <label
-								class="color-three" for="color-3"></label></li>
-						</ul>
-						<!--/end product color-->
+						
+						<c:if test="${product.category.id == '5'}">
+							<h3 class="shop-product-title">Size</h3>
+							<ul class="list-inline product-size margin-bottom-20">
+								<li><input type="radio" id="size-1" name="size"><label for="size-1">S</label></li>
+								<li><input type="radio" id="size-2" name="size"><label for="size-2">M</label></li>
+								<li><input type="radio" id="size-3" name="size" checked><label for="size-3">L</label></li>
+							</ul>
+							<h3 class="shop-product-title">Toping</h3>
+							<ul class="list-inline product-top margin-bottom-10">
+								<li><label class="checkbox"> <input type="checkbox" name="checkbox"/> <i></i> Trân Châu Trắng </label></li>
+								<li></li>
+								<li><label class="checkbox"> <input type="checkbox" name="checkbox"/> <i></i> Trân Châu Đen </label></li>
+								<li></li>
+								<li><label class="checkbox"> <input type="checkbox" name="checkbox"/> <i></i> Bánh Plan Trứng </label></li>
+							</ul>
+						</c:if>
+						<!--/end product size and toping-->
 
 						<h3 class="shop-product-title">Số Lượng</h3>
 						<div class="margin-bottom-40">
-
 							<form name="f1" class="product-quantity sm-margin-bottom-20"
 								method="get" action="<c:url value="/member/cart/add"></c:url>">
 								<input type="text" value="${product.id }" name="pId" hidden="">
-								<button type='button' class="quantity-button" name='subtract'
-									onclick='javascript: subtractQty();' value='-'>-</button>
-								<input type='text' class="quantity-field" name='quantity'
-									value="1" id='qty' />
-								<button type='button' class="quantity-button" name='add'
-									onclick='javascript: document.getElementById("qty").value++;'
-									value='+'>+</button>
+								<button type='button' class="quantity-button" name='subtract' onclick='javascript: subtractQty();' value='-'>-</button>
+								<input type='text' class="quantity-field" name='quantity' value="1" id='qty' />
+								<button type='button' class="quantity-button" name='add' onclick='javascript: document.getElementById("qty").value++;' value='+'>+</button>
 								<button type="submit" class="btn-u btn-u-sea-shop btn-u-lg">Thêm Vào Giỏ Hàng</button>
 							</form>
-
-
 						</div>
 						<!--/end product quantity-->
-
+						
+						<ul><br></ul>
 						<ul class="list-inline add-to-wishlist add-to-wishlist-brd">
 							<li class="wishlist-in"><i class="fa fa-heart"></i> <a
 								href="#">Thêm Vào Yêu Thích</a></li>
 						</ul>
 						<p class="wishlist-category">
-							<strong>Categories:</strong> <a href="#">${product.category.name },</a>
+							<strong>Phân Loại:</strong> <a href="#">${product.category.name}</a>
 						</p>
 					</div>
 				</div>
@@ -197,7 +183,7 @@
 						<h3>Đặt hàng nhanh chóng, tiện lợi</h3>
 						<p> Chỉ với 1 cú click chuột tại nhà, SCFC sẽ đem đến
 						cho bạn những bữa ăn ngon miệng với tốc độ sấm sét...</p>
-						<a href="#">+Read More</a>
+						<a href="#">+Xem thêm</a>
 					</div>
 				</div>
 				<div class="col-md-6 product-service md-margin-bottom-30">
@@ -208,7 +194,7 @@
 						<h3>Chăm sóc khách hàng</h3>
 						<p>Phương châm của SCFS là khách hàng còn hơn cả thượng đế. Chúng tôi
 						luôn sẵn sàng lắng nghe những ý kiến đóng góp của quý khách hàng...</p>
-						<a href="#">+Read More</a>
+						<a href="#">+Xem thêm</a>
 					</div>
 				</div>
 			</div>
@@ -217,10 +203,8 @@
 
 			<div class="tab-v5">
 				<ul class="nav nav-tabs" role="tablist">
-					<li class="active"><a href="#description" role="tab"
-						data-toggle="tab">Mô tả</a></li>
-					<li><a href="#reviews" role="tab" data-toggle="tab">Nhận xét
-							(1)</a></li>
+					<li class="active"><a href="#description" role="tab" data-toggle="tab">Mô tả</a></li>
+					<li><a href="#reviews" role="tab" data-toggle="tab">Nhận xét (1)</a></li>
 				</ul>
 
 				<div class="tab-content">
@@ -228,20 +212,16 @@
 					<div class="tab-pane fade in active" id="description">
 						<div class="row">
 							<div class="col-md-7">
-								<p>Morbi non semper est, eget tincidunt turpis. Vivamus
-									sollicitudin sodales nisi, et venenatis turpis Vivamus
-									sollicitudin ultricies eget. Fusce vitae neque blandit lectus
-									faucibus aliquet nec vel ipsum. Integer mattis lacinia felis
-									vel sollicitudin molestie.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+								Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 								<br>
-
 								<h3 class="heading-md margin-bottom-20">Specifies</h3>
 								<div class="row">
 									<div class="col-sm-6">
 										<ul class="list-unstyled specifies-list">
 											<li><i class="fa fa-caret-right"></i>Brand Name: <span>Lacoste</span></li>
-											<li><i class="fa fa-caret-right"></i>Technics: <span>Computer</span>
-												Knitted</li>
+											<li><i class="fa fa-caret-right"></i>Technics: <span>Computer</span> Knitted</li>
 											<li><i class="fa fa-caret-right"></i>Sleeve Length: <span>Full</span></li>
 											<li><i class="fa fa-caret-right"></i>Sleeve Style: <span>Regular</span></li>
 											<li><i class="fa fa-caret-right"></i>Pattern Type: <span>PAID</span></li>
@@ -253,8 +233,7 @@
 											<li><i class="fa fa-caret-right"></i>Material: <span>Cotton,Nylon</span></li>
 											<li><i class="fa fa-caret-right"></i>Item Type: <span>Pullovers</span></li>
 											<li><i class="fa fa-caret-right"></i>Thickness: <span>Thin</span></li>
-											<li><i class="fa fa-caret-right"></i>Model Number: <span>TM-11013
-											</span></li>
+											<li><i class="fa fa-caret-right"></i>Model Number: <span>TM-11013</span></li>
 											<li><i class="fa fa-caret-right"></i>category: <span>Men</span></li>
 											<li><i class="fa fa-caret-right"></i>MATERIAL: <span>80%COTTON+10%NYLON</span></li>
 										</ul>
@@ -281,7 +260,7 @@
 									<h4>
 										Amelia <small>22 ngày trước</small>
 									</h4>
-									<p>Giao diện của trang nhìn rất đẹp</p>
+									<p>Giao diện của trang nhìn đẹp, món ăn cũng rất ngon và nhanh chóng</p>
 									<ul class="list-inline product-ratings">
 										<li class="reply"><a href="#">Phản hồi</a></li>
 										<li class="pull-right">
@@ -289,7 +268,7 @@
 												<li><i class="rating-selected fa fa-star"></i></li>
 												<li><i class="rating-selected fa fa-star"></i></li>
 												<li><i class="rating-selected fa fa-star"></i></li>
-												<li><i class="rating fa fa-star"></i></li>
+												<li><i class="rating-selected fa fa-star"></i></li>
 												<li><i class="rating fa fa-star"></i></li>
 											</ul>
 										</li>

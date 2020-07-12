@@ -13,14 +13,14 @@ import model.Product;
 import service.ProductService;
 import service.impl.ProductServiceImpl;
 
-@WebServlet(urlPatterns="/product/category")
-public class ProductSearchByCategory extends HttpServlet {
-	ProductService productService = new ProductServiceImpl();
+@WebServlet(urlPatterns="/product/stall")
+public class ProductSearchByStall extends HttpServlet {
+	ProductService productService=new ProductServiceImpl();
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String cate_id = req.getParameter("cate_id");
-		List<Product> productSearchByCategory = productService.searchByCategory(Integer.parseInt(cate_id));
-		req.setAttribute("productSearchByCategory", productSearchByCategory);
-		req.getRequestDispatcher("/view/client/view/productSearchByCategory.jsp").forward(req, resp);
+		String stall_id = req.getParameter("stall_id");
+		List<Product> productSearchByStall = productService.searchByStall(Integer.parseInt(stall_id));
+		req.setAttribute("productSearchByStall", productSearchByStall);
+		req.getRequestDispatcher("/view/client/view/productSearchByStall.jsp").forward(req, resp);
 	}
 }

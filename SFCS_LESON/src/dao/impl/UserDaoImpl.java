@@ -30,14 +30,14 @@ public class UserDaoImpl extends JDBCConnection implements UserDao {
 			ps.setDate(6, Date.valueOf(user.getBirthday()));
 			ps.setString(7, user.getGender());
 			try {
-				if(user.getRoleId()==2) {
-					roleId=2;
+				if(user.getRoleId() == 2) {
+					roleId = 2;
 				}else {
-					roleId=1;
+					roleId = 1;
 				}
 
 			} catch (Exception e) {
-				roleId=1;
+				roleId = 1;
 			}
 			ps.setInt(8, roleId);
 			;
@@ -49,17 +49,22 @@ public class UserDaoImpl extends JDBCConnection implements UserDao {
 
 	@Override
 	public void edit(User user) {
-		String sql = "UPDATE users SET email = ? , username = ?, password = ?, avatar = ?, role_id = ? WHERE user_id = ?";
+		String sql = "UPDATE users SET first_name = ?, last_name = ?, birth_date = ?, gender = ?, phone = ?, email = ?, address = ?, password = ?, avatar = ?, role_id = ? WHERE user_id = ?";
 		Connection con = super.getJDBCConnection();
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1, user.getEmail());
-			ps.setString(2, user.getUsername());
-			ps.setString(3, user.getPassword());
-			ps.setString(4, user.getAvatar());
-			ps.setInt(5, user.getRoleId());
-			ps.setInt(6, user.getId());
+			ps.setString(1, user.getFirstname());
+			ps.setString(2, user.getLastname());
+			ps.setDate(3, Date.valueOf(user.getBirthday()));
+			ps.setString(4, user.getGender());
+			ps.setString(5, user.getPhone());
+			ps.setString(6, user.getEmail());
+			ps.setString(7, user.getAddress());
+			ps.setString(8, user.getPassword());
+			ps.setString(9, user.getAvatar());
+			ps.setInt(10, user.getRoleId());
+			ps.setInt(11, user.getId());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -129,6 +134,12 @@ public class UserDaoImpl extends JDBCConnection implements UserDao {
 				User user = new User();
 
 				user.setId(rs.getInt("user_id"));
+				user.setFirstname(rs.getString("first_name"));
+				user.setLastname(rs.getString("last_name"));
+				user.setBirthday(rs.getString("birth_date"));
+				user.setGender(rs.getString("gender"));
+				user.setPhone(rs.getString("phone"));
+				user.setAddress(rs.getString("address"));
 				user.setEmail(rs.getString("email"));
 				user.setUsername(rs.getString("username"));
 				user.setPassword(rs.getString("password"));

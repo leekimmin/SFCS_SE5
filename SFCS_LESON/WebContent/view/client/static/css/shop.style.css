@@ -11,7 +11,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: black;
+	color: #000;
 }
 
 p {
@@ -139,7 +139,7 @@ li:first-child {
 .illustration-v1.illustration-img1 {
 	width: 100%;
 	overflow: hidden;
-	background-image: url(../img/blog/07.jpg);
+	background-image: url(../img/blog/07_1.jpg);
 	transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -191,7 +191,7 @@ li:first-child {
 .illustration-v1.illustration-img2 {
 	width: 100%;
 	overflow: hidden;
-	background-image: url(../img/blog/08.jpg);
+	background-image: url(../img/blog/08_01.jpg);
 	transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -825,7 +825,7 @@ li:first-child {
 
 .shop-product h2 {
 	float: left;
-	color: #687074;
+	color: #000;
 	font-size: 26px;
 	text-transform: uppercase;
 }
@@ -868,16 +868,23 @@ li:first-child {
 	color: #d10000;
 }
 
-/*Shop Product Prices*/
-.shop-product .shop-product-prices li:first-child {
-	padding-left: 0;
+/*Stall name */
+.shop-product .stall-name {
+	font-size: 26px;
+	color: #000;
 }
 
-.shop-product .shop-product-prices li {
+/*Shop Product Prices*/
+.shop-product .shop-product-prices li:first-child {	
+	padding-left: 0;	
+}
+
+.shop-product .shop-product-prices {
 	font-size: 30px;
 }
 
 .shop-product .line-through {
+	font-size: 25px;
 	color: #bbb;
 	text-decoration: line-through;
 }
@@ -895,7 +902,7 @@ li:first-child {
 /*Shop Product Title*/
 .shop-product h3.shop-product-title {
 	color: #555;
-	font-size: 14px;
+	font-size: 17px;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
@@ -907,13 +914,13 @@ li:first-child {
 }
 
 .shop-product .product-size label {
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	float: right;
-	padding: 6px 0;
+	padding-top: 4px;
 	display: block;
 	color: #dedede;
-	font-size: 24px;
+	font-size: 20px;
 	text-align: center;
 	background: #f8f8f8;
 	text-transform: uppercase;
@@ -937,6 +944,86 @@ li:first-child {
 	border-color: #d10000;
 }
 
+/*Product Top*/
+.shop-product .checkbox {
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+
+.shop-product .checkbox {
+	color: #555;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 25px;
+	padding-left: 27px;
+}
+
+.shop-product .checkbox:hover {
+	color: #d10000;
+}
+
+.shop-product .checkbox input {
+	left: -9999px;
+	position: absolute;
+}
+
+.shop-product .checkbox i {
+	left: 0;
+	top: 2px;
+	width: 20px;
+	height: 20px;
+	outline: none;
+	display: block;
+	background: #fff;
+	border-width: 2px;
+	position: absolute;
+	border-style: solid;
+}
+
+.shop-product .checkbox input + i:after {
+	opacity: 0;
+	position: absolute;
+}
+
+.shop-product .checkbox input + i:after {
+	top: -3px;
+	left: -2px;
+	width: 20px;
+	height: 20px;
+	content: '\f00c';
+	text-align: center;
+	font: normal 12px/22px FontAwesome;
+}
+
+.shop-product .checkbox input:checked + i:after {
+	opacity: 1;
+}
+
+.shop-product .checkbox i {
+	border-color: #555;
+	-ms-transition: border-color 0.3s;
+	-moz-transition: border-color 0.3s;
+	-webkit-transition: border-color 0.3s;
+}
+
+.shop-product .checkbox:hover i {
+	border-color: #d10000;
+}
+
+.shop-product .checkbox input:focus + i {
+	border-color: #333;
+}
+
+.shop-product .checkbox input + i:after {
+	color: #d10000;
+}
+
+.shop-product .checkbox input:checked + i {
+	border-color: #d10000;	
+}
+
 /*Product Quantity*/
 .shop-product .product-quantity {
 	float: left;
@@ -945,8 +1032,8 @@ li:first-child {
 
 .shop-product .quantity-button {
 	color: #555;
-	width: 55px;
-	height: 50px;
+	width: 45px;
+	height: 45px;
 	padding: 5px;
 	border: none;
 	outline: none;
@@ -961,8 +1048,8 @@ li:first-child {
 }
 
 .shop-product .quantity-field {
-	width: 55px;
-	height: 50px;
+	width: 45px;
+	height: 45px;
 	outline: none;
 	margin: 0 -4px;
 	font-size: 20px;
@@ -1293,6 +1380,7 @@ li:first-child {
 .checkbox-list .checkbox:hover {
 	color: #d10000;
 }
+
 .checkbox-list .checkbox input {
 	left: -9999px;
 	position: absolute;
@@ -1352,11 +1440,11 @@ li:first-child {
 	border-color: #d10000;	
 }
 
-.checkbox-list .checkbox small {
+.checkbox-list small {
 	float: right;
 }
 
-.checkbox-list .checkbox small a {
+.checkbox-list small a {
 	color: #555;
 	font-size: 12px;
 }
@@ -1445,7 +1533,7 @@ li:first-child {
 	top: 12px;
 	color: #fff;
 	font-size: 12px;
-	padding: 3px 8px;
+	padding: 3px 0px;
 	position: relative;
 }
 
@@ -1533,7 +1621,7 @@ li:first-child {
 }
 
 .filter-results .category {
-	color: #ffc400;
+	color: #d10000;
 }
 
 .filter-results .stall-name {
@@ -1548,10 +1636,10 @@ li:first-child {
 	text-decoration: line-through;
 }
 
-.filter-results .rating {
+.rating {
 	color: #bbb;
 }
-.filter-results .rating-selected {
+.rating-selected {
 	color: #ffc400;
 }
 

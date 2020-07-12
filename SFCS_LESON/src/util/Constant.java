@@ -9,6 +9,7 @@ public class Constant {
 		public static final String REGISTER = "/view/client/view/register.jsp";
 		public static final String HOME = "/view/client/view/index.jsp";
 		public static final String DASHBOARD = "/view/admin/view/login.jsp";
+		public static final String MEMBER = "/view/client/view/myaccount.jsp";
 
 	}
 }

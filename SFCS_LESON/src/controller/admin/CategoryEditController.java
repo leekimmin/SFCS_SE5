@@ -24,7 +24,7 @@ import service.impl.CategoryServiceImpl;
 import service.impl.UserServiceImpl;
 
 @WebServlet(urlPatterns = { "/admin/category/edit" })
-public class CategoryeEditController extends HttpServlet {
+public class CategoryEditController extends HttpServlet {
 	CategoryService cateService = new CategoryServiceImpl();
 
 	@Override

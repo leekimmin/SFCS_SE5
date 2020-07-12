@@ -33,8 +33,8 @@ var Login = function () {
 					},
 	                email:
 	                {
-	                    required: 'Please enter your email address',
-	                    email: 'Please enter a VALID email address'
+	                    required: 'Vui lòng nhập địa chỉ email!',
+	                    email: 'Vui lòng nhập một địa chỉ email hợp lệ!'
 	                },
 	                password:
 	                {

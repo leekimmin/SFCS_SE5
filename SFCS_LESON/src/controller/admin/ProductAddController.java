@@ -18,24 +18,30 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import model.Category;
 import model.Product;
+import model.Stall;
 import model.User;
 import service.CategoryService;
 import service.ProductService;
+import service.StallService;
 import service.UserService;
 import service.impl.CategoryServiceImpl;
 import service.impl.ProductServiceImpl;
+import service.impl.StallServiceImpl;
 import service.impl.UserServiceImpl;
 
 @WebServlet(urlPatterns = { "/admin/product/add" })
 public class ProductAddController extends HttpServlet {
 	ProductService productService = new ProductServiceImpl();
 	CategoryService categoryService = new CategoryServiceImpl();
+	StallService stallService = new StallServiceImpl();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		List<Category> categories = categoryService.getAll();
-
+		List<Stall> stalls = stallService.getAll();
+		
 		req.setAttribute("categories", categories);
+		req.setAttribute("stalls", stalls);
 
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/view/add-product.jsp");
 		dispatcher.forward(req, resp);
@@ -55,10 +61,16 @@ public class ProductAddController extends HttpServlet {
 					product.setName(item.getString());
 				} else if (item.getFieldName().equals("category")) {
 					product.setCategory(categoryService.get(Integer.parseInt(item.getString())));
+				} else if (item.getFieldName().equals("stall")) {
+					product.setStall(stallService.get(Integer.parseInt(item.getString())));
 				} else if (item.getFieldName().equals("price")) {
 					product.setPrice(Integer.parseInt(item.getString()));
+				} else if (item.getFieldName().equals("quantity")) {
+					product.setQuantity(Integer.parseInt(item.getString()));
+				} else if (item.getFieldName().equals("discount")) {
+					product.setDiscount(Integer.parseInt(item.getString()));
 				} else if (item.getFieldName().equals("des")) {
-					product.setDes(item.getString());;
+					product.setDes(item.getString());
 				} else if (item.getFieldName().equals("image")) {
 					String root = getServletContext().getRealPath("/");
 					File path = new File(root + "/uploads");

@@ -78,6 +78,39 @@
 					<!-- SLIDE -->
 					<li class="revolution-mch-1" data-transition="fade"
 						data-slotamount="5" data-masterspeed="1000" data-title="Slide 1">
+						<!-- MAIN IMAGE --> <img src="${url}/img/3.jpg" alt="darkblurbg"
+						data-bgfit="cover" data-bgposition="right top"
+						data-bgrepeat="no-repeat">
+
+						<div class="tp-caption revolution-ch4 sft" data-x="right"
+							data-hoffset="-14" data-y="170" data-speed="1400"
+							data-start="500" data-easing="Power4.easeOut"
+							data-endspeed="300" data-endeasing="Power1.easeIn"
+							data-captionhidden="off" style="z-index: 6">
+							Thỏa sức ăn uống cùng
+						</div> <!-- LAYER -->
+						
+						<div class="tp-caption revolution-ch5 sft start" data-x="right"
+							data-hoffset="5" data-y="210" data-speed="1500" data-start="2000"
+							data-easing="Back.easeInOut" data-endeasing="Power1.easeIn"
+							data-endspeed="300">
+							<strong>MC DONALD'S</strong>
+						</div> <!-- LAYER -->
+						
+						<div class="tp-caption sft" data-x="right" data-hoffset="0"
+							data-y="300" data-speed="1600" data-start="2800"
+							data-easing="Power4.easeOut" data-endspeed="300"
+							data-endeasing="Power1.easeIn" data-captionhidden="off"
+							style="z-index: 6">
+							<a href="${pageContext.request.contextPath }/product/stall?stall_id=6" class="btn-u btn-brd btn-brd-hover btn-u-light">Đặt
+								Món Ngay</a>
+						</div>
+					</li>
+					<!-- END SLIDE -->
+					
+					<!-- SLIDE -->
+					<li class="revolution-mch-1" data-transition="fade"
+						data-slotamount="5" data-masterspeed="1000" data-title="Slide 2">
 						<!-- MAIN IMAGE --> <img src="${url}/img/1.jpg" alt="darkblurbg"
 						data-bgfit="cover" data-bgposition="left top"
 						data-bgrepeat="no-repeat">
@@ -86,127 +119,26 @@
 
 					<!-- SLIDE -->
 					<li class="revolution-mch-1" data-transition="fade"
-						data-slotamount="5" data-masterspeed="1000" data-title="Slide 2">
-						<!-- MAIN IMAGE --> <img src="${url}/img/5.jpg" alt="darkblurbg"
-						data-bgfit="cover" data-bgposition="left top"
-						data-bgrepeat="no-repeat">
-
-						<div class="tp-caption revolution-ch3 sft start" data-x="center"
-							data-hoffset="0" data-y="140" data-speed="1500" data-start="500"
-							data-easing="Back.easeInOut" data-endeasing="Power1.easeIn"
-							data-endspeed="300">
-							Latest <strong>Fashion</strong> Trends
-						</div> <!-- LAYER -->
-						<div class="tp-caption revolution-ch4 sft" data-x="center"
-							data-hoffset="-14" data-y="210" data-speed="1400"
-							data-start="2000" data-easing="Power4.easeOut"
-							data-endspeed="300" data-endeasing="Power1.easeIn"
-							data-captionhidden="off" style="z-index: 6">
-							Cras non dui et quam auctor pretium.<br> Aenean enim tortr,
-							tempus et iteus m
-						</div> <!-- LAYER -->
-						<div class="tp-caption sft" data-x="center" data-hoffset="0"
-							data-y="300" data-speed="1600" data-start="1800"
-							data-easing="Power4.easeOut" data-endspeed="300"
-							data-endeasing="Power1.easeIn" data-captionhidden="off"
-							style="z-index: 6">
-							<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Shop
-								Now</a>
-						</div>
-					</li>
-					<!-- END SLIDE -->
-
-					<!-- SLIDE -->
-					<li class="revolution-mch-1" data-transition="fade"
 						data-slotamount="5" data-masterspeed="1000" data-title="Slide 3">
-						<!-- MAIN IMAGE --> <img src="${url}/img/3.jpg" alt="darkblurbg"
-						data-bgfit="cover" data-bgposition="right top"
-						data-bgrepeat="no-repeat">
-
-						<div class="tp-caption revolution-ch3 sft start" data-x="right"
-							data-hoffset="5" data-y="130" data-speed="1500" data-start="500"
-							data-easing="Back.easeInOut" data-endeasing="Power1.easeIn"
-							data-endspeed="300">
-							<strong>Luxury</strong> Watches
-						</div> <!-- LAYER -->
-						<div class="tp-caption revolution-ch4 sft" data-x="right"
-							data-hoffset="0" data-y="210" data-speed="1400" data-start="2000"
-							data-easing="Power4.easeOut" data-endspeed="300"
-							data-endeasing="Power1.easeIn" data-captionhidden="off"
-							style="z-index: 6">
-							lectus. Cras non dui et quam auctor.<br> Aenean enim tortor,
-							tempus et im
-						</div> <!-- LAYER -->
-						<div class="tp-caption sft" data-x="right" data-hoffset="0"
-							data-y="300" data-speed="1600" data-start="2800"
-							data-easing="Power4.easeOut" data-endspeed="300"
-							data-endeasing="Power1.easeIn" data-captionhidden="off"
-							style="z-index: 6">
-							<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Shop
-								Now</a>
-						</div>
-					</li>
-					<!-- END SLIDE -->
-
-					<!-- SLIDE -->
-					<li class="revolution-mch-1" data-transition="fade"
-						data-slotamount="5" data-masterspeed="1000" data-title="Slide 4">
 						<!-- MAIN IMAGE --> <img src="${url}/img/2.jpg" alt="darkblurbg"
 						data-bgfit="cover" data-bgposition="left top"
 						data-bgrepeat="no-repeat">
 
 						<div class="tp-caption revolution-ch1 sft start" data-x="center"
-							data-hoffset="0" data-y="100" data-speed="1500" data-start="500"
+							data-hoffset="0" data-y="10" data-speed="1500" data-start="500"
 							data-easing="Back.easeInOut" data-endeasing="Power1.easeIn"
-							data-endspeed="300">Girl's Accesories</div> <!-- LAYER -->
-						<div class="tp-caption revolution-ch2 sft" data-x="center"
-							data-hoffset="0" data-y="280" data-speed="1400" data-start="2000"
-							data-easing="Power4.easeOut" data-endspeed="300"
-							data-endeasing="Power1.easeIn" data-captionhidden="off"
-							style="z-index: 6">Super Promo</div> <!-- LAYER -->
+							data-endspeed="300">Combo siêu tiết kiệm của <strong>KFC</strong></div> <!-- LAYER -->
+						
 						<div class="tp-caption sft" data-x="center" data-hoffset="0"
-							data-y="370" data-speed="1600" data-start="2800"
+							data-y="180" data-speed="1600" data-start="2800"
 							data-easing="Power4.easeOut" data-endspeed="300"
 							data-endeasing="Power1.easeIn" data-captionhidden="off"
 							style="z-index: 6">
-							<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">View
-								More</a> <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Shop
-								Now</a>
+							<a href="${pageContext.request.contextPath }/product/stall?stall_id=4" class="btn-u btn-brd btn-brd-hover btn-u-light"><strong>Đặt
+							Món Ngay</strong></a>
 						</div>
 					</li>
-					<!-- END SLIDE -->
-
-					<!-- SLIDE -->
-					<li class="revolution-mch-1" data-transition="fade"
-						data-slotamount="5" data-masterspeed="1000" data-title="Slide 5">
-						<!-- MAIN IMAGE --> <img src="${url}/img/4.jpg" alt="darkblurbg"
-						data-bgfit="cover" data-bgposition="right top"
-						data-bgrepeat="no-repeat">
-
-						<div class="tp-caption revolution-ch5 sft start" data-x="right"
-							data-hoffset="5" data-y="130" data-speed="1500" data-start="500"
-							data-easing="Back.easeInOut" data-endeasing="Power1.easeIn"
-							data-endspeed="300">
-							<strong>Jeans</strong> Collection
-						</div> <!-- LAYER -->
-						<div class="tp-caption revolution-ch4 sft" data-x="right"
-							data-hoffset="-14" data-y="210" data-speed="1400"
-							data-start="2000" data-easing="Power4.easeOut"
-							data-endspeed="300" data-endeasing="Power1.easeIn"
-							data-captionhidden="off" style="z-index: 6">
-							Cras non dui et quam auctor pretium.<br> Aenean enim tortr,
-							tempus et iteus m
-						</div> <!-- LAYER -->
-						<div class="tp-caption sft" data-x="right" data-hoffset="0"
-							data-y="300" data-speed="1600" data-start="2800"
-							data-easing="Power4.easeOut" data-endspeed="300"
-							data-endeasing="Power1.easeIn" data-captionhidden="off"
-							style="z-index: 6">
-							<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Shop
-								Now</a>
-						</div>
-					</li>
-					<!-- END SLIDE -->
+					<!-- END SLIDE -->					
 				</ul>
 				<div class="tp-bannertimer tp-bottom"></div>
 			</div>
@@ -223,10 +155,10 @@
 							<div class="illustration-bg">
 								<div class="illustration-ads ad-details-v1">
 									<h3>
-										NEW YEAR <strong>SALE</strong> 30% - 60% <strong>off</strong>
+										<strong>Ưu đãi</strong> mùa thi cùng Phúc Long
 									</h3>
-									<a class="btn-u btn-brd btn-brd-hover btn-u-light" href="#">Shop
-										Now</a>
+									<a class="btn-u btn-brd btn-brd-hover btn-u-light" href="${pageContext.request.contextPath }/product/stall?stall_id=11">Đặt
+									Hàng Ngay</a>
 								</div>
 							</div>
 						</div>
@@ -237,7 +169,7 @@
 						<a class="illustration-v1 illustration-img2" href="#"> <span
 							class="illustration-bg"> <span
 								class="illustration-ads ad-details-v2"> <span
-									class="item-time">Spring 2014</span> <span class="item-name">Lacoste</span>
+									class="item-time">Khuyến mãi <strong>30-40%</strong> tại</span> <span class="item-name">ROYAL TEA</span>
 							</span>
 						</span>
 						</a>
@@ -249,26 +181,25 @@
 
 			<div class="heading heading-v1 margin-bottom-20">
 				<h2>Thực Đơn Đặc Biệt</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-					Sed odio elit, ultrices vel cursus sed, placerat ut leo. 
-					Phasellus in magna erat. Etiam gravida convallis augue non tincidunt. 
-					Nunc lobortis dapibus neque quis lacinia. Nam dapibus tellus sit amet odio venenatis.</p>
+				<p>Thực Đơn Đặc Biệt tại SFCS bao gồm nhiều món ngon
+				hấp dẫn chia thành 6 nhóm vô cùng đa dạng cho bạn
+				tha hồ lựa chọn, bao gồm:</p>
 			</div>
-			
+
 			<!--=== Illustration v2 ===-->
 			<div class="row margin-bottom-50">
 				<div class="col-md-4 md-margin-bottom-30">
 					<div class="overflow-h">
 						<a class="illustration-v2 illustration-img1 upper"
 							href="${pageContext.request.contextPath }/product/category?cate_id=1">
-							<span class="illustration-bg"> 
-								<span class="illustration-ads"> 
-									<span class="illustration-v2-category">
-									 	<span class="product-category">Ẩm Thực Việt</span> 
-										<span class="product-amount">+5 Món Mới</span>
-									</span>
+							<span class="illustration-bg"> <span
+								class="illustration-ads"> <span
+									class="illustration-v2-category"> <span
+										class="product-category">Ẩm Thực Việt</span> <span
+										class="product-amount">+5 Món Mới</span>
 								</span>
 							</span>
+						</span>
 						</a>
 					</div>
 				</div>
@@ -276,14 +207,14 @@
 					<div class="overflow-h">
 						<a class="illustration-v2 illustration-img2 upper"
 							href="${pageContext.request.contextPath }/product/category?cate_id=2">
-							<span class="illustration-bg"> 								
-								<span class="illustration-ads"> 
-									<span class="illustration-v2-category">								 	
-										<span class="product-category">Thức Ăn Nhanh</span> 
-										<span class="product-amount">+10 Món Mới</span>
-									</span>
+							<span class="illustration-bg"> <span
+								class="illustration-ads"> <span
+									class="illustration-v2-category"> <span
+										class="product-category">Thức Ăn Nhanh</span> <span
+										class="product-amount">+10 Món Mới</span>
 								</span>
 							</span>
+						</span>
 						</a>
 					</div>
 				</div>
@@ -291,14 +222,14 @@
 					<div class="overflow-h">
 						<a class="illustration-v2 illustration-img3 upper"
 							href="${pageContext.request.contextPath }/product/category?cate_id=3">
-							<span class="illustration-bg"> 								
-								<span class="illustration-ads"> 
-									<span class="illustration-v2-category">
-										<span class="product-category">Lẩu & Nướng</span> 
-										<span class="product-amount">+4 Món Mới</span>
-									</span>
+							<span class="illustration-bg"> <span
+								class="illustration-ads"> <span
+									class="illustration-v2-category"> <span
+										class="product-category">Lẩu & Nướng</span> <span
+										class="product-amount">+4 Món Mới</span>
 								</span>
 							</span>
+						</span>
 						</a>
 					</div>
 				</div>
@@ -308,14 +239,14 @@
 					<div class="overflow-h">
 						<a class="illustration-v2 illustration-img4"
 							href="${pageContext.request.contextPath }/product/category?cate_id=4">
-							<span class="illustration-bg">								
-								<span class="illustration-ads"> 
-									<span class="illustration-v2-category">
-									 	<span class="product-category">Món Tráng Miệng</span> 
-										<span class="product-amount">+7 Món Mới</span>
-									</span>
+							<span class="illustration-bg"> <span
+								class="illustration-ads"> <span
+									class="illustration-v2-category"> <span
+										class="product-category">Món Tráng Miệng</span> <span
+										class="product-amount">+7 Món Mới</span>
 								</span>
 							</span>
+						</span>
 						</a>
 					</div>
 				</div>
@@ -323,14 +254,14 @@
 					<div class="overflow-h">
 						<a class="illustration-v2 illustration-img5"
 							href="${pageContext.request.contextPath }/product/category?cate_id=5">
-							<span class="illustration-bg"> 								
-								<span class="illustration-ads"> 
-									<span class="illustration-v2-category">									 	
-										<span class="product-category">Thức Uống</span> 
-										<span class="product-amount">+12 Món Mới</span>
-									</span>
+							<span class="illustration-bg"> <span
+								class="illustration-ads"> <span
+									class="illustration-v2-category"> <span
+										class="product-category">Thức Uống</span> <span
+										class="product-amount">+12 Món Mới</span>
 								</span>
 							</span>
+						</span>
 						</a>
 					</div>
 				</div>
@@ -338,14 +269,14 @@
 					<div class="overflow-h">
 						<a class="illustration-v2 illustration-img6"
 							href="${pageContext.request.contextPath }/product/category?cate_id=6">
-							<span class="illustration-bg"> 								
-								<span class="illustration-ads"> 
-									<span class="illustration-v2-category">
-										<span class="product-category">Món Khác</span> 
-										<span class="product-amount">+9 Món Mới</span>
-									</span>
+							<span class="illustration-bg"> <span
+								class="illustration-ads"> <span
+									class="illustration-v2-category"> <span
+										class="product-category">Món Khác</span> <span
+										class="product-amount">+9 Món Mới</span>
 								</span>
 							</span>
+						</span>
 						</a>
 					</div>
 				</div>
@@ -375,13 +306,11 @@
 
 					<div class="carousel-inner">
 						<div class="item active">
+							<p>SFCS đang sắp sửa có chương trình khuyến mãi lớn nhất
+								trong năm từ ngày 21/07 đến 31/07 nhân dịp bước vào mùa thi cuối
+								kì khắc nghiệt của trường Đại học Bách khoa Thành phố Hồ Chí
+								Minh :D
 							<p>
-								SFCS đang sắp sửa có chương trình khuyến mãi lớn nhất trong năm
-								từ ngày 21/07 đến 31/07 nhân dịp bước vào mùa thi cuối kì khắc
-								nghiệt của trường Đại học Bách khoa Thành phố Hồ Chí Minh :D
-							    
-							<p>
-							
 							<p>
 								<a href="#">#cập nhật ngày 01/07</a>
 							</p>
@@ -392,10 +321,9 @@
 							</ul>
 						</div>
 						<div class="item">
-							<p>
-								SCFS sẽ tiến hành bảo trì trong ngày Chủ nhật (27/06) sắp tới. Xin
-								lỗi bạn vì sự bất tiện này. Hệ thống sẽ hoạt động trở lại bình
-								thường kể từ ngày tiếp theo (28/06)
+							<p>SCFS sẽ tiến hành bảo trì trong ngày Chủ nhật (27/06) sắp
+								tới. Xin lỗi bạn vì sự bất tiện này. Hệ thống sẽ hoạt động trở
+								lại bình thường kể từ ngày tiếp theo (28/06)
 							<p>
 								<a href="#">#cập nhật ngày 24/06</a>
 							</p>
@@ -406,10 +334,8 @@
 							</ul>
 						</div>
 						<div class="item">
-							<p>
-								Chào mừng bạn đến với hệ thống Quán ăn thông minh (SFCS) của trường Đại học
-								Bách Khoa Thành phố Hồ Chí Minh.
-							</p>
+							<p>Chào mừng bạn đến với hệ thống Quán ăn thông minh (SFCS)
+								của trường Đại học Bách Khoa Thành phố Hồ Chí Minh.</p>
 							<p>
 								<a href="#">#cập nhật ngày 01/06</a>
 							</p>
@@ -444,9 +370,9 @@
 					</div>
 					<div class="product-service-in">
 						<h3>Đặt hàng nhanh chóng, tiện lợi</h3>
-						<p>Chỉ với 1 cú click chuột tại nhà, SCFC sẽ đem đến
-						cho bạn những bữa ăn ngon miệng với tốc độ sấm sét...</p>
-						<a href="#">+Read More</a>
+						<p>Chỉ với 1 cú click chuột tại nhà, SCFC sẽ đem đến cho bạn
+							những bữa ăn ngon miệng với tốc độ sấm sét...</p>
+						<a href="#">+Đọc thêm</a>
 					</div>
 				</div>
 				<div class="col-md-6 product-service md-margin-bottom-30">
@@ -455,10 +381,10 @@
 					</div>
 					<div class="product-service-in">
 						<h3>Chăm sóc khách hàng</h3>
-						<p>Phương châm của SCFS là khách hàng còn hơn cả thượng đế. Chúng tôi
-						luôn sẵn sàng lắng nghe những ý kiến đóng góp của quý khách hàng...
-						</p>
-						<a href="#">+Read More</a>
+						<p>Phương châm của SCFS là khách hàng còn hơn cả thượng đế.
+							Chúng tôi luôn sẵn sàng lắng nghe những ý kiến đóng góp của quý
+							khách hàng...</p>
+						<a href="#">+Đọc thêm</a>
 					</div>
 				</div>
 			</div>
@@ -466,9 +392,9 @@
 			<!--=== End Product Service ===-->
 
 			<!--=== Illustration v3 ===-->
-			
+
 			<div class="heading heading-v1 margin-bottom-20">
-					<h2>Thương hiệu nổi bật</h2>
+				<h2>Thương hiệu nổi bật</h2>
 			</div>
 			<div class="row illustration-v4 margin-bottom-40">
 				<div class="col-md-4">
@@ -477,9 +403,10 @@
 							alt="">
 						<div class="thumb-product-in">
 							<h4>
-								<a href="shop-ui-inner.html">McDonald's</a>
+								<a href="${pageContext.request.contextPath }/product/stall?stall_id=6">McDonald's</a>
 							</h4>
-							<span class="thumb-product-type">Một trong những cửa hàng được giới trẻ yêu thích nhất hiện nay</span>
+							<span class="thumb-product-type">Một trong những cửa hàng
+								được giới trẻ yêu thích nhất hiện nay</span>
 						</div>
 					</div>
 				</div>
@@ -489,20 +416,21 @@
 							alt="">
 						<div class="thumb-product-in">
 							<h4>
-								<a href="shop-ui-inner.html">KFC</a>
+								<a href="${pageContext.request.contextPath }/product/stall?stall_id=4">KFC</a>
 							</h4>
-							<span class="thumb-product-type">Vị ngon trên từng ngón tay</span>
+							<span class="thumb-product-type">Vị ngon trên từng ngón
+								tay</span>
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col-md-4 padding">
 					<div class="thumb-product">
 						<img class="thumb-product-img" src="${url}/img/thumb/toco.png"
 							alt="">
 						<div class="thumb-product-in">
 							<h4>
-								<a href="shop-ui-inner.html">Toco Toco</a>
+								<a href="${pageContext.request.contextPath }/product/stall?stall_id=12">Toco Toco</a>
 							</h4>
 							<span class="thumb-product-type">Nhấp nhô từng nhịp</span>
 						</div>
@@ -520,10 +448,9 @@
 				<div class="col-md-7 md-margin-bottom-50">
 					<h2>Ưu đãi cực sốc</h2>
 					<p>
-						Tưng bừng chào đón mùa thi cuối kì sắp tới :D
-						<br> SFCS công bố chương trình ưu đãi
-						"sales sấp mặt" lên đến 50% dành cho các món ăn mới
-						trên hệ thống. Các bạn sẽ được thưởng thức những món
+						Tưng bừng chào đón mùa thi cuối kì sắp tới :D <br> SFCS công
+						bố chương trình ưu đãi "sales sấp mặt" lên đến 50% dành cho các
+						món ăn mới trên hệ thống. Các bạn sẽ được thưởng thức những món
 						ngon hơn, bổ dưỡng hơn đi kèm với mức giá vô cùng phải chăng
 					</p>
 					<br> <a href="#"
@@ -546,13 +473,15 @@
 		</div>
 		<!--=== End Collection Banner ===-->
 
-		
+
 		<!--=== Shop Suvbscribe ===-->
 		<div class="shop-subscribe">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 md-margin-bottom-20">
-						<h2>đăng ký để nhận <strong>bản tin hàng tuần</strong> của chúng tôi</h2>
+						<h2>
+							đăng ký để nhận <strong>bản tin hàng tuần</strong> của chúng tôi
+						</h2>
 					</div>
 					<div class="col-md-4">
 						<div class="input-group">

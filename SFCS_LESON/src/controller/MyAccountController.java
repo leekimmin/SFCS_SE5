@@ -20,6 +20,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import model.User;
 import service.UserService;
 import service.impl.UserServiceImpl;
+import util.Constant;
 
 @WebServlet(urlPatterns = { "/member/myaccount" })
 public class MyAccountController extends HttpServlet {
@@ -27,17 +28,22 @@ public class MyAccountController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html; charset=UTF-8");
+		req.setCharacterEncoding("UTF-8");
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/view/myaccount.jsp");
 		dispatcher.forward(req, resp);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html; charset=UTF-8");
+		req.setCharacterEncoding("UTF-8");
 		String id = "";
 		User user = new User();
+		String passwordConfirm="";
+		String alertMsg="";
 		DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
 		ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
-
 		try {
 			List<FileItem> items = servletFileUpload.parseRequest(req);
 			for (FileItem item : items) {
@@ -49,11 +55,19 @@ public class MyAccountController extends HttpServlet {
 				} else if (item.getFieldName().equals("username")) {
 					user.setUsername(item.getString());
 				} else if (item.getFieldName().equals("firstname")) {
-					user.setEmail(item.getString());
+					user.setFirstname(item.getString());
 				} else if (item.getFieldName().equals("lastname")) {
-					user.setUsername(item.getString());
+					user.setLastname(item.getString());
 				} else if (item.getFieldName().equals("password")) {
 					user.setPassword(item.getString());
+				} else if (item.getFieldName().equals("passwordConfirm")) {
+					passwordConfirm=item.getString();
+				} else if (item.getFieldName().equals("gender")) {
+					user.setGender(item.getString());
+				} else if (item.getFieldName().equals("phone")) {
+					user.setPhone(item.getString());
+				} else if (item.getFieldName().equals("address")) {
+					user.setAddress(item.getString());
 				} else if (item.getFieldName().equals("role")) {
 					user.setRoleId(Integer.parseInt(item.getString()));
 				} else if (item.getFieldName().equals("avatar")) {
@@ -76,12 +90,18 @@ public class MyAccountController extends HttpServlet {
 					}
 				}
 			}
-
+			if(!passwordConfirm.equals(user.getPassword())) {
+				System.out.println(passwordConfirm+"&"+user.getPassword());
+				alertMsg = "Vui lòng nhập đúng mật khẩu!";
+				req.setAttribute("alertMsg", alertMsg);
+				req.getRequestDispatcher(Constant.Path.MEMBER).forward(req, resp);
+				return;
+			}
 			userService.edit(user);
 			User u = userService.get(Integer.parseInt(id));
 			HttpSession session = req.getSession(true);
-			 session.setAttribute("account", u);
-
+			session.setAttribute("account", u);
+			
 			resp.sendRedirect(req.getContextPath() + "/member/myaccount");
 		} catch (FileUploadException e) {
 			e.printStackTrace();

@@ -23,16 +23,16 @@ import service.UserService;
 import service.impl.CategoryServiceImpl;
 import service.impl.UserServiceImpl;
 
-@WebServlet(urlPatterns = { "/admin/category/list" })
-public class CategoryeListController extends HttpServlet {
+@WebServlet(urlPatterns = { "/admin/category/delete" })
+public class CategoryDeleteController extends HttpServlet {
 	CategoryService cateService = new CategoryServiceImpl();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		List<Category> cateList = cateService.getAll();
-		req.setAttribute("cateList", cateList);
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/category/list-category.jsp");
-		dispatcher.forward(req, resp);
+		String id = req.getParameter("id");
+		cateService.delete(Integer.parseInt(id));
+		
+		resp.sendRedirect(req.getContextPath() + "/admin/category/list");
 	}
 
 }

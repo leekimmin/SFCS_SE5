@@ -24,7 +24,6 @@ public class ProductServiceImpl implements ProductService {
 		oldProduct.setName(newProduct.getName());
 		oldProduct.setPrice(newProduct.getPrice());
 		oldProduct.setCategory(newProduct.getCategory());
-		oldProduct.setDes(newProduct.getDes());
 		if (newProduct.getImage() != null) {
 			// XOA ANH CU DI
 			String fileName = oldProduct.getImage();

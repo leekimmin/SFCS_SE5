@@ -16,7 +16,7 @@ import model.Product;
 import service.ProductService;
 import service.impl.ProductServiceImpl;
 
-@WebServlet(urlPatterns = { "/member/cart/add" }) // ?pId=123
+@WebServlet(urlPatterns = { "/member/cart/add" }) 
 public class CartAddController extends HttpServlet {
 	ProductService productService = new ProductServiceImpl();
 
