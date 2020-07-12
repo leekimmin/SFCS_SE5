@@ -48,6 +48,27 @@
 											enctype="multipart/form-data">
 											<input name="id" value="${user.id }" type="text" hidden="">
 											<div class="form-group">
+												<label>First Name:</label> <input class="form-control"
+													value="${user.firstname }" name="firstname" />
+											</div>
+											<div class="form-group">
+												<label>Last Name:</label> <input class="form-control"
+													value="${user.lastname }" name="lastname" />
+											</div>
+											<div class="form-group">
+												<label>Birth Day:</label> <input class="form-control"
+													value="${user.birthday }" name="birthday" />
+											</div>
+											<div class="form-group">
+												<label>Gender:</label>
+												<div class="checkbox">
+													<label> <input type="radio" value="M" name="gender" />Male
+													</label> <br> <label> <input type="radio" value="F"
+														name="gender" checked="checked"/>Female
+													</label>
+												</div>
+											</div>
+											<div class="form-group">
 												<label>User Name:</label> <input class="form-control"
 													value="${user.username }" name="username" />
 											</div>
@@ -60,10 +81,18 @@
 													value="${user.email }" name="email" />
 											</div>
 											<div class="form-group">
+												<label>Phone:</label> <input class="form-control"
+													value="${user.phone }" name="phone" />
+											</div>
+											<div class="form-group">
+												<label>Address:</label> <input class="form-control"
+													value="${user.address }" name="address" />
+											</div>
+											<div class="form-group">
 												<label>Role</label>
 												<div class="checkbox">
-													<label> <input type="radio" value="1" name="role" />Admin
-													</label> <br> <label> <input type="radio" value="2"
+													<label> <input type="radio" value="2" name="role" />Admin
+													</label> <br> <label> <input type="radio" value="1"
 														name="role" checked="checked"/>Client
 													</label>
 												</div>

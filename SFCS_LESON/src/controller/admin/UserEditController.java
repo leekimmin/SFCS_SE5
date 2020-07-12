@@ -2,6 +2,7 @@ package controller.admin;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.Date;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -19,6 +20,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import model.User;
 import service.UserService;
 import service.impl.UserServiceImpl;
+import util.Constant;
 
 @WebServlet(urlPatterns = { "/admin/user/edit" })
 public class UserEditController extends HttpServlet {
@@ -49,14 +51,20 @@ public class UserEditController extends HttpServlet {
 					user.setEmail(item.getString());
 				} else if (item.getFieldName().equals("username")) {
 					user.setUsername(item.getString());
-				} else if (item.getFieldName().equals("password")) {
-					user.setPassword(item.getString());
 				} else if (item.getFieldName().equals("firstname")) {
 					user.setFirstname(item.getString());
 				} else if (item.getFieldName().equals("lastname")) {
 					user.setLastname(item.getString());
+				} else if (item.getFieldName().equals("password")) {
+					user.setPassword(item.getString());
 				} else if (item.getFieldName().equals("gender")) {
 					user.setGender(item.getString());
+				} else if (item.getFieldName().equals("birthday")) {
+					user.setBirthday(item.getString());
+				} else if (item.getFieldName().equals("phone")) {
+					user.setPhone(item.getString());
+				} else if (item.getFieldName().equals("address")) {
+					user.setAddress(item.getString());
 				} else if (item.getFieldName().equals("role")) {
 					user.setRoleId(Integer.parseInt(item.getString()));
 				} else if (item.getFieldName().equals("avatar")) {
@@ -80,6 +88,7 @@ public class UserEditController extends HttpServlet {
 				}
 			}
 
+			
 			userService.edit(user);
 
 			resp.sendRedirect(req.getContextPath() + "/admin/user/list");

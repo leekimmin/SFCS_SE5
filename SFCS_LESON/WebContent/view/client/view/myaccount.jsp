@@ -5,7 +5,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>My Account</title>
+<title>Thông tin tài khoản</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -170,7 +171,7 @@
 							<div class="col-xs-6">
 							<label for="passwordConfirm"><h4>Nhập lại mật khẩu:</h4></label> <input
 									type="password" class="form-control" name="passwordConfirm" id="phone"
-									value=""
+									required="required"
 									title="enter your phone number if any.">
 							</div>
 						</div>

@@ -51,7 +51,6 @@ public class UserDaoImpl extends JDBCConnection implements UserDao {
 	public void edit(User user) {
 		String sql = "UPDATE users SET first_name = ?, last_name = ?, birth_date = ?, gender = ?, phone = ?, email = ?, address = ?, password = ?, avatar = ?, role_id = ? WHERE user_id = ?";
 		Connection con = super.getJDBCConnection();
-
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, user.getFirstname());
@@ -65,7 +64,9 @@ public class UserDaoImpl extends JDBCConnection implements UserDao {
 			ps.setString(9, user.getAvatar());
 			ps.setInt(10, user.getRoleId());
 			ps.setInt(11, user.getId());
+
 			ps.executeUpdate();
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -169,6 +170,12 @@ public class UserDaoImpl extends JDBCConnection implements UserDao {
 				User user = new User();
 
 				user.setId(rs.getInt("user_id"));
+				user.setFirstname(rs.getString("first_name"));
+				user.setLastname(rs.getString("last_name"));
+				user.setBirthday(rs.getString("birth_date"));
+				user.setGender(rs.getString("gender"));
+				user.setPhone(rs.getString("phone"));
+				user.setAddress(rs.getString("address"));
 				user.setEmail(rs.getString("email"));
 				user.setUsername(rs.getString("username"));
 				user.setPassword(rs.getString("password"));

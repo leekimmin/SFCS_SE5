@@ -93,7 +93,6 @@ public class MyAccountController extends HttpServlet {
 				}
 			}
 			if(!passwordConfirm.equals(user.getPassword())) {
-				System.out.println(passwordConfirm+"&"+user.getPassword());
 				alertMsg = "Vui lòng nhập đúng mật khẩu!";
 				req.setAttribute("alertMsg", alertMsg);
 				req.getRequestDispatcher(Constant.Path.MEMBER).forward(req, resp);

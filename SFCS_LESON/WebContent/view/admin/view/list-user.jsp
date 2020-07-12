@@ -37,7 +37,8 @@
 					<div class="col-md-12">
 						<h2>List User</h2>
 						<h5>You can edit , add, delete User</h5>
-
+						<button onclick="location.href='${pageContext.request.contextPath }/admin/user/add'" type="button">
+         Add new account</button>
 					</div>
 				</div>
 				<!-- /. ROW  -->
@@ -56,11 +57,13 @@
 											<tr>
 												<th>ID</th>
 												<th>Avatar</th>
+												<th>First Name</th>
+												<th>Last Name</th>
 												<th>Email</th>
+												<th>Phone</th>
 												<th>User Name</th>
 												<th>Password</th>
-												<th>Status</th>
-												<th> Role </th>
+												<th>Role</th>
 												<th>Action</th>
 												
 
@@ -72,13 +75,15 @@
 													<td>${list.id }</td>
 													<c:url value="/image?fname=${list.avatar }" var="imgUrl"></c:url>
 													<td><img height="70" width="90" src="${imgUrl}" /></td>
+													<td>${list.firstname }</td>
+													<td>${list.lastname }</td>
 													<td>${list.email }</td>
+													<td>${list.phone }</td>
 													<td>${list.username }</td>
 													<td>${list.password }</td>
-													<td class="center">Active</td>
 
 													<td class="center"><c:choose>
-															<c:when test="${list.roleId ==1 }">
+															<c:when test="${list.roleId == 2 }">
 													Admin
 													</c:when>
 															<c:otherwise>Client</c:otherwise>
