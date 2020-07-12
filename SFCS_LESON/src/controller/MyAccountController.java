@@ -64,6 +64,8 @@ public class MyAccountController extends HttpServlet {
 					passwordConfirm=item.getString();
 				} else if (item.getFieldName().equals("gender")) {
 					user.setGender(item.getString());
+				} else if (item.getFieldName().equals("birthday")) {
+					user.setBirthday(item.getString());
 				} else if (item.getFieldName().equals("phone")) {
 					user.setPhone(item.getString());
 				} else if (item.getFieldName().equals("address")) {

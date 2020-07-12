@@ -93,16 +93,15 @@
 									title="enter your first name if any.">
 							</div>
 						</div>
-						
-						
+											
 						<div class="form-group">
 							<div class="col-xs-6">
-								<label for="username"><h4>Tên đăng nhập:</h4></label> <input
-									type="text" class="form-control" name="username"
-									id="username" value="${sessionScope.account.username}" disabled="disabled">
+								<label for="birthday"><h4>Ngày sinh:</h4></label> <input
+									type="date" class="form-control" name="birthday"
+									id="birthday" value="${sessionScope.account.birthday}">
 							</div>
 						</div>
-
+						
 						<div class="form-group">
 							<div class="col-xs-6">
 								<label for="gender"><h4>Giới tính:</h4></label>
@@ -120,6 +119,15 @@
 								</div>
 							</div>
 						</div>
+						
+						<div class="form-group">
+							<div class="col-xs-6">
+								<label for="username"><h4>Tên đăng nhập:</h4></label> <input
+									type="text" class="form-control" name="username"
+									id="username" value="${sessionScope.account.username}" disabled="disabled">
+							</div>
+						</div>
+						
 						<div class="form-group">
 							<div class="col-xs-6">
 								<label for="email"><h4>Email:</h4></label> <input
