@@ -20,7 +20,7 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public void edit(Product newProduct) {
 		Product oldProduct = productDao.get(newProduct.getId());
-
+		
 		oldProduct.setName(newProduct.getName());
 		oldProduct.setPrice(newProduct.getPrice());
 		oldProduct.setCategory(newProduct.getCategory());
@@ -35,7 +35,7 @@ public class ProductServiceImpl implements ProductService {
 
 			oldProduct.setImage(newProduct.getImage());
 		}
-
+		
 		productDao.edit(oldProduct);
 
 	}

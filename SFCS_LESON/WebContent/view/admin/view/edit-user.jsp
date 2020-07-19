@@ -56,7 +56,7 @@
 													value="${user.lastname }" name="lastname" />
 											</div>
 											<div class="form-group">
-												<label>Birth Day:</label> <input class="form-control"
+												<label>Birth Day:</label> <input type ="date" class="form-control"
 													value="${user.birthday }" name="birthday" />
 											</div>
 											<div class="form-group">

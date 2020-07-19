@@ -139,7 +139,24 @@ li:first-child {
 .illustration-v1.illustration-img1 {
 	width: 100%;
 	overflow: hidden;
-	background-image: url(../img/blog/07_1.jpg);
+	background-image: url(../img/blog/07.jpg);
+	transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.illustration-v1.illustration-img1:hover {
+	-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+}
+
+.illustration-v1.illustration-img3 {
+	width: 100%;
+	overflow: hidden;
+	background-image: url(../img/blog/09.jpg);
 	transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -191,7 +208,24 @@ li:first-child {
 .illustration-v1.illustration-img2 {
 	width: 100%;
 	overflow: hidden;
-	background-image: url(../img/blog/08_01.jpg);
+	background-image: url(../img/blog/08.jpg);
+	transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.illustration-v1.illustration-img2:hover {
+	-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+}
+
+.illustration-v1.illustration-img4 {
+	width: 100%;
+	overflow: hidden;
+	background-image: url(../img/blog/10.jpg);
 	transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -717,7 +751,7 @@ li:first-child {
 }
 
 .owl-slider-v2 .item img {
-  	width: 150px;
+  	width: 180px;
   	height: auto;
 }
 

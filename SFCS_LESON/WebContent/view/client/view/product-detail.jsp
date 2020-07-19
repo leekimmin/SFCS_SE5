@@ -200,256 +200,102 @@
 			</div>
 			<!--/end row-->
 			<!--=== End Product Service ===-->
-
-			<div class="tab-v5">
-				<ul class="nav nav-tabs" role="tablist">
-					<li class="active"><a href="#description" role="tab" data-toggle="tab">Mô tả</a></li>
-					<li><a href="#reviews" role="tab" data-toggle="tab">Nhận xét (1)</a></li>
-				</ul>
-
-				<div class="tab-content">
-					<!-- Description -->
-					<div class="tab-pane fade in active" id="description">
-						<div class="row">
-							<div class="col-md-7">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-								Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-								<br>
-								<h3 class="heading-md margin-bottom-20">Specifies</h3>
-								<div class="row">
-									<div class="col-sm-6">
-										<ul class="list-unstyled specifies-list">
-											<li><i class="fa fa-caret-right"></i>Brand Name: <span>Lacoste</span></li>
-											<li><i class="fa fa-caret-right"></i>Technics: <span>Computer</span> Knitted</li>
-											<li><i class="fa fa-caret-right"></i>Sleeve Length: <span>Full</span></li>
-											<li><i class="fa fa-caret-right"></i>Sleeve Style: <span>Regular</span></li>
-											<li><i class="fa fa-caret-right"></i>Pattern Type: <span>PAID</span></li>
-											<li><i class="fa fa-caret-right"></i>Style: <span>Casual</span></li>
-										</ul>
-									</div>
-									<div class="col-sm-6">
-										<ul class="list-unstyled specifies-list">
-											<li><i class="fa fa-caret-right"></i>Material: <span>Cotton,Nylon</span></li>
-											<li><i class="fa fa-caret-right"></i>Item Type: <span>Pullovers</span></li>
-											<li><i class="fa fa-caret-right"></i>Thickness: <span>Thin</span></li>
-											<li><i class="fa fa-caret-right"></i>Model Number: <span>TM-11013</span></li>
-											<li><i class="fa fa-caret-right"></i>category: <span>Men</span></li>
-											<li><i class="fa fa-caret-right"></i>MATERIAL: <span>80%COTTON+10%NYLON</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-5">
-								<div class="responsive-video">
-									<iframe src="//player.vimeo.com/video/72343553" frameborder="0"
-										webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- End Description -->
-
-					<!-- Reviews -->
-					<div class="tab-pane fade" id="reviews">
-						<div class="product-comment margin-bottom-40">
-							<div class="product-comment-in">
-								<img class="product-comment-img rounded-x"
-									src="${url}/img/team/01.jpg" alt="">
-								<div class="product-comment-dtl">
-									<h4>
-										Amelia <small>22 ngày trước</small>
-									</h4>
-									<p>Giao diện của trang nhìn đẹp, món ăn cũng rất ngon và nhanh chóng</p>
-									<ul class="list-inline product-ratings">
-										<li class="reply"><a href="#">Phản hồi</a></li>
-										<li class="pull-right">
-											<ul class="list-inline">
-												<li><i class="rating-selected fa fa-star"></i></li>
-												<li><i class="rating-selected fa fa-star"></i></li>
-												<li><i class="rating-selected fa fa-star"></i></li>
-												<li><i class="rating-selected fa fa-star"></i></li>
-												<li><i class="rating fa fa-star"></i></li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<h3 class="heading-md margin-bottom-30">Thêm nhận xét</h3>
-						<form action="${url}/php/demo-contacts-process.php" method="post"
-							id="sky-form3" class="sky-form sky-changes-4">
-							<fieldset>
-								<div class="margin-bottom-30">
-									<label class="label-v2">Tên</label> <label class="input">
-										<input type="text" name="name" id="name">
-									</label>
-								</div>
-
-								<div class="margin-bottom-30">
-									<label class="label-v2">Email</label> <label class="input">
-										<input type="email" name="email" id="email">
-									</label>
-								</div>
-
-								<div class="margin-bottom-30">
-									<label class="label-v2">Nhận xét</label> <label class="textarea">
-										<textarea rows="7" name="message" id="message"></textarea>
-									</label>
-								</div>
-							</fieldset>
-
-							<footer class="review-submit">
-								<label class="label-v2">Đánh giá</label>
-								<div class="stars-ratings">
-									<input type="radio" name="stars-rating" id="stars-rating-5">
-									<label for="stars-rating-5"><i class="fa fa-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-4">
-									<label for="stars-rating-4"><i class="fa fa-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-3">
-									<label for="stars-rating-3"><i class="fa fa-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-2">
-									<label for="stars-rating-2"><i class="fa fa-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-1">
-									<label for="stars-rating-1"><i class="fa fa-star"></i></label>
-								</div>
-								<button type="button"
-									class="btn-u btn-u-sea-shop btn-u-sm pull-right">Gửi</button>
-							</footer>
-						</form>
-					</div>
-					<!-- End Reviews -->
-				</div>
-			</div>
 		</div>
 		<!--/end container-->
 		<!--=== End Content Medium ===-->
 
-		<!--=== Illustration v2 ===-->
 		<div class="container">
-			<div class="heading heading-v1 margin-bottom-20">
-				<h2>Product you may like</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-					odio elit, ultrices vel cursus sed, placerat ut leo. Phasellus in
-					magna erat. Etiam gravida convallis augue non tincidunt. Nunc
-					lobortis dapibus neque quis lacinia. Nam dapibus tellus sit amet
-					odio venenatis</p>
-			</div>
+			<!--=== Illustration v3 ===-->
 
-			<div class="illustration-v2 margin-bottom-60">
-				<div class="customNavigation margin-bottom-25">
-					<a class="owl-btn prev rounded-x"><i class="fa fa-angle-left"></i></a>
-					<a class="owl-btn next rounded-x"><i class="fa fa-angle-right"></i></a>
+			<div class="heading heading-v1 margin-bottom-20">
+				<h2>Thương hiệu nổi bật</h2>
+			</div>
+			<div class="row illustration-v4 margin-bottom-40">
+				<div class="col-md-4">
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="${url}/img/thumb/mcdonald.png"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="${pageContext.request.contextPath }/product/stall?stall_id=6">McDonald's</a>
+							</h4>
+							<span class="thumb-product-type">Một trong những cửa hàng
+								được giới trẻ yêu thích nhất hiện nay</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="${url}/img/thumb/kfc.png"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="${pageContext.request.contextPath }/product/stall?stall_id=4">KFC</a>
+							</h4>
+							<span class="thumb-product-type">Vị ngon trên từng ngón
+								tay</span>
+						</div>
+					</div>
 				</div>
 
-				<ul class="list-inline owl-slider-v4">
-					<li class="item"><a href="#"><img class="img-responsive"
-							src="${url}/img/thumb/09.jpg" alt=""></a>
-						<div class="product-description-v2">
-							<div class="margin-bottom-5">
-								<h4 class="title-price">
-									<a href="#">Double-breasted</a>
-								</h4>
-								<span class="title-price">$95.00</span>
-							</div>
-							<ul class="list-inline product-ratings">
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-							</ul>
-						</div></li>
-					<li class="item"><a href="#"><img class="img-responsive"
-							src="${url}/img/thumb/07.jpg" alt=""></a>
-						<div class="product-description-v2">
-							<div class="margin-bottom-5">
-								<h4 class="title-price">
-									<a href="#">Double-breasted</a>
-								</h4>
-								<span class="title-price">$60.00</span> <span
-									class="title-price line-through">$95.00</span>
-							</div>
-							<ul class="list-inline product-ratings">
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-							</ul>
-						</div></li>
-					<li class="item"><a href="#"><img class="img-responsive"
-							src="${url}/img/thumb/08.jpg" alt=""></a>
-						<div class="product-description-v2">
-							<div class="margin-bottom-5">
-								<h4 class="title-price">
-									<a href="#">Double-breasted</a>
-								</h4>
-								<span class="title-price">$95.00</span>
-							</div>
-							<ul class="list-inline product-ratings">
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-							</ul>
-						</div></li>
-					<li class="item"><a href="#"><img class="img-responsive"
-							src="${url}/img/thumb/06.jpg" alt=""></a>
-						<div class="product-description-v2">
-							<div class="margin-bottom-5">
-								<h4 class="title-price">
-									<a href="#">Double-breasted</a>
-								</h4>
-								<span class="title-price">$95.00</span>
-							</div>
-							<ul class="list-inline product-ratings">
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-							</ul>
-						</div></li>
-					<li class="item"><a href="#"><img class="img-responsive"
-							src="${url}/img/thumb/04.jpg" alt=""></a>
-						<div class="product-description-v2">
-							<div class="margin-bottom-5">
-								<h4 class="title-price">
-									<a href="#">Double-breasted</a>
-								</h4>
-								<span class="title-price">$95.00</span>
-							</div>
-							<ul class="list-inline product-ratings">
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-							</ul>
-						</div></li>
-					<li class="item"><a href="#"><img class="img-responsive"
-							src="${url}/img/thumb/03.jpg" alt=""></a>
-						<div class="product-description-v2">
-							<div class="margin-bottom-5">
-								<h4 class="title-price">
-									<a href="#">Double-breasted</a>
-								</h4>
-								<span class="title-price">$95.00</span>
-							</div>
-							<ul class="list-inline product-ratings">
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-							</ul>
-						</div></li>
-				</ul>
+				<div class="col-md-4 padding">
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="${url}/img/thumb/toco.png"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="${pageContext.request.contextPath }/product/stall?stall_id=12">Trà sữa Toco Toco</a>
+							</h4>
+							<span class="thumb-product-type">Nhấp nhô từng nhịp</span>
+						</div>
+					</div>
+				</div>
 			</div>
+			
+			<!--/end row-->
+			<div class="row illustration-v4 margin-bottom-40">
+				<div class="col-md-4">
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="${url}/img/thumb/phuclong.png"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="${pageContext.request.contextPath }/product/stall?stall_id=11">Phúc Long Coffee & Tea</a>
+							</h4>
+							<span class="thumb-product-type">Điểm 10 chất lượng cho các loại đồ uống</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="${url}/img/thumb/royaltea.png"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="${pageContext.request.contextPath }/product/stall?stall_id=10">The Royal Tea</a>
+							</h4>
+							<span class="thumb-product-type">Trà Quý's Tộc Hoàng Gia</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 padding">
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="${url}/img/thumb/pizzahut.png"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="${pageContext.request.contextPath }/product/stall?stall_id=5">Pizza Hut</a>
+							</h4>
+							<span class="thumb-product-type">Thương hiệu Pizza ngon nhất Việt Nam</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/end row-->
+			<!--=== End Illustration v3 ===-->
 		</div>
-		<!--=== End Illustration v2 ===-->
+		<!--/end cotnainer-->		
 
 		<!--=== Shop Suvbscribe ===-->
 		<div class="shop-subscribe">
@@ -457,13 +303,13 @@
 				<div class="row">
 					<div class="col-md-8 md-margin-bottom-20">
 						<h2>
-							subscribe to our weekly <strong>newsletter</strong>
+							đăng ký để nhận <strong>bản tin hàng tuần</strong> của chúng tôi
 						</h2>
 					</div>
 					<div class="col-md-4">
 						<div class="input-group">
 							<input type="text" class="form-control"
-								placeholder="Email your email..."> <span
+								placeholder="Nhập địa chỉ email..."> <span
 								class="input-group-btn">
 								<button class="btn" type="button">
 									<i class="fa fa-envelope-o"></i>
