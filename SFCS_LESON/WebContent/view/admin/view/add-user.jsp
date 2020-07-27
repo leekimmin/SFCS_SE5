@@ -28,7 +28,7 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>Edit User</h2>
+						<h2>Add User</h2>
 						<h5>You can edit info user in here</h5>
 					</div>
 				</div>
@@ -46,11 +46,32 @@
 										
 										<form role="form" action="add"  method="post" enctype="multipart/form-data">
 											<div class="form-group">
+												<label>First Name:</label> <input class="form-control"
+													placeholder="please enter firstname" name="firstname" />
+											</div>
+											<div class="form-group">
+												<label>Last Name:</label> <input class="form-control"
+													placeholder="please enter lastname" name="lastname" />
+											</div>
+											<div class="form-group">
+												<label>Birth Day:</label> <input type ="date" class="form-control"
+													name="birthday" />
+											</div>
+											<div class="form-group">
+												<label>Gender:</label>
+												<div class="checkbox">
+													<label> <input type="radio" value="M" name="gender" />Male
+													</label> <br> <label> <input type="radio" value="F"
+														name="gender"/>Female
+													</label>
+												</div>
+											</div>
+											<div class="form-group">
 												<label>User Name:</label> <input class="form-control"
 													placeholder="please enter username" name="username" />
 											</div>
 											<div class="form-group">
-												<label>Password</label> <input class="form-control"
+												<label>Password:</label> <input class="form-control"
 													placeholder="please enter password" type="password"
 													name="password" />
 											</div>
@@ -59,12 +80,20 @@
 													placeholder="Please enter email" name="email" />
 											</div>
 											<div class="form-group">
+												<label>Phone:</label> <input class="form-control"
+													placeholder="Please enter phone" name="phone" />
+											</div>
+											<div class="form-group">
+												<label>Address:</label> <input class="form-control"
+													placeholder="Please enter address" name="address" />
+											</div>
+											<div class="form-group">
 												<label>Role</label>
 												<div class="checkbox">
-													<label> <input type="radio" value="1" name="role"/>Admin
+													<label> <input type="radio" value="2" name="role"/>Admin
 													</label>
 													<br>
-													<label> <input type="radio" value="2" name="role" />Client
+													<label> <input type="radio" value="1" name="role" />Client
 													</label>
 												</div>
 												

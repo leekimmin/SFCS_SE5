@@ -82,28 +82,20 @@
 						data-bgfit="cover" data-bgposition="right top"
 						data-bgrepeat="no-repeat">
 
-						<div class="tp-caption revolution-ch4 sft" data-x="right"
-							data-hoffset="-14" data-y="170" data-speed="1400"
-							data-start="500" data-easing="Power4.easeOut"
-							data-endspeed="300" data-endeasing="Power1.easeIn"
-							data-captionhidden="off" style="z-index: 6">
-							Thỏa sức ăn uống cùng
-						</div> <!-- LAYER -->
-						
-						<div class="tp-caption revolution-ch5 sft start" data-x="right"
-							data-hoffset="5" data-y="210" data-speed="1500" data-start="2000"
+						<div class="tp-caption revolution-ch3 sft start" data-x="center"
+							data-hoffset="0" data-y="20" data-speed="1500" data-start="500"
 							data-easing="Back.easeInOut" data-endeasing="Power1.easeIn"
 							data-endspeed="300">
-							<strong>MC DONALD'S</strong>
+							<strong>SIÊU HOT</strong> MÙA COVID
 						</div> <!-- LAYER -->
 						
-						<div class="tp-caption sft" data-x="right" data-hoffset="0"
-							data-y="300" data-speed="1600" data-start="2800"
+						<div class="tp-caption sft" data-x="center" data-hoffset="0"
+							data-y="140" data-speed="1600" data-start="1800"
 							data-easing="Power4.easeOut" data-endspeed="300"
 							data-endeasing="Power1.easeIn" data-captionhidden="off"
 							style="z-index: 6">
 							<a href="${pageContext.request.contextPath }/product/stall?stall_id=6" class="btn-u btn-brd btn-brd-hover btn-u-light">Đặt
-								Món Ngay</a>
+							Hàng Ngay</a>
 						</div>
 					</li>
 					<!-- END SLIDE -->
@@ -123,22 +115,102 @@
 						<!-- MAIN IMAGE --> <img src="${url}/img/2.jpg" alt="darkblurbg"
 						data-bgfit="cover" data-bgposition="left top"
 						data-bgrepeat="no-repeat">
+					</li>
+					<!-- END SLIDE -->	
+					
+					<!-- SLIDE -->
+					<li class="revolution-mch-1" data-transition="fade"
+						data-slotamount="5" data-masterspeed="1000" data-title="Slide 4">
+						<!-- MAIN IMAGE --> <img src="${url}/img/4.jpg" alt="darkblurbg"
+						data-bgfit="cover" data-bgposition="left top"
+						data-bgrepeat="no-repeat">
 
-						<div class="tp-caption revolution-ch1 sft start" data-x="center"
-							data-hoffset="0" data-y="10" data-speed="1500" data-start="500"
+						<div class="tp-caption revolution-ch3 sft start" data-x="center"
+							data-hoffset="0" data-y="140" data-speed="1500" data-start="500"
 							data-easing="Back.easeInOut" data-endeasing="Power1.easeIn"
-							data-endspeed="300">Combo siêu tiết kiệm của <strong>KFC</strong></div> <!-- LAYER -->
-						
+							data-endspeed="300">
+							THỰC ĐƠN <strong>MÓN CHAY</strong>
+							<br> ĐÁNH BAY <strong>KHẨU NGHIỆP</strong>
+						</div> <!-- LAYER -->
+						<div class="tp-caption revolution-ch4 sft" data-x="center"
+							data-hoffset="-14" data-y="310" data-speed="1400"
+							data-start="2000" data-easing="Power4.easeOut"
+							data-endspeed="300" data-endeasing="Power1.easeIn"
+							data-captionhidden="off" style="z-index: 6">
+							Các món ăn chế biến từ nguyện liệu 100% chay.<br> đang là xu hướng
+							thịnh hành hiện nay
+						</div> <!-- LAYER -->
 						<div class="tp-caption sft" data-x="center" data-hoffset="0"
-							data-y="180" data-speed="1600" data-start="2800"
+							data-y="400" data-speed="1600" data-start="1800"
 							data-easing="Power4.easeOut" data-endspeed="300"
 							data-endeasing="Power1.easeIn" data-captionhidden="off"
 							style="z-index: 6">
-							<a href="${pageContext.request.contextPath }/product/stall?stall_id=4" class="btn-u btn-brd btn-brd-hover btn-u-light"><strong>Đặt
-							Món Ngay</strong></a>
+							<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Đặt
+							Hàng Ngay</a>
 						</div>
 					</li>
-					<!-- END SLIDE -->					
+					<!-- END SLIDE -->		
+					
+					<!-- SLIDE -->
+					<li class="revolution-mch-1" data-transition="fade"
+						data-slotamount="5" data-masterspeed="1000" data-title="Slide 5">
+						<!-- MAIN IMAGE --> <img src="${url}/img/5.jpg" alt="darkblurbg"
+						data-bgfit="cover" data-bgposition="left top"
+						data-bgrepeat="no-repeat">
+					</li>
+					<!-- END SLIDE -->	
+					
+					<!-- SLIDE -->
+					<li class="revolution-mch-1" data-transition="fade"
+						data-slotamount="5" data-masterspeed="1000" data-title="Slide 6">
+						<!-- MAIN IMAGE --> <img src="${url}/img/6.jpg" alt="darkblurbg"
+						data-bgfit="cover" data-bgposition="left top"
+						data-bgrepeat="no-repeat">
+						
+					</li>
+					<!-- END SLIDE -->	
+					
+					<!-- SLIDE -->
+					<li class="revolution-mch-1" data-transition="fade"
+						data-slotamount="5" data-masterspeed="1000" data-title="Slide 7">
+						<!-- MAIN IMAGE --> <img src="${url}/img/7.jpg" alt="darkblurbg"
+						data-bgfit="cover" data-bgposition="left top"
+						data-bgrepeat="no-repeat">
+
+						<div class="tp-caption revolution-ch3 sft start" data-x="center"
+							data-hoffset="0" data-y="140" data-speed="1500" data-start="500"
+							data-easing="Back.easeInOut" data-endeasing="Power1.easeIn"
+							data-endspeed="300">
+							THỰC ĐƠN <strong>GIẢM CÂN</strong> KHỎE MẠNH
+						</div> <!-- LAYER -->
+						<div class="tp-caption revolution-ch4 sft" data-x="center"
+							data-hoffset="-14" data-y="210" data-speed="1400"
+							data-start="2000" data-easing="Power4.easeOut"
+							data-endspeed="300" data-endeasing="Power1.easeIn"
+							data-captionhidden="off" style="z-index: 6">
+							Thực phẩm được làm từ những loại rau sạch<br> Đảm bảo sức khỏe
+							người dùng
+						</div> <!-- LAYER -->
+						<div class="tp-caption sft" data-x="center" data-hoffset="0"
+							data-y="300" data-speed="1600" data-start="1800"
+							data-easing="Power4.easeOut" data-endspeed="300"
+							data-endeasing="Power1.easeIn" data-captionhidden="off"
+							style="z-index: 6">
+							<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Đặt
+								Hàng Ngay</a>
+						</div>
+					</li>
+					<!-- END SLIDE -->	
+					
+					<!-- SLIDE -->
+					<li class="revolution-mch-1" data-transition="fade"
+						data-slotamount="5" data-masterspeed="1000" data-title="Slide 8">
+						<!-- MAIN IMAGE --> <img src="${url}/img/8.jpg" alt="darkblurbg"
+						data-bgfit="cover" data-bgposition="left top"
+						data-bgrepeat="no-repeat">
+						
+					</li>
+					<!-- END SLIDE -->		
 				</ul>
 				<div class="tp-bannertimer tp-bottom"></div>
 			</div>
@@ -155,7 +227,7 @@
 							<div class="illustration-bg">
 								<div class="illustration-ads ad-details-v1">
 									<h3>
-										<strong>Ưu đãi</strong> mùa thi cùng Phúc Long
+										<strong>ƯU ĐÃI</strong> MÙA THI CÙNG PHÚC LONG
 									</h3>
 									<a class="btn-u btn-brd btn-brd-hover btn-u-light" href="${pageContext.request.contextPath }/product/stall?stall_id=11">Đặt
 									Hàng Ngay</a>
@@ -166,10 +238,43 @@
 				</div>
 				<div class="col-md-6">
 					<div class="overflow-h">
-						<a class="illustration-v1 illustration-img2" href="#"> <span
+						<a class="illustration-v1 illustration-img2" href="${pageContext.request.contextPath }/product/stall?stall_id=10"> <span
 							class="illustration-bg"> <span
 								class="illustration-ads ad-details-v2"> <span
-									class="item-time">Khuyến mãi <strong>30-40%</strong> tại</span> <span class="item-name">ROYAL TEA</span>
+									class="item-time">KHUYẾN MÃI <strong>30-40%</strong> TẠI</span> <span class="item-name">ROYAL TEA</span>
+							</span>
+						</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--/end row-->
+			<!--=== End Illustration v1 ===-->
+			
+			<!--=== Illustration v1 ===-->
+			<div class="row margin-bottom-60">
+				<div class="col-md-6 md-margin-bottom-30">
+					<div class="overflow-h">
+						<div class="illustration-v1 illustration-img3">
+							<div class="illustration-bg">
+								<div class="illustration-ads ad-details-v1">
+									<h3>
+										<strong>ƯU ĐÃI</strong> HÈ 20% - 40%
+									</h3>
+									<a class="btn-u btn-brd btn-brd-hover btn-u-light" href="#">Đặt
+									Hàng Ngay</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="overflow-h">
+						<a class="illustration-v1 illustration-img4" href="#"> <span
+							class="illustration-bg"> <span
+								class="illustration-ads ad-details-v2"> <span
+									class="item-time">THỰC ĐƠN MÙA</span> <span class="item-name">
+									<strong>COVID</strong></span>
 							</span>
 						</span>
 						</a>
@@ -430,9 +535,50 @@
 							alt="">
 						<div class="thumb-product-in">
 							<h4>
-								<a href="${pageContext.request.contextPath }/product/stall?stall_id=12">Toco Toco</a>
+								<a href="${pageContext.request.contextPath }/product/stall?stall_id=12">Trà sữa Toco Toco</a>
 							</h4>
 							<span class="thumb-product-type">Nhấp nhô từng nhịp</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--/end row-->
+			<div class="row illustration-v4 margin-bottom-40">
+				<div class="col-md-4">
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="${url}/img/thumb/phuclong.png"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="${pageContext.request.contextPath }/product/stall?stall_id=11">Phúc Long Coffee & Tea</a>
+							</h4>
+							<span class="thumb-product-type">Điểm 10 chất lượng cho các loại đồ uống</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="${url}/img/thumb/royaltea.png"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="${pageContext.request.contextPath }/product/stall?stall_id=10">The Royal Tea</a>
+							</h4>
+							<span class="thumb-product-type">Trà Quý's Tộc Hoàng Gia</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 padding">
+					<div class="thumb-product">
+						<img class="thumb-product-img" src="${url}/img/thumb/pizzahut.png"
+							alt="">
+						<div class="thumb-product-in">
+							<h4>
+								<a href="${pageContext.request.contextPath }/product/stall?stall_id=5">Pizza Hut</a>
+							</h4>
+							<span class="thumb-product-type">Thương hiệu Pizza ngon nhất Việt Nam</span>
 						</div>
 					</div>
 				</div>
@@ -473,6 +619,39 @@
 		</div>
 		<!--=== End Collection Banner ===-->
 
+		<!--=== Sponsors ===-->
+		<div class="container content">
+			<div class="heading heading-v1 margin-bottom-40">
+				<h2>Nhà tài trợ</h2>
+				<p>Chân thành cảm ơn các nhà tài trợ đã cùng đồng hành với
+				SFCS</p>
+			</div>
+
+			<ul class="list-inline owl-slider-v2">
+				<li class="item"><img src="${url}/img/clients/hcmut-01.jpg" alt="">
+				</li>
+				<li class="item"><img src="${url}/img/clients/cse-01.jpg" alt="">
+				</li>
+				<li class="item"><img src="${url}/img/clients/kfc-01.jpg" alt="">
+				</li>
+				<li class="item"><img src="${url}/img/clients/mcdonald-01.jpg" alt="">
+				</li>
+				<li class="item"><img src="${url}/img/clients/toco-01.jpg" alt="">
+				</li>
+				<li class="item"><img src="${url}/img/clients/phuclong-01.jpg" alt="">
+				</li>
+				<li class="item"><img src="${url}/img/clients/royaltea-01.jpg" alt="">
+				</li>
+				<li class="item"><img src="${url}/img/clients/pizzahut-01.jpg" alt="">
+				</li>
+				<li class="item"><img src="${url}/img/clients/hcmut-01.jpg" alt="">
+				</li>
+				<li class="item"><img src="${url}/img/clients/cse-01.jpg" alt="">
+				</li>
+			</ul>
+			<!--/end owl-carousel-->
+		</div>
+		<!--=== End Sponsors ===-->
 
 		<!--=== Shop Suvbscribe ===-->
 		<div class="shop-subscribe">

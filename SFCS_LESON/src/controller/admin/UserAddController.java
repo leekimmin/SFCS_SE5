@@ -50,16 +50,22 @@ public class UserAddController extends HttpServlet {
 					user.setEmail(item.getString());
 				} else if (item.getFieldName().equals("username")) {
 					user.setUsername(item.getString());
-				} else if (item.getFieldName().equals("password")) {
-					user.setPassword(item.getString());
 				} else if (item.getFieldName().equals("firstname")) {
 					user.setFirstname(item.getString());
 				} else if (item.getFieldName().equals("lastname")) {
 					user.setLastname(item.getString());
+				} else if (item.getFieldName().equals("password")) {
+					user.setPassword(item.getString());
 				} else if (item.getFieldName().equals("gender")) {
 					user.setGender(item.getString());
+				} else if (item.getFieldName().equals("birthday")) {
+					user.setBirthday(item.getString());
+				} else if (item.getFieldName().equals("phone")) {
+					user.setPhone(item.getString());
+				} else if (item.getFieldName().equals("address")) {
+					user.setAddress(item.getString());
 				} else if (item.getFieldName().equals("role")) {
-					user.setRoleId(Integer.parseInt(item.getString()));;
+					user.setRoleId(Integer.parseInt(item.getString()));
 				} else if (item.getFieldName().equals("avatar")) {
 					String root = getServletContext().getRealPath("/");
 					File path = new File(root + "/uploads");
@@ -76,7 +82,7 @@ public class UserAddController extends HttpServlet {
 					user.setAvatar(fileName);
 				}
 			}
-
+			
 			userService.insert(user);
 
 			resp.sendRedirect(req.getContextPath() + "/admin/user/list");

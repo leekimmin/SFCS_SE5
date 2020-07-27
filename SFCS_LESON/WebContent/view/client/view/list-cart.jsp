@@ -1,14 +1,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt"%> 
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Add to Cart</title>
+<meta charset="UTF-8">
+<title>Thêm Vào Giỏ Hàng</title>
 <!-- Favicon -->
 <link rel="shortcut icon" href="favicon.ico">
-<c:url value="/view/client/static" var="url"></c:url>
+<c:url value="/view/client" var="url"></c:url>
 
 <!-- Web Fonts -->
 <link rel='stylesheet' type='text/css'
@@ -16,32 +16,32 @@
 
 <!-- CSS Global Compulsory -->
 <link rel="stylesheet"
-	href="${url}/plugins/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="${url}/css/shop.style.css">
+	href="${url}/static/plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="${url}/static/css/shop.style.css">
 
 <!-- CSS Header and Footer -->
-<link rel="stylesheet" href="${url}/css/headers/header-v5.css">
-<link rel="stylesheet" href="${url}/css/footers/footer-v4.css">
+<link rel="stylesheet" href="${url}/static/css/headers/header-v5.css">
+<link rel="stylesheet" href="${url}/static/css/footers/footer-v4.css">
 
 <!-- CSS Implementing Plugins -->
-<link rel="stylesheet" href="${url}/plugins/animate.css">
-<link rel="stylesheet" href="${url}/plugins/line-icons/line-icons.css">
+<link rel="stylesheet" href="${url}/static/plugins/animate.css">
+<link rel="stylesheet" href="${url}/static/plugins/line-icons/line-icons.css">
 <link rel="stylesheet"
-	href="${url}/plugins/font-awesome/css/font-awesome.min.css">
+	href="${url}/static/plugins/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet"
-	href="${url}/plugins/jquery-steps/css/custom-jquery.steps.css">
+	href="${url}/static/plugins/jquery-steps/css/custom-jquery.steps.css">
 <link rel="stylesheet"
-	href="${url}/plugins/scrollbar/css/jquery.mCustomScrollbar.css">
+	href="${url}/static/plugins/scrollbar/css/jquery.mCustomScrollbar.css">
 
 <!-- Style Switcher -->
-<link rel="stylesheet" href="${url}/css/plugins/style-switcher.css">
+<link rel="stylesheet" href="${url}/static/css/plugins/style-switcher.css">
 
 <!-- CSS Theme -->
-<link rel="stylesheet" href="${url}/css/theme-colors/default.css"
+<link rel="stylesheet" href="${url}/static/css/theme-colors/default.css"
 	id="style_color">
 
 <!-- CSS Customization -->
-<link rel="stylesheet" href="${url}/css/custom.css">
+<link rel="stylesheet" href="${url}/static/css/custom.css">
 </head>
 <body>
 	<!-- Subiz -->
@@ -57,8 +57,7 @@
 			z.src = b;
 			z.id = 'subiz-script';
 			zz.parentNode.insertBefore(z, zz);
-		})(document, window, 'https://widgetv4.subiz.com/static/js/app.js',
-				'subiz');
+		})(document, window, 'https://widgetv4.subiz.com/static/js/app.js', 'subiz');
 		subiz('setAccount', 'acqetkhujxyunuatbxzw');
 	</script>
 	<!-- End Subiz -->
@@ -79,14 +78,11 @@
 		<!--=== Breadcrumbs v4 ===-->
 		<div class="breadcrumbs-v4">
 			<div class="container">
-				<span class="page-name">Check Out</span>
-				<h1>
-					Maecenas <span class="shop-green">enim</span> sapien
-				</h1>
+				<span class="page-name">Đặt Hàng</span>
+				<h1>TẬN HƯỞNG CÙNG <span class="shop-yellow">SFCS</span></h1>
 				<ul class="breadcrumb-v4-in">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="">Product</a></li>
-					<li class="active">Shopping Cart</li>
+					<li><a href="${url}/view/index.jsp">Trang Chủ</a></li>
+					<li class="active">Giỏ Hàng</li>
 				</ul>
 			</div>
 			<!--/end container-->
@@ -97,293 +93,190 @@
 		<div class="content-md margin-bottom-30">
 			<div class="container">
 				<form class="shopping-cart" action="#">
-					<div>
-						<div class="header-tags">
-							<div class="overflow-h">
-								<h2>Shopping Cart</h2>
-								<p>Review &amp; edit your product</p>
-								<i class="rounded-x fa fa-check"></i>
-							</div>
-						</div>
-						<section>
-							<div class="table-responsive">
-								<table class="table table-striped">
-									<thead>
-										<tr>
-											<th>Product</th>
-											<th>Price</th>
-											<th>Qty</th>
-											<th>Total</th>
-										</tr>
-									</thead>
-									<tbody>
+					<div><div class="header-tags">
+						<div class="overflow-h">
+							<h2>Giỏ Hàng</h2>
+							<p>Đánh giá &amp; chỉnh sửa đơn hàng</p>
+							<i class="rounded-x fa fa-check"></i>
+					</div></div>
+					<section>
+						<div class="table-responsive">
+							<table class="table table-striped">
+								<thead><tr>
+									<th>Món</th>
+									<th>Đơn Giá</th>
+									<th>Số Lượng</th>
+									<th>Thành Tiền</th>
+								</tr></thead>
+							<tbody>
+			
+							<c:forEach items="${sessionScope.cart}" var="map">
+								<tr><f:setLocale value="vi_VN"/>
+									<c:url value="/image?fname=${map.value.product.image }" var="imgUrl"></c:url>
+									<td class="product-in-table"><img class="img-responsive" src="${imgUrl}" alt="">
+										<div class="product-it-in">
+											<h3>${map.value.product.name }</h3>
+											<span>${map.value.product.des }</span>
+										</div>
+									</td>
+									<td><f:formatNumber value="${map.value.product.price }" type="currency"/></td>
+									<td>${map.value.quantity }</td>
+									<td class="shop-red"><f:formatNumber value="${map.value.product.price * map.value.quantity }" type="currency"/></td>
+									<td><a href="${pageContext.request.contextPath}/member/cart/remove?pId=${map.value.product.id}">
+										<button type="button" class="close">
+											<span>&times;</span><span class="sr-only">Đóng</span>
+										</button>
+									</a></td>
+								</tr>
+							</c:forEach>
+							</tbody>
+								
+							<tbody>
+								<td></td>
+								<td><strong>TỔNG TIỀN</strong></td>
+								<td></td>
+				
+									<c:set var="total" value="${0}"/> 
 										<c:forEach items="${sessionScope.cart}" var="map">
-
-											<tr>
-												<c:url value="/image?fname=${map.value.product.image }"
-													var="imgUrl"></c:url>
-												<td class="product-in-table"><img
-													class="img-responsive" src="${imgUrl}" alt="">
-													<div class="product-it-in">
-														<h3>${map.value.product.name }</h3>
-														<span>${map.value.product.des }</span>
-													</div></td>
-												<td>$ ${map.value.product.price }</td>
-												<td>${map.value.quantity }</td>
-												<td class="shop-red">$ ${map.value.product.price * map.value.quantity }</td>
-												<td><a
-													href="${pageContext.request.contextPath}/member/cart/remove?pId=${map.value.product.id}"><button
-															type="button" class="close">
-															<span>&times;</span><span class="sr-only">Close</span>
-														</button></a></td>
-											</tr>
-										</c:forEach>
-
-									</tbody>
-								</table>
-							</div>
-						</section>
-
-
-
-
-						<div class="header-tags">
-							<div class="overflow-h">
-								<h2>Payment</h2>
-								<p>Select Payment method</p>
-								<i class="rounded-x fa fa-credit-card"></i>
-							</div>
+											<c:set var="total" value="${total + map.value.quantity * map.value.product.price}" />
+										</c:forEach>	
+								<td class="shop-red"><f:formatNumber value="${total}" type="currency"/></td>
+								<td></td>
+							</tbody>
+							
+							</table>
 						</div>
-						<section>
-							<div class="row">
-								<div class="col-md-6 md-margin-bottom-50">
-									<h2 class="title-type">Choose a payment method</h2>
-									<!-- Accordion -->
-									<div class="accordion-v2">
-										<div class="panel-group" id="accordion">
-											<div class="panel panel-default">
-												<div class="panel-heading">
-													<h4 class="panel-title">
-														<a data-toggle="collapse" data-parent="#accordion"
-															href="#collapseOne"> <i class="fa fa-credit-card"></i>
-															Credit or Debit Card
-														</a>
-													</h4>
-												</div>
-												<div id="collapseOne" class="panel-collapse collapse in">
-													<div class="panel-body cus-form-horizontal">
-														<div class="form-group">
-															<label class="col-sm-4 no-col-space control-label">Cardholder
-																Name</label>
-															<div class="col-sm-8">
-																<input type="text" class="form-control required"
-																	name="cardholder" placeholder="">
-															</div>
-														</div>
-														<div class="form-group">
-															<label class="col-sm-4 no-col-space control-label">Card
-																Number</label>
-															<div class="col-sm-8">
-																<input type="text" class="form-control required"
-																	name="cardnumber" placeholder="">
-															</div>
-														</div>
-														<div class="form-group">
-															<label class="col-sm-4 no-col-space control-label">Payment
-																Types</label>
-															<div class="col-sm-8">
-																<ul class="list-inline payment-type">
-																	<li><i class="fa fa-cc-paypal"></i></li>
-																	<li><i class="fa fa-cc-visa"></i></li>
-																	<li><i class="fa fa-cc-mastercard"></i></li>
-																	<li><i class="fa fa-cc-discover"></i></li>
-																</ul>
-															</div>
-														</div>
-														<div class="form-group">
-															<label class="col-sm-4">Expiration Date</label>
-															<div class="col-sm-8 input-small-field">
-																<input type="text" name="mm" placeholder="MM"
-																	class="form-control required sm-margin-bottom-20">
-																<span class="slash">/</span> <input type="text"
-																	name="yy" placeholder="YY"
-																	class="form-control required">
-															</div>
-														</div>
-														<div class="form-group">
-															<label class="col-sm-4 no-col-space control-label">CSC</label>
-															<div class="col-sm-8 input-small-field">
-																<input type="text" name="number" placeholder=""
-																	class="form-control required"> <a href="#">What's
-																	this?</a>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="panel panel-default">
-												<div class="panel-heading">
-													<h4 class="panel-title">
-														<a data-toggle="collapse" data-parent="#accordion"
-															href="#collapseTwo"> <i class="fa fa-paypal"></i> Pay
-															with PayPal
-														</a>
-													</h4>
-												</div>
-												<div id="collapseTwo" class="panel-collapse collapse">
-													<div class="content margin-left-10">
-														<a href="#"><img
-															src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_150x38.png"
-															alt="PayPal"></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- End Accordion -->
-								</div>
-
-								<div class="col-md-6">
-									<h2 class="title-type">Frequently asked questions</h2>
-									<!-- Accordion -->
-									<div class="accordion-v2 plus-toggle">
-										<div class="panel-group" id="accordion-v2">
-											<div class="panel panel-default">
-												<div class="panel-heading">
-													<h4 class="panel-title">
-														<a data-toggle="collapse" data-parent="#accordion-v2"
-															href="#collapseOne-v2"> What payments methods can I
-															use? </a>
-													</h4>
-												</div>
-												<div id="collapseOne-v2" class="panel-collapse collapse in">
-													<div class="panel-body">Lorem ipsum dolor sit amet,
-														consectetur adipiscing elit. Nam hendrerit, felis vel
-														tincidunt sodales, urna metus rutrum leo, sit amet finibus
-														velit ante nec lacus. Cras erat nunc, pulvinar nec leo at,
-														rhoncus elementum orci. Nullam ut sapien ultricies,
-														gravida ante ut, ultrices nunc.</div>
-												</div>
-											</div>
-											<div class="panel panel-default">
-												<div class="panel-heading">
-													<h4 class="panel-title">
-														<a data-toggle="collapse" class="collapsed"
-															data-parent="#accordion-v2" href="#collapseTwo-v2">
-															Can I use gift card to pay for my purchase? </a>
-													</h4>
-												</div>
-												<div id="collapseTwo-v2" class="panel-collapse collapse">
-													<div class="panel-body">Lorem ipsum dolor sit amet,
-														consectetur adipiscing elit. Nam hendrerit, felis vel
-														tincidunt sodales, urna metus rutrum leo, sit amet finibus
-														velit ante nec lacus. Cras erat nunc, pulvinar nec leo at,
-														rhoncus elementum orci. Nullam ut sapien ultricies,
-														gravida ante ut, ultrices nunc.</div>
-												</div>
-											</div>
-											<div class="panel panel-default">
-												<div class="panel-heading">
-													<h4 class="panel-title">
-														<a data-toggle="collapse" class="collapsed"
-															data-parent="#accordion-v2" href="#collapseThree-v2">
-															Will I be charged when I place my order? </a>
-													</h4>
-												</div>
-												<div id="collapseThree-v2" class="panel-collapse collapse">
-													<div class="panel-body">Lorem ipsum dolor sit amet,
-														consectetur adipiscing elit. Nam hendrerit, felis vel
-														tincidunt sodales, urna metus rutrum leo, sit amet finibus
-														velit ante nec lacus. Cras erat nunc, pulvinar nec leo at,
-														rhoncus elementum orci. Nullam ut sapien ultricies,
-														gravida ante ut, ultrices nunc.</div>
-												</div>
-											</div>
-											<div class="panel panel-default">
-												<div class="panel-heading">
-													<h4 class="panel-title">
-														<a data-toggle="collapse" class="collapsed"
-															data-parent="#accordion-v2" href="#collapseFour-v2">
-															How long will it take to get my order? </a>
-													</h4>
-												</div>
-												<div id="collapseFour-v2" class="panel-collapse collapse">
-													<div class="panel-body">Lorem ipsum dolor sit amet,
-														consectetur adipiscing elit. Nam hendrerit, felis vel
-														tincidunt sodales, urna metus rutrum leo, sit amet finibus
-														velit ante nec lacus. Cras erat nunc, pulvinar nec leo at,
-														rhoncus elementum orci. Nullam ut sapien ultricies,
-														gravida ante ut, ultrices nunc.</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- End Accordion -->
-								</div>
-							</div>
-						</section>
-
-						<div class="coupon-code">
-							<div class="row">
-								<div class="col-sm-4 sm-margin-bottom-30">
-									<h3>Discount Code</h3>
-									<p>Enter your coupon code</p>
-									<input class="form-control margin-bottom-10" name="code"
-										type="text">
-									<button type="button" class="btn-u btn-u-sea-shop">Apply
-										Coupon</button>
-								</div>
-								<div class="col-sm-3 col-sm-offset-5">
-									<ul class="list-inline total-result">
-										<li>
-											<h4>Subtotal:</h4> <c:set var="total" value="${0}" /> <c:forEach
-												items="${sessionScope.cart}" var="map">
-												<c:set var="total"
-													value="${total + map.value.quantity * map.value.product.price}" />
-											</c:forEach>
-											<div class="total-result-in">
-												<span>$ ${total }</span>
-
-											</div>
-										</li>
-										<li>
-											<h4>Shipping:</h4>
-											<div class="total-result-in">
-												<span class="text-right">- - - -</span>
-											</div>
-										</li>
-										<li class="divider"></li>
-										<li class="total-price">
-											<h4>Total:</h4>
-											<div class="total-result-in">
-												<span>$ ${total }</span>
-
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
+					</section>
+					
+					
+					
+					<div class="header-tags">
+						<div class="overflow-h">
+							<h2>Thanh Toán</h2>
+							<i class="rounded-x fa fa-credit-card"></i>
 						</div>
 					</div>
-				</form>
-			</div>
-			<!--/end container-->
-		</div>
-		<!--=== End Content Medium Part ===-->
+					
+					<section>
+						<div class="row">
+							<div class="col-md-6 md-margin-bottom-50">
+								<h2 class="title-type">Chọn phương thức thanh toán </h2>
+								<!-- Accordion -->
+								<div class="accordion-v2">
+									<div class="panel-group" id="accordion">
+										
+										
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+													Thanh toán bằng MoMo
+												</h4>
+											</div>
+											<div id="collapseTwo" class="panel-collapse collapse">
+												<div class="content margin-left-10">
+													<a href="#">
+														<img src="${url}/static/img/LogoMomo.png" alt="MoMo">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- End Accordion -->
+							</div>
+							
+							<div class="col-md-6">
+								<h2 class="title-type">Những câu hỏi thường gặp</h2>
+								<!-- Accordion -->
+								<div class="accordion-v2 plus-toggle">
+									<div class="panel-group" id="accordion-v2">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion-v2" href="#collapseOne-v2"> 
+														Tôi có thể sử dụng phương thức nào để thanh toán trên SFCS? 
+													</a>
+												</h4>
+											</div>
+											<div id="collapseOne-v2" class="panel-collapse collapse in">
+												<div class="panel-body">Khi thanh toán đơn hàng, SFCS sẽ hỗ trợ bạn liên kết
+												và thanh toán bằng tài khoản trên ví điện tử MoMo của bạn</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" class="collapsed" data-parent="#accordion-v2" href="#collapseTwo-v2">
+														Tôi có thể sử dụng voucher của các cửa hàng khi đặt hàng bằng SFCS được không ?
+													</a>
+												</h4>
+											</div>
+											<div id="collapseTwo-v2" class="panel-collapse collapse">
+												<div class="panel-body">Hiện tại, SFCS chỉ áp dụng ưu đãi ứng với chương trình khuyến mãi của các cửa hàng.
+												Khi đó, các món ăn được khuyến mãi sẽ tự động được cập nhật giá ưu đãi và hiện lên thông báo cho bạn.
+												Vậy nên voucher là một hình thức khuyến mãi khác, bạn chỉ được áp dụng khi bạn mua hàng trực tiếp tại cửa hàng đó.
+												 
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" class="collapsed" data-parent="#accordion-v2" href="#collapseThree-v2">
+														Làm thế nào để được hoàn tiền nếu như đơn hàng bị hủy sau khi đã thanh toán?
+													</a>
+												</h4>
+											</div>
+											<div id="collapseThree-v2" class="panel-collapse collapse">
+												<div class="panel-body">Hệ thống SFCS sẽ cập nhật liên tục số lượng hàng hóa tại các cửa hàng.
+												Nếu như hết hàng, hệ thống sẽ báo lại và không cho phép bạn thực hiện thanh toán.
+												Trường hợp xảy ra sai sót, bạn có thể liên hệ với tổng đài của chúng tôi qua SĐT: 0123.456.789 hoặc
+												email: foodcourt@gmail.com 
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" class="collapsed" data-parent="#accordion-v2" href="#collapseFour-v2">
+														Khoảng bao lâu để tôi nhận được đơn hàng của mình ?
+													</a>
+												</h4>
+											</div>
+											<div id="collapseFour-v2" class="panel-collapse collapse">
+												<div class="panel-body">Điều này tùy thuộc vào thời gian chuẩn bị ở bếp và địa chỉ nhận đơn hàng của bạn.
+												Tuy nhiên SFCS cam kết sẽ luôn thực hiện giao hàng trong thời gian sớm nhất có thể để đem đến cho bạn
+												những bữa ăn thơm ngon và tiện lợi nhất. 
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- End Accordion -->
+							</div>
+						</div>
+					</section>
 
-		<!--=== Shop Suvbscribe ===-->
+					
+				</div>
+			</form>
+		</div>
+		<!--/end container-->
+	</div>
+	<!--=== End Content Medium Part ===-->
+
+	<!--=== Shop Subscribe ===-->
 		<div class="shop-subscribe">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 md-margin-bottom-20">
-						<h2>
-							subscribe to our weekly <strong>newsletter</strong>
-						</h2>
+						<h2>đăng ký để nhận <strong>bản tin hàng tuần</strong> của chúng tôi</h2>
 					</div>
 					<div class="col-md-4">
 						<div class="input-group">
 							<input type="text" class="form-control"
-								placeholder="Email your email..."> <span
+								placeholder="Nhập địa chỉ email..."> <span
 								class="input-group-btn">
 								<button class="btn" type="button">
 									<i class="fa fa-envelope-o"></i>
@@ -395,7 +288,7 @@
 			</div>
 			<!--/end container-->
 		</div>
-		<!--=== End Shop Suvbscribe ===-->
+		<!--=== End Shop Subscribe ===-->
 
 		<!--=== Footer v4 ===-->
 		<jsp:include page="footer.jsp"></jsp:include>
@@ -404,24 +297,24 @@
 	<!--/wrapper-->
 
 	<!-- JS Global Compulsory -->
-	<script src="${url}/plugins/jquery/jquery.min.js"></script>
-	<script src="${url}/plugins/jquery/jquery-migrate.min.js"></script>
-	<script src="${url}/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="${url}/static/plugins/jquery/jquery.min.js"></script>
+	<script src="${url}/static/plugins/jquery/jquery-migrate.min.js"></script>
+	<script src="${url}/static/plugins/bootstrap/js/bootstrap.min.js"></script>
 	<!-- JS Implementing Plugins -->
-	<script src="${url}/plugins/back-to-top.js"></script>
-	<script src="${url}/plugins/smoothScroll.js"></script>
-	<script src="${url}/plugins/jquery-steps/build/jquery.steps.js"></script>
+	<script src="${url}/static/plugins/back-to-top.js"></script>
+	<script src="${url}/static/plugins/smoothScroll.js"></script>
+	<script src="${url}/static/plugins/jquery-steps/build/jquery.steps.js"></script>
 	<script
-		src="${url}/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
+		src="${url}/static/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script
-		src="${url}/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+		src="${url}/static/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
 	<!-- JS Customization -->
-	<script src="${url}/js/custom.js"></script>
+	<script src="${url}/static/js/custom.js"></script>
 	<!-- JS Page Level -->
-	<script src="${url}/js/shop.app.js"></script>
-	<script src="${url}/js/forms/page_login.js"></script>
-	<script src="${url}/js/plugins/stepWizard.js"></script>
-	<script src="${url}/js/forms/product-quantity.js"></script>
+	<script src="${url}/static/js/shop.app.js"></script>
+	<script src="${url}/static/js/forms/page_login.js"></script>
+	<script src="${url}/static/js/plugins/stepWizard.js"></script>
+	<script src="${url}/static/js/forms/product-quantity.js"></script>
 	<script>
 		jQuery(document).ready(function() {
 			App.init();

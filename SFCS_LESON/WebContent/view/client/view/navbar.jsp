@@ -98,6 +98,74 @@
                         </li>
                         <!-- End Menu -->
                         
+                        <!-- Brand -->
+                        <li class="dropdown mega-menu-fullwidth">
+                            <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+                                Thương Hiệu
+                            </a>
+                             <ul class="dropdown-menu">
+                                <li>
+                                    <div class="mega-menu-content">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-2 col-sm-6">
+                                                    <h3 class="mega-menu-heading">Ẩm thực Việt</h3>
+                                                    
+                                                    <ul class="list-unstyled style-list">
+                                                        <li><a href="${pageContext.request.contextPath }/product/stall?stall_id=1">Cơm Nguyên Ký</a><span class="label label-danger-shop">Có Món Mới</span></li>
+                                                        <li><a href="${pageContext.request.contextPath }/product/stall?stall_id=2">Phở 10 Lý Quốc Sư</a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+
+                                                <div class="col-md-2 col-sm-6">
+                                                    <h3 class="mega-menu-heading">Thức ăn nhanh</h3>
+                                                    <ul class="list-unstyled style-list">
+                                                         <li><a href="${pageContext.request.contextPath }/product/stall?stall_id=4">KFC</a><span class="label label-danger-shop">Có Món Mới</span></li>
+                                                         <li><a href="${pageContext.request.contextPath }/product/stall?stall_id=5">Pizza Hut</a></li>
+                                                         <li><a href="${pageContext.request.contextPath }/product/stall?stall_id=6">McDonald's</a></li>
+                                                    </ul>                                                  
+                                                </div>
+
+                                                <div class="col-md-2 col-sm-6">
+                                                    <h3 class="mega-menu-heading">Lẩu & Nướng</h3>
+                                                    <ul class="list-unstyled style-list">
+                                                        <li><a href="${pageContext.request.contextPath }/product/stall?stall_id=3">Hoàng Yến Cuisine</a></li>
+                                                    </ul>
+                                                </div>        
+
+                                                <div class="col-md-2 col-sm-6">
+                                                    <h3 class="mega-menu-heading">Thức uống</h3>
+                                                    <ul class="list-unstyled style-list">
+                                                       <li><a href="${pageContext.request.contextPath }/product/stall?stall_id=10">The Royal Tea</a><span class="label label-danger-shop">Có Món Mới</span></li>
+                                                       <li><a href="${pageContext.request.contextPath }/product/stall?stall_id=11">Phúc Long Coffee & Tea</a></li>
+                                                       <li><a href="${pageContext.request.contextPath }/product/stall?stall_id=12">Trà sữa Toco Toco</a></li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="col-md-2 col-sm-6">
+                                                    <h3 class="mega-menu-heading">Tráng miệng</h3>
+                                                    <ul class="list-unstyled style-list">
+                                                        <li><a href="${pageContext.request.contextPath }/product/stall?stall_id=9">Tous Les Jours</a></li>
+                                                    </ul>                                                    
+                                                </div>
+
+                                                <div class="col-md-2 col-sm-6">
+                                                    <h3 class="mega-menu-heading">Các món khác</h3>
+                                                    <ul class="list-unstyled style-list">
+                                                        <li><a href="${pageContext.request.contextPath }/product/stall?stall_id=8">Hanuri</a><span class="label label-danger-shop">Có Món Mới</span></li>
+                                                        <li><a href="${pageContext.request.contextPath }/product/stall?stall_id=7">Hotto</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div><!--/end row-->
+                                        </div><!--/end container-->
+                                    </div><!--/end mega menu content-->  
+                                </li>
+                            </ul><!--/end dropdown-menu-->
+
+                        </li>
+                        <!-- End Menu -->
+                        
                         <!-- Khuyến mãi -->
                         <li><a href="${pageContext.request.contextPath }">Khuyến mãi</a></li>
                         <!-- End Khuyến mãi -->

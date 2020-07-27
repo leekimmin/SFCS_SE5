@@ -43,7 +43,7 @@
 							<div class="panel-body">
 								<div class="row">
 									<div class="col-md-6">
-										<h3>User:</h3>
+										<h3>Product:</h3>
 										<c:url value="/admin/product/edit" var="edit"></c:url>
 										<form role="form" action="${edit }" method="post"
 											enctype="multipart/form-data">

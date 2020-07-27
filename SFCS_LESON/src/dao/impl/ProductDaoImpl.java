@@ -47,14 +47,15 @@ public class ProductDaoImpl extends JDBCConnection implements ProductDao {
 		String sql = "UPDATE products SET name = ? , price = ?, quantity = ?, discount = ?, category_id = ?, stall_id = ?, description = ?, image = ? "
 				+ "WHERE product_id = ?";
 		Connection con = super.getJDBCConnection();
-
+		
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, product.getName());
 			ps.setInt(2, product.getPrice());
 			ps.setInt(3, product.getQuantity());
 			ps.setInt(4, product.getDiscount());
-			ps.setInt(5, product.getCategory().getId());
+			
+			ps.setInt(5, (product.getCategory()).getId());
 			ps.setInt(6, product.getStall().getId()); 
 			ps.setString(7, product.getDes());
 			ps.setString(8, product.getImage());
