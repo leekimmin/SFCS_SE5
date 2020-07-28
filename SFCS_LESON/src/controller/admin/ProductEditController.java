@@ -15,6 +15,7 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.taglibs.standard.tag.common.fmt.RequestEncodingSupport;
 
 import model.Category;
 import model.Product;
@@ -70,10 +71,10 @@ public class ProductEditController extends HttpServlet {
 					product.setId(Integer.parseInt(item.getString()));
 				} else if (item.getFieldName().equals("name")) {
 					product.setName(item.getString());
-				} else if (item.getFieldName().equals("cate")) {
+				} else if (item.getFieldName().equals("category")) {
 					product.setCategory(categoryService.get(Integer.parseInt(item.getString())));
 				} else if (item.getFieldName().equals("stall")) {
-					product.setStall(stallService.get(item.getString()));
+					product.setStall(stallService.get(Integer.parseInt(item.getString())));
 				} else if (item.getFieldName().equals("price")) {
 					product.setPrice(Integer.parseInt(item.getString()));
 				} else if (item.getFieldName().equals("quantity")) {
@@ -103,7 +104,15 @@ public class ProductEditController extends HttpServlet {
 					}
 				}
 			}
-			
+			/*product.setId(Integer.parseInt(req.getParameter("product_id")));
+			product.setName(req.getParameter("name"));
+			product.setCategory(categoryService.get(Integer.parseInt(req.getParameter("category"))));
+			product.setStall(stallService.get(Integer.parseInt(req.getParameter("stall"))));
+			product.setPrice(Integer.parseInt(req.getParameter("price")));
+			product.setQuantity(Integer.parseInt(req.getParameter("quantity")));
+			product.setDiscount(Integer.parseInt(req.getParameter("discount")));
+			product.setDes(req.getParameter("des"));
+			product.setImage(req.getParameter("image "));*/
 			productService.edit(product);
 
 			resp.sendRedirect(req.getContextPath() + "/admin/product/list");

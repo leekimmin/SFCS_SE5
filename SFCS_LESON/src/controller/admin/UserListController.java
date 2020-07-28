@@ -19,6 +19,9 @@ public class UserListController extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html; charset=UTF-8");
+		req.setCharacterEncoding("UTF-8");
+		
 		List<User> userList = userService.getAll();
 		req.setAttribute("userList", userList);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/view/list-user.jsp");

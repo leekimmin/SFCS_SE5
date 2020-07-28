@@ -25,7 +25,6 @@
 </head>
 <body>
 	<div id="wrapper">
-
 		<jsp:include page="/view/admin/view/nav-bar.jsp"></jsp:include>
 
 		<!-- /. NAV TOP  -->
@@ -35,9 +34,10 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>All Product</h2>
-						<h5>You can management product in here</h5>
-
+						<h2>All Products</h2>
+						<h5>You can manage products in here</h5>
+						<button onclick="location.href='${pageContext.request.contextPath }/admin/product/add'" type="button">
+         				Add New Product</button>
 					</div>
 				</div>
 				<!-- /. ROW  -->
@@ -58,7 +58,10 @@
 												<th>Image</th>
 												<th>Name</th>
 												<th>Price</th>
+												<th>Quantity</th>
+												<th>Discount</th>
 												<th>Category</th>
+												<th>Stall</th>
 												<th>Description</th>
 												<th>Action </th>
 											</tr>
@@ -67,26 +70,22 @@
 										<c:forEach items="${proList }" var="pro" >
 											<tr class="odd gradeX">
 												<td>${pro.id }</td>
-													<c:url value="/image?fname=${pro.image }" var="imgUrl"></c:url>
-													<td><img height="150" width="200" src="${imgUrl}" /></td>
-
-													<td>${pro.name }</td>
+												<c:url value="/image?fname=${pro.image }" var="imgUrl"></c:url>
+												<td><img height="150" width="200" src="${imgUrl}" /></td>
+												<td>${pro.name }</td>
 												<td>${pro.price }</td>
+												<td>${pro.quantity }</td>
+												<td>${pro.discount }</td>
 												<td>${pro.category.name }</td>
+												<td>${pro.stall.name }</td>
 												<td>${pro.des } </td>
-												<td><a
-														href="<c:url value='/product/detail?id=${pro.id }'/>"
-														class="center">Detail</a> | <a
-														href="<c:url value='/admin/product/edit?id=${pro.id }'/>"
-														class="center">Edit</a>
-														| <a
-														href="<c:url value='/admin/product/delete?id=${pro.id }'/>"
-														class="center">Delete</a></td>
-												
+												<td>
+													<a href="<c:url value='/product/detail?id=${pro.id }'/>" class="center">Detail</a> | 
+													<a href="<c:url value='/admin/product/edit?id=${pro.id }'/>" class="center">Edit</a> | 
+													<a href="<c:url value='/admin/product/delete?id=${pro.id }'/>" class="center">Delete</a>
+												</td>							
 											</tr>
-											</c:forEach>
-											
-											
+										</c:forEach>									
 										</tbody>
 									</table>
 								</div>

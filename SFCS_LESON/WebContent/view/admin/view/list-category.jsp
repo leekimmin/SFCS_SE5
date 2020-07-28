@@ -5,9 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>User Management</title>
+<title>Category Management</title>
 <!-- BOOTSTRAP STYLES-->
 <link href="${url}/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
@@ -35,10 +35,9 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>List Users</h2>
-						<h5>You can manage users in here</h5>
-						<button onclick="location.href='${pageContext.request.contextPath }/admin/user/add'" type="button">
-         				Add New Account</button>
+						<h2>All Categories</h2>
+						<button onclick="location.href='${pageContext.request.contextPath }/admin/category/add'" type="button">
+         				Add New Category</button>
 					</div>
 				</div>
 				<!-- /. ROW  -->
@@ -56,51 +55,22 @@
 										<thead>
 											<tr>
 												<th>ID</th>
-												<th>Avatar</th>
-												<th>First Name</th>
-												<th>Last Name</th>
-												<th>Birthdate</th>
-												<th>Gender</th>
-												<th>Email</th>
-												<th>Phone</th>
-												<th>Address</th>
-												<th>User Name</th>
-												<th>Password</th>
-												<th>Role</th>
+												<th>Category Name</th>
 												<th>Action</th>
 											</tr>
 										</thead>
 										<tbody>
-											<c:forEach items="${userList }" var="list">
+											<c:set var="index" value="${0}" />
+											<c:forEach items="${cateList }" var="cate">
 												<tr class="odd gradeX">
-													<td>${list.id }</td>
-													<c:url value="/image?fname=${list.avatar }" var="imgUrl"></c:url>
-													<td><img height="70" width="90" src="${imgUrl}" /></td>
-													<td>${list.firstname }</td>
-													<td>${list.lastname }</td>
-													<td>${list.birthday }</td>
-													<td>${list.gender }</td>
-													<td>${list.email }</td>
-													<td>${list.phone }</td>
-													<td>${list.address }</td>
-													<td>${list.username }</td>
-													<td>${list.password }</td>
-													<td class="center">
-														<c:choose>
-															<c:when test="${list.roleId == 1 }">Customer</c:when>
-															<c:when test="${list.roleId == 2 }">Admin</c:when>
-															<c:when test="${list.roleId == 3 }">Cook</c:when>
-															<c:when test="${list.roleId == 4 }">Vendor</c:when>
-															<c:when test="${list.roleId == 5 }">Manager</c:when>
-														</c:choose>
-													</td>
+													<td>${cate.id }</td>
+													<td>${cate.name }</td>
 													<td>
-														<a href="<c:url value='/admin/user/edit?id=${list.id }'/>" class="center">Edit</a> | 
-														<a href="<c:url value='/admin/user/delete?id=${list.id }'/>" class="center">Delete</a>
+														<a href="<c:url value='/admin/category/edit?id=${cate.id }'/>" class="center">Edit</a> | 
+														<a href="<c:url value='/admin/category/delete?id=${cate.id }'/>" class="center">Delete</a>
 													</td>
 												</tr>
 											</c:forEach>
-
 										</tbody>
 									</table>
 								</div>

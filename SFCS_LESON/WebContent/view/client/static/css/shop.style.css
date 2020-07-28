@@ -1552,23 +1552,18 @@ li:first-child {
 /*Result Category*/
 .result-category {
 	/*background: #000;*/
-	overflow: hidden;	
 	margin-bottom: 5px;
 }
 
-.result-category h2 {
-	float: left;
-	font-size: 30px;
-	margin-right: 20px;
-	text-transform: uppercase;
-}
-
 .result-category .badge-results {
+	float: left;
+	width: 100px;
 	top: 12px;
 	color: #fff;
-	font-size: 12px;
+	font-size: 14px;
 	padding: 3px 0px;
 	position: relative;
+	text-align: center;
 }
 
 /*Grid List Icons*/

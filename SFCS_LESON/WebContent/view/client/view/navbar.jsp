@@ -1,4 +1,4 @@
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+	<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
       <c:url value="/view/client/static" var="url"></c:url>
@@ -32,7 +32,7 @@
 
                         <!-- Menu -->
                         <li class="dropdown mega-menu-fullwidth">
-                            <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+                            <a href="${pageContext.request.contextPath }/product/list" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
                                 Thực đơn
                             </a>
                              <ul class="dropdown-menu">
@@ -41,12 +41,10 @@
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-md-2 col-sm-6">
-                                                    <h3 class="mega-menu-heading">Ẩm thực Việt</h3>
-                                                    
+                                                    <h3 class="mega-menu-heading">Ẩm thực Việt</h3>       
                                                     <ul class="list-unstyled style-list">
                                                         <li><a href="${pageContext.request.contextPath }/product/detail?id=2">Cơm Gà Xối Mỡ</a><span class="label label-danger-shop">Mới</span></li>
-                                                        <li><a href="${pageContext.request.contextPath }/product/detail?id=1">Phở Bò Tái Chín</a></li>
-                                                        
+                                                        <li><a href="${pageContext.request.contextPath }/product/detail?id=1">Phở Bò Tái Chín</a></li>         
                                                     </ul>
                                                 </div>
 
@@ -100,7 +98,7 @@
                         
                         <!-- Brand -->
                         <li class="dropdown mega-menu-fullwidth">
-                            <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+                            <a href="${pageContext.request.contextPath }/product/list" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
                                 Thương Hiệu
                             </a>
                              <ul class="dropdown-menu">
@@ -110,7 +108,6 @@
                                             <div class="row">
                                                 <div class="col-md-2 col-sm-6">
                                                     <h3 class="mega-menu-heading">Ẩm thực Việt</h3>
-                                                    
                                                     <ul class="list-unstyled style-list">
                                                         <li><a href="${pageContext.request.contextPath }/product/stall?stall_id=1">Cơm Nguyên Ký</a><span class="label label-danger-shop">Có Món Mới</span></li>
                                                         <li><a href="${pageContext.request.contextPath }/product/stall?stall_id=2">Phở 10 Lý Quốc Sư</a></li>

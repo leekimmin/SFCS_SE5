@@ -35,7 +35,7 @@ public class UserServiceImpl implements UserService {
 			// XOA ANH CU DI
 			String fileName = oldUser.getAvatar();
 
-			final String dir = "C:\\Users\\mai vien\\eclipse-workspace\\UNIFY\\upload";
+			final String dir = "~\\eclipse-workspace\\SFCS\\upload";
 			File file = new File(dir + "/" + fileName);
 
 			if (file.exists()) {

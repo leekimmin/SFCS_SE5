@@ -44,8 +44,7 @@
 									<div class="col-md-6">
 										<h3>User:</h3>
 										<c:url value="/admin/user/edit" var="edit"></c:url>
-										<form role="form" action="${edit }" method="post"
-											enctype="multipart/form-data">
+										<form role="form" action="${edit }" method="post" enctype="multipart/form-data">
 											<input name="id" value="${user.id }" type="text" hidden="">
 											<div class="form-group">
 												<label>First Name:</label> <input class="form-control"
@@ -56,16 +55,14 @@
 													value="${user.lastname }" name="lastname" />
 											</div>
 											<div class="form-group">
-												<label>Birth Day:</label> <input type ="date" class="form-control"
-													value="${user.birthday }" name="birthday" />
+												<label>Birth Day:</label> <input class="form-control"
+													value="${user.birthday }" type="date" name="birthday" />
 											</div>
 											<div class="form-group">
 												<label>Gender:</label>
 												<div class="checkbox">
-													<label> <input type="radio" value="M" name="gender" />Male
-													</label> <br> <label> <input type="radio" value="F"
-														name="gender" checked="checked"/>Female
-													</label>
+													<label> <input type="radio" value="M" name="gender" checked="checked"/>Male</label> 
+													<br> <label> <input type="radio" value="F" name="gender"/>Female</label>
 												</div>
 											</div>
 											<div class="form-group">
@@ -91,10 +88,11 @@
 											<div class="form-group">
 												<label>Role</label>
 												<div class="checkbox">
-													<label> <input type="radio" value="2" name="role" />Admin
-													</label> <br> <label> <input type="radio" value="1"
-														name="role" checked="checked"/>Client
-													</label>
+													<label> <input type="radio" value="1" name="role" checked="checked" />Customer</label><br>
+													<label> <input type="radio" value="2" name="role" />Admin</label><br>
+													<label> <input type="radio" value="1" name="role" />Cook</label><br>
+													<label> <input type="radio" value="2" name="role" />Vendor</label><br>
+													<label> <input type="radio" value="2" name="role" />Manager</label>
 												</div>
 
 											</div>

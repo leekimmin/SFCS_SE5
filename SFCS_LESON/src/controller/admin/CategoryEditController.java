@@ -29,17 +29,22 @@ public class CategoryEditController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html; charset=UTF-8");
+		req.setCharacterEncoding("UTF-8");
+		
 		String id = req.getParameter("id");
 		Category category = cateService.get(Integer.parseInt(id));
 		
 		req.setAttribute("category", category);
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/category/edit-category.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/view/edit-category.jsp");
 		dispatcher.forward(req, resp);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html; charset=UTF-8");
+		req.setCharacterEncoding("UTF-8");
 		
 		Category category = new Category();
 		category.setId(Integer.parseInt(req.getParameter("id")));

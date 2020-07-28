@@ -100,6 +100,7 @@
 							<i class="rounded-x fa fa-check"></i>
 					</div></div>
 					<section>
+					<f:setLocale value="vi_VN"/>
 						<div class="table-responsive">
 							<table class="table table-striped">
 								<thead><tr>
@@ -109,9 +110,8 @@
 									<th>Thành Tiền</th>
 								</tr></thead>
 							<tbody>
-			
 							<c:forEach items="${sessionScope.cart}" var="map">
-								<tr><f:setLocale value="vi_VN"/>
+								<tr>
 									<c:url value="/image?fname=${map.value.product.image }" var="imgUrl"></c:url>
 									<td class="product-in-table"><img class="img-responsive" src="${imgUrl}" alt="">
 										<div class="product-it-in">
@@ -129,43 +129,35 @@
 									</a></td>
 								</tr>
 							</c:forEach>
-							</tbody>
-								
+							</tbody>						
 							<tbody>
 								<td></td>
 								<td><strong>TỔNG TIỀN</strong></td>
 								<td></td>
-				
 									<c:set var="total" value="${0}"/> 
-										<c:forEach items="${sessionScope.cart}" var="map">
-											<c:set var="total" value="${total + map.value.quantity * map.value.product.price}" />
-										</c:forEach>	
+									<c:forEach items="${sessionScope.cart}" var="map">
+										<c:set var="total" value="${total + map.value.quantity * map.value.product.price}" />
+									</c:forEach>	
 								<td class="shop-red"><f:formatNumber value="${total}" type="currency"/></td>
 								<td></td>
 							</tbody>
 							
 							</table>
 						</div>
-					</section>
-					
-					
-					
+					</section>				
 					<div class="header-tags">
 						<div class="overflow-h">
 							<h2>Thanh Toán</h2>
 							<i class="rounded-x fa fa-credit-card"></i>
 						</div>
-					</div>
-					
+					</div>			
 					<section>
 						<div class="row">
 							<div class="col-md-6 md-margin-bottom-50">
 								<h2 class="title-type">Chọn phương thức thanh toán </h2>
 								<!-- Accordion -->
 								<div class="accordion-v2">
-									<div class="panel-group" id="accordion">
-										
-										
+									<div class="panel-group" id="accordion">								
 										<div class="panel panel-default">
 											<div class="panel-heading">
 												<h4 class="panel-title">
@@ -256,9 +248,7 @@
 								<!-- End Accordion -->
 							</div>
 						</div>
-					</section>
-
-					
+					</section>				
 				</div>
 			</form>
 		</div>

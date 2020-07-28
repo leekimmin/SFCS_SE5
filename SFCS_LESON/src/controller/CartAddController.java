@@ -48,33 +48,6 @@ public class CartAddController extends HttpServlet {
 
 			httpSession.setAttribute("cart", map);
 		}
-		/*
-		 * if (obj != null) { CartItem cartItem = new CartItem();
-		 * cartItem.setProduct(product); cartItem.setQuantity(1);
-		 * cartItem.setUnitPrice(product.getPrice());
-		 * 
-		 * Map<Integer, CartItem> map = new HashMap<Integer, CartItem>(); // Su dung map
-		 * de luu va tim kiem nhanh hon map.put(cartItem.getProduct().getId(),
-		 * cartItem);
-		 * 
-		 * httpSession.setAttribute("cart", map);// luu vao session
-		 * 
-		 * } else {
-		 * 
-		 * Map<Integer, CartItem> map = (Map<Integer, CartItem>) obj; CartItem cartItem
-		 * = map.get(product.getId()); // 1: Chua co san pham trong gio hang if
-		 * (cartItem == null) { CartItem cartItems = new CartItem();
-		 * cartItems.setProduct(product); cartItems.setQuantity(1);
-		 * cartItems.setUnitPrice(product.getPrice());
-		 * 
-		 * // Su dung map de luu va tim kiem nhanh hon
-		 * map.put(cartItems.getProduct().getId(), cartItems);
-		 * 
-		 * httpSession.setAttribute("cart", map);// luu vao session } else { // Truong
-		 * hop da co roi cartItem.setQuantity(1 + cartItem.getQuantity());
-		 * 
-		 * httpSession.setAttribute("cart", map); }
-		 */
 		resp.sendRedirect(req.getContextPath() + "/member/cart");
 	}
 }

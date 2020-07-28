@@ -8,7 +8,7 @@
 <script src="<c:url value="/ckeditor/ckeditor.js" />"></script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Add Product</title>
+<title>Edit Category</title>
 <!-- BOOTSTRAP STYLES-->
 <link href="${url}/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
@@ -29,8 +29,7 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>Add Product</h2>
-						<h5>Add product you can sell</h5>
+						<h2>Edit Category</h2>
 					</div>
 				</div>
 				<!-- /. ROW  -->
@@ -39,57 +38,17 @@
 					<div class="col-md-12">
 						<!-- Form Elements -->
 						<div class="panel panel-default">
-							<div class="panel-heading">Add Product</div>
+							<div class="panel-heading">Edit Category</div>
 							<div class="panel-body">
 								<div class="row">
 									<div class="col-md-6">
-										<h3>Product Information:</h3>
+										<h3>Category:</h3>
 										<form role="form" action="add" method="post" enctype="multipart/form-data">
 											<div class="form-group">
-												<label>Product Name:</label> <input class="form-control"
-													placeholder="Please enter Product Name" name="name" />
-											</div>
-											<div class="form-group">
-												<label>Price (VNĐ):</label> <input class="form-control"
-													placeholder="Please enter Price" type="number" name="price" />
-											</div>
-											<div class="form-group">
-												<label>Quantity:</label> <input class="form-control"
-													placeholder="Please enter Quantity" type="number" name="quantity" />
-											</div>
-											<div class="form-group">
-												<label>Discount (%):</label> <input class="form-control"
-													placeholder="Please enter Discount" type="number" name="discount" />
-											</div>
-											<div class="form-group">
-												<label>Description:</label>
-												<br>
-												<textarea rows="4" cols="50" name="des" id="editer"></textarea>
-											</div>
-											<div class="form-group">
-												<label>Category</label>
-												<div class="checkbox">
-													<select name="category">
-														<c:forEach items="${categories}" var="c">
-															<option value="${c.id}">${c.name}</option>
-														</c:forEach>
-													</select>
-												</div>
-											</div>
-											<div class="form-group">
-												<label>Stall</label>
-												<div class="checkbox">
-													<select name="stall">
-														<c:forEach items="${stalls}" var="s">
-															<option value="${s.id}">${s.name}</option>
-														</c:forEach>
-													</select>
-												</div>
-											</div>
-											<div class="form-group">
-												<label>Image</label> <input type="file" name="image" />
-											</div>
-											<button type="submit" class="btn btn-default">Add</button>
+												<label>Category Name:</label> <input class="form-control"
+													value="${category.name }" name="name" />
+											</div>																				
+											<button type="submit" class="btn btn-default">Edit</button>
 											<button type="reset" class="btn btn-primary">Reset</button>
 										</form>
 									</div>
@@ -119,8 +78,6 @@
 	<script src="${url}/js/jquery.metisMenu.js"></script>
 	<!-- CUSTOM SCRIPTS -->
 	<script src="${url}/js/custom.js"></script>
-<script type="text/javascript" language="javascript">
-   CKEDITOR.replace('editer', {width: '700px',height: '300px'});
-</script>
+
 </body>
 </html>

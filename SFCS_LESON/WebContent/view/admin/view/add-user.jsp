@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Edit User</title>
+<title>Add User</title>
 <!-- BOOTSTRAP STYLES-->
 <link href="${url}/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
@@ -28,7 +28,7 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>Add User</h2>
+						<h2>Edit User</h2>
 						<h5>You can edit info user in here</h5>
 					</div>
 				</div>
@@ -42,61 +42,53 @@
 							<div class="panel-body">
 								<div class="row">
 									<div class="col-md-6">
-										<h3>User:</h3>
-										
+										<h3>User:</h3>										
 										<form role="form" action="add"  method="post" enctype="multipart/form-data">
 											<div class="form-group">
+												<label>User Name:</label> <input class="form-control"
+													placeholder="Please enter username" name="username" />
+											</div>
+											<div class="form-group">
+												<label>Password:</label> <input class="form-control"
+													placeholder="Please enter password" type="password"
+													name="password" />
+											</div>									
+											<div class="form-group">
 												<label>First Name:</label> <input class="form-control"
-													placeholder="please enter firstname" name="firstname" />
+													placeholder="Please enter firstname" name="firstname" />
 											</div>
 											<div class="form-group">
 												<label>Last Name:</label> <input class="form-control"
-													placeholder="please enter lastname" name="lastname" />
+													placeholder="Please enter lastname" name="lastname" />
 											</div>
 											<div class="form-group">
-												<label>Birth Day:</label> <input type ="date" class="form-control"
-													name="birthday" />
+												<label>Birth Day:</label> <input class="form-control"
+													type="date" name="birthday" />
 											</div>
 											<div class="form-group">
 												<label>Gender:</label>
 												<div class="checkbox">
-													<label> <input type="radio" value="M" name="gender" />Male
-													</label> <br> <label> <input type="radio" value="F"
-														name="gender"/>Female
-													</label>
+													<label> <input type="radio" value="M" name="gender" checked="checked"/>Male</label> 
+													<br> <label> <input type="radio" value="F" name="gender"/>Female</label>
 												</div>
-											</div>
-											<div class="form-group">
-												<label>User Name:</label> <input class="form-control"
-													placeholder="please enter username" name="username" />
-											</div>
-											<div class="form-group">
-												<label>Password:</label> <input class="form-control"
-													placeholder="please enter password" type="password"
-													name="password" />
 											</div>
 											<div class="form-group">
 												<label>Email:</label> <input class="form-control"
 													placeholder="Please enter email" name="email" />
-											</div>
+											</div>											
 											<div class="form-group">
-												<label>Phone:</label> <input class="form-control"
-													placeholder="Please enter phone" name="phone" />
-											</div>
-											<div class="form-group">
-												<label>Address:</label> <input class="form-control"
-													placeholder="Please enter address" name="address" />
-											</div>
-											<div class="form-group">
-												<label>Role</label>
+												<label>Role:</label>
 												<div class="checkbox">
-													<label> <input type="radio" value="2" name="role"/>Admin
-													</label>
+													<label> <input type="radio" value="1" name="role"/>Customer</label>
 													<br>
-													<label> <input type="radio" value="1" name="role" />Client
-													</label>
-												</div>
-												
+													<label> <input type="radio" value="2" name="role" />Admin</label>
+													<br>
+													<label> <input type="radio" value="3" name="role" />Cook</label>
+													<br>
+													<label> <input type="radio" value="4" name="role" />Vendor</label>
+													<br>
+													<label> <input type="radio" value="5" name="role" />Manager</label>																										
+												</div>												
 											</div>
 											<div class="form-group">
 												<label>Avatar</label> <input type="file" name="avatar" />

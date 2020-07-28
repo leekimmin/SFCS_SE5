@@ -1,4 +1,4 @@
-package controller;
+package controller.admin;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,28 +16,39 @@ import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-import model.Category;
-import model.Product;
+import model.Stall;
 import model.User;
-import service.CategoryService;
-import service.ProductService;
 import service.StallService;
 import service.UserService;
-import service.impl.CategoryServiceImpl;
-import service.impl.ProductServiceImpl;
 import service.impl.StallServiceImpl;
 import service.impl.UserServiceImpl;
 
-@WebServlet(urlPatterns = { "/product/list" })
-public class ProductListClientController extends HttpServlet {
-	ProductService productService = new ProductServiceImpl();
+@WebServlet(urlPatterns = { "/admin/stall/add" })
+public class StallAddController extends HttpServlet {
+	StallService stallService = new StallServiceImpl();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		List<Product> productList = productService.getAll();
-		req.setAttribute("productList", productList);
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/view/product-list.jsp");
+		resp.setContentType("text/html; charset=UTF-8");
+		req.setCharacterEncoding("UTF-8");
+		
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/view/add-stall.jsp");
 		dispatcher.forward(req, resp);
 	}
 
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html; charset=UTF-8");
+		req.setCharacterEncoding("UTF-8");
+		
+		String name = req.getParameter("name");
+		
+		Stall stall = new Stall();
+		stall.setName(name);
+
+		stallService.insert(stall);
+
+		resp.sendRedirect(req.getContextPath() + "/admin/stall/list");
+
+	}
 }

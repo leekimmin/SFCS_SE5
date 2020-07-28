@@ -6,9 +6,9 @@
 <html>
 <head>
 <script src="<c:url value="/ckeditor/ckeditor.js" />"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Edit Product</title>
+<title>Edit Stall</title>
 <!-- BOOTSTRAP STYLES-->
 <link href="${url}/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
@@ -29,8 +29,7 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>Edit Product</h2>
-						<h5>Edit product you can sell</h5>
+						<h2>Edit Stall</h2>
 					</div>
 				</div>
 				<!-- /. ROW  -->
@@ -39,63 +38,27 @@
 					<div class="col-md-12">
 						<!-- Form Elements -->
 						<div class="panel panel-default">
-							<div class="panel-heading">Edit Product</div>
+							<div class="panel-heading">Edit Stall</div>
 							<div class="panel-body">
 								<div class="row">
 									<div class="col-md-6">
-										<h3>Product:</h3>
-										<c:url value="/admin/product/edit" var="edit"></c:url>
-										<form role="form" action="${edit }" method="post" enctype="multipart/form-data">
-											<input name="id" value="${product.id }" hidden="">
+										<h3>Stall:</h3>
+										<form role="form" action="add" method="post" enctype="multipart/form-data">
 											<div class="form-group">
-												<label>Name:</label> <input class="form-control"
-													value="${product.name }" name="name" />
-											</div>
-											<div class="form-group">
-												<label>Price (VNĐ):</label> <input class="form-control"
-													value="${product.price }" type="number" name="price" />
-											</div>
-											<div class="form-group">
-												<label>Quantity:</label> <input class="form-control"
-													value="${product.quantity }" type="number" name="quantity" />
-											</div>
-											<div class="form-group">
-												<label>Discount (%):</label> <input class="form-control"
-													value="${product.discount }" type="number" name="discount" />
-											</div>
+												<label>Stall Name:</label> <input class="form-control"
+													value="${stall.name }" name="name" />
+											</div>										
 											<div class="form-group">
 												<label>Description:</label>
 												<br>
 												<textarea rows="4" cols="50" name="des" id="editer"></textarea>
 											</div>
 											<div class="form-group">
-												<label>Category</label>
-												<div class="checkbox">
-													<select name="category">
-														<c:forEach items="${categories}" var="c">
-															<option value="${c.id}">${c.name}</option>
-														</c:forEach>
-													</select>
-												</div>
-											</div>
-											<div class="form-group">
-												<label>Stall</label>
-												<div class="checkbox">
-													<select name="stall">
-														<c:forEach items="${stalls}" var="s">
-															<option value="${s.id}">${s.name}</option>
-														</c:forEach>
-													</select>
-												</div>
-											</div>
-											<div class="form-group">
-												<label>image</label> <input type="file" name="image" value="${product.image }" />
-											</div>
+												<label>Image</label> <input type="file" name="image"/>
+											</div>											
 											<button type="submit" class="btn btn-default">Edit</button>
 											<button type="reset" class="btn btn-primary">Reset</button>
 										</form>
-
-
 									</div>
 								</div>
 							</div>

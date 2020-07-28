@@ -21,13 +21,13 @@ public class SendMail {
                 new javax.mail.Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("lesonlhld@gmail.com", "leson0108");
+                return new PasswordAuthentication("quy.nguyenwill_101@hcmut.edu.vn", "450096pyphamnguyen");
             }
         });
         try {
             Message message = new MimeMessage(session);
             message.setHeader("Content-Type", "text/plain; charset=UTF-8");
-            message.setFrom(new InternetAddress("UNIFY"));
+            message.setFrom(new InternetAddress("SFCS"));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
             message.setSubject(subject);
             message.setText(text);

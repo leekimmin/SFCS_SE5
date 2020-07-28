@@ -36,8 +36,6 @@
 				<div class="row">
 					<div class="col-md-12">
 						<h2>Order Management</h2>
-
-
 					</div>
 				</div>
 				<!-- /. ROW  -->
@@ -58,19 +56,16 @@
 												<th>ID</th>
 												<th>Buyer</th>
 												<th>Email</th>
-												<th>Date</th>
+												<th>Order Date</th>
 												<th>Product</th>
 												<th>Quantity</th>
 												<th>Price</th>
 												<th>Sum</th>
 												<th>Status</th>
 												<th>Action</th>
-
-
 											</tr>
 										</thead>
 										<tbody>
-											</a>
 											<c:set var="index" value="${0}" />
 											<c:forEach items="${listCartItem }" var="list">
 												<tr class="odd gradeX">
@@ -82,17 +77,13 @@
 													<td>${list.cart.buyDate }</td>
 													<td>${list.product.name }</td>
 													<td>${list.quantity }</td>
-													<td>$ ${list.product.price }</td>
-													<td>$ ${ list.quantity * list.product.price }</td>
-													<td class="center">Pending</td>
-
-
-													<td><a
-														href="<c:url value='/admin/order/edit?id=${list.id }'/>"
-														class="center">Edit</a> | <a
-														href="<c:url value='/admin/order/delete?id=${list.id }'/>"
-														class="center">Delete</a></td>
-
+													<td>${list.product.price }</td>
+													<td>${list.quantity * list.product.price }</td>
+													<td class="center">${list.status.name }</td>
+													<td>
+														<a href="<c:url value='/admin/order/edit?id=${list.id }'/>" class="center">Edit</a> | 
+														<a href="<c:url value='/admin/order/delete?id=${list.id }'/>" class="center">Delete</a>
+													</td>
 												</tr>
 											</c:forEach>
 
