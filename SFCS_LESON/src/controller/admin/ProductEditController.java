@@ -62,7 +62,8 @@ public class ProductEditController extends HttpServlet {
 		Product product = new Product();
 		DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
 		ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
-
+		
+		System.out.println(req.getParameter("name"));
 		try {
 			List<FileItem> items = servletFileUpload.parseRequest(req);
 
@@ -70,7 +71,7 @@ public class ProductEditController extends HttpServlet {
 				if (item.getFieldName().equals("id")) {
 					product.setId(Integer.parseInt(item.getString()));
 				} else if (item.getFieldName().equals("name")) {
-					product.setName(item.getString());
+					product.setName(item.getString("UTF-8"));
 				} else if (item.getFieldName().equals("category")) {
 					product.setCategory(categoryService.get(Integer.parseInt(item.getString())));
 				} else if (item.getFieldName().equals("stall")) {
@@ -82,13 +83,13 @@ public class ProductEditController extends HttpServlet {
 				} else if (item.getFieldName().equals("discount")) {
 					product.setDiscount(Integer.parseInt(item.getString()));
 				} else if (item.getFieldName().equals("des")) {
-					product.setDes(item.getString());				
+					product.setDes(item.getString("UTF-8"));				
 				} else if (item.getFieldName().equals("image")) {
-					if (item.getSize() > 0) {// neu co file d
-						String root = getServletContext().getRealPath("/");
+					if (item.getSize() > 0) {
+						String root = System.getProperty("user.home");
 						File path = new File(root + "/uploads");
 						if (!path.exists()) {
-							boolean status = path.mkdirs();
+							path.mkdirs();
 						}
 						String originalFileName = item.getName();
 						int index = originalFileName.lastIndexOf(".");

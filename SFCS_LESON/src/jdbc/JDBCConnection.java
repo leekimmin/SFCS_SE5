@@ -13,7 +13,7 @@ public class JDBCConnection {
 		    String dbName = "SFCS";
 		    String userName = "root";
 		    String password = "123456a@";
-		    String connectionURL = "jdbc:mysql://" + hostName + ":3306/" + dbName + "?useUnicode=true&characterEncoding=UTF-8";
+		    String connectionURL = "jdbc:mysql://" + hostName + ":3306/" + dbName + "?requireSSL=false&useUnicode=true&characterEncoding=UTF-8";
 		   
 		    connection = DriverManager.getConnection(connectionURL, userName, password);
 			System.out.println("thanh cong");

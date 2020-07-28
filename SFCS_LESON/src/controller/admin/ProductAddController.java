@@ -63,7 +63,7 @@ public class ProductAddController extends HttpServlet {
 			List<FileItem> items = servletFileUpload.parseRequest(req);
 			for (FileItem item : items) {
 				if (item.getFieldName().equals("name")) {
-					product.setName(item.getString());
+					product.setName(item.getString("UTF-8"));
 				} else if (item.getFieldName().equals("category")) {
 					product.setCategory(categoryService.get(Integer.parseInt(item.getString())));
 				} else if (item.getFieldName().equals("stall")) {
@@ -75,12 +75,12 @@ public class ProductAddController extends HttpServlet {
 				} else if (item.getFieldName().equals("discount")) {
 					product.setDiscount(Integer.parseInt(item.getString()));
 				} else if (item.getFieldName().equals("des")) {
-					product.setDes(item.getString());
+					product.setDes(item.getString("UTF-8"));
 				} else if (item.getFieldName().equals("image")) {
-					String root = getServletContext().getRealPath("/");
+					String root = System.getProperty("user.home");
 					File path = new File(root + "/uploads");
 					if (!path.exists()) {
-						boolean status = path.mkdirs();
+						path.mkdirs();
 					}
 					String originalFileName = item.getName();
 					int index = originalFileName.lastIndexOf(".");

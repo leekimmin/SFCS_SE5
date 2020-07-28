@@ -32,16 +32,14 @@ public class UserServiceImpl implements UserService {
 		oldUser.setBirthday(newUser.getBirthday());
 		oldUser.setRoleId(newUser.getRoleId());
 		if (newUser.getAvatar() != null) {
-			// XOA ANH CU DI
 			String fileName = oldUser.getAvatar();
 
-			final String dir = "~\\eclipse-workspace\\SFCS\\upload";
-			File file = new File(dir + "/" + fileName);
-
+			String root = System.getProperty("user.home") + "/uploads";
+			File file = new File(root + "/" + fileName);
 			if (file.exists()) {
 				file.delete();
 			}
-			// THEM ANH MOI
+			
 			oldUser.setAvatar(newUser.getAvatar());
 		}
 

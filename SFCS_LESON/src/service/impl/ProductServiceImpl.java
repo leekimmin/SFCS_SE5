@@ -28,10 +28,9 @@ public class ProductServiceImpl implements ProductService {
 		oldProduct.setDes(newProduct.getDes()); 
 		oldProduct.setCategory(newProduct.getCategory());
 		if (newProduct.getImage() != null) {
-			// XOA ANH CU DI
 			String fileName = oldProduct.getImage();
-			final String dir = "F:\\upload";
-			File file = new File(dir + "/" + fileName);
+			String root = System.getProperty("user.home") + "/uploads";
+			File file = new File(root + "/" + fileName);
 			if (file.exists()) {
 				file.delete();
 			}

@@ -12,16 +12,19 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.IOUtils;
 
-@WebServlet(urlPatterns = "/image") // ?fname=abc.png
+@WebServlet(urlPatterns = "/image")
 public class DownloadImageController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html; charset=UTF-8");
+		req.setCharacterEncoding("UTF-8");
+		
 		String fileName = req.getParameter("fname");
 
-		String root = getServletContext().getRealPath("/");
+		String root = System.getProperty("user.home");
 		File path = new File(root + "/uploads");
 		if (!path.exists()) {
-			boolean status = path.mkdirs();
+			path.mkdirs();
 		}
 		File file = new File(path + "/" + fileName);
 

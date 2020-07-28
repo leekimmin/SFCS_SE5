@@ -55,9 +55,9 @@ public class MyAccountController extends HttpServlet {
 				} else if (item.getFieldName().equals("username")) {
 					user.setUsername(item.getString());
 				} else if (item.getFieldName().equals("firstname")) {
-					user.setFirstname(item.getString());
+					user.setFirstname(item.getString("UTF-8"));
 				} else if (item.getFieldName().equals("lastname")) {
-					user.setLastname(item.getString());
+					user.setLastname(item.getString("UTF-8"));
 				} else if (item.getFieldName().equals("password")) {
 					user.setPassword(item.getString());
 				} else if (item.getFieldName().equals("passwordConfirm")) {
@@ -69,15 +69,15 @@ public class MyAccountController extends HttpServlet {
 				} else if (item.getFieldName().equals("phone")) {
 					user.setPhone(item.getString());
 				} else if (item.getFieldName().equals("address")) {
-					user.setAddress(item.getString());
+					user.setAddress(item.getString("UTF-8"));
 				} else if (item.getFieldName().equals("role")) {
 					user.setRoleId(Integer.parseInt(item.getString()));
 				} else if (item.getFieldName().equals("avatar")) {
-					if (item.getSize() > 0) {// neu co file d
-						String root = getServletContext().getRealPath("/");
+					if (item.getSize() > 0) {
+						String root = System.getProperty("user.home");
 						File path = new File(root + "/uploads");
 						if (!path.exists()) {
-							boolean status = path.mkdirs();
+							path.mkdirs();
 						}
 						String originalFileName = item.getName();
 						int index = originalFileName.lastIndexOf(".");
