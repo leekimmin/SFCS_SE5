@@ -150,7 +150,7 @@
 											</div>
 											<div id="collapseTwo" class="panel-collapse collapse">
 												<div class="content1 margin-left-10">
-													<a href="https://momo.vn">
+													<a href="https://test-payment.momo.vn/gw_payment/payment/qr?partnerCode=MOMOBKUN20180529&accessKey=klm05TvNBzhg7h7j&requestId=1596009679&amount=100000&orderId=1596009679&signature=fd968e65f2c825844026dea47f49a2475e5501074ccd29834f4eb652f58f7256&requestType=captureMoMoWallet">
 														<img src="${url}/static/img/LogoMomo.png" alt="MoMo">
 													</a>
 												</div>
