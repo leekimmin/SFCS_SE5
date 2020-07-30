@@ -44,23 +44,6 @@
 <link rel="stylesheet" href="${url}/static/css/custom.css">
 </head>
 <body>
-	<!-- Subiz -->
-	<script>
-		(function(s, u, b, i, z) {
-			u[i] = u[i] || function() {
-				u[i].t = +new Date();
-				(u[i].q = u[i].q || []).push(arguments);
-			};
-			z = s.createElement('script');
-			var zz = s.getElementsByTagName('script')[0];
-			z.async = 1;
-			z.src = b;
-			z.id = 'subiz-script';
-			zz.parentNode.insertBefore(z, zz);
-		})(document, window, 'https://widgetv4.subiz.com/static/js/app.js', 'subiz');
-		subiz('setAccount', 'acqetkhujxyunuatbxzw');
-	</script>
-	<!-- End Subiz -->
 <body class="header-fixed">
 	<div class="wrapper">
 		<!--=== Header v5 ===-->
@@ -166,10 +149,14 @@
 												</h4>
 											</div>
 											<div id="collapseTwo" class="panel-collapse collapse">
-												<div class="content margin-left-10">
-													<a href="#">
+												<div class="content1 margin-left-10">
+													<a href="https://test-payment.momo.vn/gw_payment/payment/qr?partnerCode=MOMOBKUN20180529&accessKey=klm05TvNBzhg7h7j&requestId=1596009679&amount=100000&orderId=1596009679&signature=fd968e65f2c825844026dea47f49a2475e5501074ccd29834f4eb652f58f7256&requestType=captureMoMoWallet">
 														<img src="${url}/static/img/LogoMomo.png" alt="MoMo">
 													</a>
+												</div>
+												<div class="content2 margin-left-10">
+													<div>Mã nhà cung cấp: MOMO9P7W200780</div>
+													<div>Nhà cung cấp: Đại học Bách Khoa TP.HCM</div>
 												</div>
 											</div>
 										</div>
@@ -248,7 +235,34 @@
 								<!-- End Accordion -->
 							</div>
 						</div>
-					</section>				
+					</section>	
+					<div class="coupon-code">
+						<div class="row">
+							<div class="col-sm-4 sm-margin-bottom-30">
+								<h3>Mã giảm giá</h3>
+								<p>Nhập mã giảm giá của bạn:</p>
+								<input class="form-control margin-bottom-10" name="code" type="text">
+								<button type="button" class="btn-u btn-u-sea-shop">Áp dụng</button>
+							</div>
+							<div class="col-sm-3 col-sm-offset-5">
+								<ul class="list-inline total-result">
+									<li class="total-price">
+										<h4>Tổng Tiền:</h4>
+										<c:set var="total" value="${0}" /> 
+										<c:forEach items="${sessionScope.cart}" var="map">
+											<c:set var="total" value="${total + map.value.quantity * map.value.product.price}" />
+										</c:forEach>
+										<div class="total-result-in">
+											<span><f:formatNumber value="${total}" type="currency"/></span>
+										</div>	
+										<br>			
+										<div><a href="${pageContext.request.contextPath}/member/order"
+											class="buttonx btn-u btn-u-sea-shop btn-block">Thanh Toán</a></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>			
 				</div>
 			</form>
 		</div>

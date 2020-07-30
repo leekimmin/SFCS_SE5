@@ -16,6 +16,7 @@ import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
+import model.Product;
 import model.Stall;
 import model.User;
 import service.StallService;
@@ -41,14 +42,43 @@ public class StallAddController extends HttpServlet {
 		resp.setContentType("text/html; charset=UTF-8");
 		req.setCharacterEncoding("UTF-8");
 		
-		String name = req.getParameter("name");
-		
 		Stall stall = new Stall();
-		stall.setName(name);
+		DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
+		ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
 
-		stallService.insert(stall);
+		try {
+			List<FileItem> items = servletFileUpload.parseRequest(req);
+			for (FileItem item : items) {
+				if (item.getFieldName().equals("name")) {
+					stall.setName(item.getString("UTF-8"));
+				} else if (item.getFieldName().equals("item")) {
+					stall.setId(Integer.parseInt(item.getString()));
+				} else if (item.getFieldName().equals("des")) {
+					stall.setDes(item.getString("UTF-8"));
+				} else if (item.getFieldName().equals("image")) {
+					String root = System.getProperty("user.home");
+					File path = new File(root + "/uploads");
+					if (!path.exists()) {
+						path.mkdirs();
+					}
+					String originalFileName = item.getName();
+					int index = originalFileName.lastIndexOf(".");
+					String ext = originalFileName.substring(index + 1);
+					String fileName = System.currentTimeMillis() + "." + ext;
+					File file = new File(path + "/" + fileName);
+					item.write(file);
+					stall.setImage(fileName);
+				}
+			}
 
-		resp.sendRedirect(req.getContextPath() + "/admin/stall/list");
+			stallService.insert(stall);
+
+			resp.sendRedirect(req.getContextPath() + "/admin/stall/list");
+		} catch (FileUploadException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 	}
 }

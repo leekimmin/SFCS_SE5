@@ -32,6 +32,7 @@ public class UserServiceImpl implements UserService {
 		oldUser.setBirthday(newUser.getBirthday());
 		oldUser.setRoleId(newUser.getRoleId());
 		if (newUser.getAvatar() != null) {
+			// XOA ANH CU DI
 			String fileName = oldUser.getAvatar();
 
 			String root = System.getProperty("user.home") + "/uploads";
@@ -39,10 +40,9 @@ public class UserServiceImpl implements UserService {
 			if (file.exists()) {
 				file.delete();
 			}
-			
+			// THEM ANH MOI
 			oldUser.setAvatar(newUser.getAvatar());
 		}
-
 		userDao.edit(oldUser);
 	}
 

@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.security.MessageDigest;
 import java.sql.Date;
 import java.util.List;
@@ -14,9 +15,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.swing.JOptionPane;
 
 import model.Cart;
 import model.CartItem;
+import model.OrderStatus;
 import model.User;
 import service.CartItemService;
 import service.CartService;
@@ -42,7 +45,6 @@ public class OrderController extends HttpServlet {
 		Cart cart = new Cart();
 		cart.setBuyer(buyer);
 		cart.setBuyDate(new java.sql.Date(time));
-		cart.setId(RandomUUID.getRandomID());
 		cartService.insert(cart);
 
 		Object objCart = session.getAttribute("cart");
@@ -52,11 +54,13 @@ public class OrderController extends HttpServlet {
 
 			for (CartItem cartItem : map.values()) {
 				cartItem.setCart(cart);
-				cartItem.setId(RandomUUID.getRandomID());
-				SendMail sm = new SendMail();
-				sm.sendMail(cart.getBuyer().getEmail(), "SFCS", "Payment success. We will contact you soon ! ");
-				cartItemService.insert(cartItem);
-				
+				int confirm = JOptionPane.showConfirmDialog(null, "Vui lòng xác nhận thanh toán đơn hàng!");
+				if (confirm == 0) {
+					JOptionPane.showMessageDialog(null, "Thanh toán thành công, Vui lòng đợi món ăn chuẩn bị!");
+					cartItemService.insert(cartItem);	
+				}
+				//SendMail sm = new SendMail();
+				//sm.sendMail(cart.getBuyer().getEmail(), "SFCS", "Thanh toán thành công, Vui lòng đợi món ăn được chuẩn bị! ");		
 			}
 
 		}

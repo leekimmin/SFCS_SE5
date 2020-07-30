@@ -331,3 +331,12 @@
   position: absolute;
   text-transform: uppercase;
 }
+
+.panel-collapse .content1 {
+	float: left;
+	padding: 20px 0;
+}
+.panel-collapse .content2 {
+	float: left;
+	padding-top: 30px;
+}

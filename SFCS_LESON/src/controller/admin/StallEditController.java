@@ -47,11 +47,51 @@ public class StallEditController extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 		
 		Stall stall = new Stall();
-		stall.setId(Integer.parseInt(req.getParameter("id")));
-		stall.setName(req.getParameter("name"));
-		stallService.edit(stall);
-		
-		resp.sendRedirect(req.getContextPath()+"/admin/stall/list");
+		DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
+		ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
+
+		try {
+			List<FileItem> items = servletFileUpload.parseRequest(req);
+
+			for (FileItem item : items) {
+				if (item.getFieldName().equals("id")) {
+					stall.setId(Integer.parseInt(item.getString()));
+				} else if (item.getFieldName().equals("name")) {
+					stall.setName(item.getString("UTF-8"));
+				} else if (item.getFieldName().equals("item")) {
+						stall.setId(Integer.parseInt(item.getString()));
+				} else if (item.getFieldName().equals("des")) {
+					stall.setDes(item.getString("UTF-8"));				
+				} else if (item.getFieldName().equals("image")) {
+					if (item.getSize() > 0) {// neu co file d
+						String root = System.getProperty("user.home");
+						File path = new File(root + "/uploads");
+						if (!path.exists()) {
+							boolean status = path.mkdirs();
+						}
+						String originalFileName = item.getName();
+						int index = originalFileName.lastIndexOf(".");
+						String ext = originalFileName.substring(index + 1);
+						String fileName = System.currentTimeMillis() + "." + ext;
+						File file = new File(path + "/" + fileName);
+						item.write(file);
+
+						stall.setImage(fileName);
+
+					} else {
+						stall.setImage(null);
+					}
+				}
+			}
+
+			stallService.edit(stall);
+
+			resp.sendRedirect(req.getContextPath() + "/admin/stall/list");
+		} catch (FileUploadException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 	}
 }

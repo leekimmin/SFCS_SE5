@@ -104,9 +104,6 @@
 											<button type="submit" class="btn btn-default">Edit</button>
 											<button type="reset" class="btn btn-primary">Reset</button>
 										</form>
-
-
-
 									</div>
 								</div>
 							</div>

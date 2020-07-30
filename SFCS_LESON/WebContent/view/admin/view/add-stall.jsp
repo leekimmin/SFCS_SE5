@@ -47,6 +47,10 @@
 											<div class="form-group">
 												<label>Stall Name:</label> <input class="form-control"
 													placeholder="Please enter Stall Name" name="name" />
+											</div>
+											<div class="form-group">
+												<label>Number of items:</label> <input class="form-control"
+													placeholder="Please enter Number of items" type="number" name="item" />
 											</div>										
 											<div class="form-group">
 												<label>Description:</label>

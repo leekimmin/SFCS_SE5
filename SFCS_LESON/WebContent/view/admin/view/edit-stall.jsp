@@ -47,7 +47,11 @@
 											<div class="form-group">
 												<label>Stall Name:</label> <input class="form-control"
 													value="${stall.name }" name="name" />
-											</div>										
+											</div>
+											<div class="form-group">
+												<label>Number of items:</label> <input class="form-control"
+													value="${stall.item }" type="number" name="item" />
+											</div>																							
 											<div class="form-group">
 												<label>Description:</label>
 												<br>

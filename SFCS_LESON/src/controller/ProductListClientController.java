@@ -19,6 +19,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import model.Category;
 import model.Product;
 import model.User;
+import model.Stall;
 import service.CategoryService;
 import service.ProductService;
 import service.StallService;
@@ -31,11 +32,17 @@ import service.impl.UserServiceImpl;
 @WebServlet(urlPatterns = { "/product/list" })
 public class ProductListClientController extends HttpServlet {
 	ProductService productService = new ProductServiceImpl();
+	CategoryServiceImpl categoryService = new CategoryServiceImpl();
+	StallServiceImpl stallService = new StallServiceImpl();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		List<Product> productList = productService.getAll();
 		req.setAttribute("productList", productList);
+		List<Category> categoryList = categoryService.getAll();
+		req.setAttribute("categoryList", categoryList);
+		List<Stall> stallList = stallService.getAll();
+		req.setAttribute("stallList", stallList);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/view/product-list.jsp");
 		dispatcher.forward(req, resp);
 	}

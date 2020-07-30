@@ -62,8 +62,7 @@ public class ProductEditController extends HttpServlet {
 		Product product = new Product();
 		DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
 		ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
-		
-		System.out.println(req.getParameter("name"));
+
 		try {
 			List<FileItem> items = servletFileUpload.parseRequest(req);
 
@@ -105,15 +104,7 @@ public class ProductEditController extends HttpServlet {
 					}
 				}
 			}
-			/*product.setId(Integer.parseInt(req.getParameter("product_id")));
-			product.setName(req.getParameter("name"));
-			product.setCategory(categoryService.get(Integer.parseInt(req.getParameter("category"))));
-			product.setStall(stallService.get(Integer.parseInt(req.getParameter("stall"))));
-			product.setPrice(Integer.parseInt(req.getParameter("price")));
-			product.setQuantity(Integer.parseInt(req.getParameter("quantity")));
-			product.setDiscount(Integer.parseInt(req.getParameter("discount")));
-			product.setDes(req.getParameter("des"));
-			product.setImage(req.getParameter("image "));*/
+
 			productService.edit(product);
 
 			resp.sendRedirect(req.getContextPath() + "/admin/product/list");

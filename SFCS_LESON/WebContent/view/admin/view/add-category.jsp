@@ -43,7 +43,7 @@
 								<div class="row">
 									<div class="col-md-6">
 										<h3>Category:</h3>
-										<form role="form" action="add" method="post" enctype="multipart/form-data">
+										<form role="form" action="add" method="post">
 											<div class="form-group">
 												<label>Category Name:</label> <input class="form-control"
 													placeholder="Please enter Category Name" name="name" />

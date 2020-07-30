@@ -39,7 +39,7 @@
 					</div>
 					<div class="col-xs-6">
 						<a href="${pageContext.request.contextPath}/member/order"
-							class="btn-u btn-u-sea-shop btn-block">Đặt Hàng</a>
+							class="btn-u btn-u-sea-shop btn-block">Thanh Toán</a>
 					</div>
 				</div>
 			</li>

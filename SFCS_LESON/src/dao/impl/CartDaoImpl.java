@@ -25,15 +25,13 @@ public class CartDaoImpl extends JDBCConnection implements CartDao {
 
 	@Override
 	public void insert(Cart cart) {
-		String sql = "INSERT INTO orders(order_id, user_id, order_date, status) VALUES (?,?,?,?)";
+		String sql = "INSERT INTO orders(user_id, order_date) VALUES (?,?)";
 		Connection con = super.getJDBCConnection();
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setInt(1, cart.getId());
-			ps.setInt(2, cart.getBuyer().getId());
-			ps.setDate(3, new Date(cart.getBuyDate().getTime()));
-			ps.setInt(4, cart.getStatus().getId()); 
+			ps.setInt(1, cart.getBuyer().getId());
+			ps.setDate(2, new Date(cart.getBuyDate().getTime()));
 			ps.executeUpdate();
 			
 		} catch (SQLException e) {

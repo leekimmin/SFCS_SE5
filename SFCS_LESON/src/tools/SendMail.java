@@ -21,7 +21,7 @@ public class SendMail {
                 new javax.mail.Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("quy.nguyenwill_101@hcmut.edu.vn", "450096pyphamnguyen");
+                return new PasswordAuthentication("email@gmail.com", "password");
             }
         });
         try {

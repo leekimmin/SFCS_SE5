@@ -1743,6 +1743,12 @@ li:first-child {
 	display: inline-block;
 }
 
+.shopping-cart .coupon-code .buttonx{
+	marign-top: 20px;
+	font-size: 17px;
+	float: right;
+}
+
 /*Total Result*/
 .shopping-cart .total-result li {
 	display: block;

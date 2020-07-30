@@ -1,6 +1,7 @@
 package service.impl;
 
 import java.util.List;
+import java.io.File;
 
 import dao.StallDao;
 import dao.impl.StallDaoImpl;
@@ -21,7 +22,16 @@ public class StallServiceImpl implements StallService {
 		oldStall.setName(newStall.getName());
 		oldStall.setItem(newStall.getItem());
 		oldStall.setDes(newStall.getDes());
-		oldStall.setImage(newStall.getImage());
+		if (newStall.getImage() != null) {
+			String fileName = oldStall.getImage();
+			String root = System.getProperty("user.home") + "/uploads";
+			File file = new File(root + "/" + fileName);
+			if (file.exists()) {
+				file.delete();
+			}
+			oldStall.setImage(newStall.getImage());
+		}
+
 		stallDao.edit(oldStall);
 	}
 

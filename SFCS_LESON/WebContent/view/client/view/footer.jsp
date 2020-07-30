@@ -3,7 +3,7 @@
 	pageEncoding="UTF-8"%>
 
 <div class="footer-v4">
-	<div class="footer">
+	<div class="footer" id="introduce-id">
 		<div class="container">
 			<div class="row">
 				<!-- About -->
