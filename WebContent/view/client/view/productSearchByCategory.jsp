@@ -165,7 +165,7 @@
 											</li>
 										</ul>
 										<a href="${pageContext.request.contextPath }/product/detail?id=${p.id}" >
-											<button type="button" class="btn-u btn-u-sea-shop">Thêm Vào Giỏ Hàng</button>
+											<button type="button" class="btn-u btn-u-sea-shop">Xem chi tiết</button>
 										</a>
 									</div>
 								</div>								

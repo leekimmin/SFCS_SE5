@@ -2,6 +2,11 @@
 <%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt"%> 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<script type="text/javascript">
+   function testAlertDialog()  {
+       alert("Vui lòng chọn món ăn trước khi thanh toán!");
+   }
+</script>
 <f:setLocale value="vi_VN"/>
 <ul class="list-inline shop-badge badge-lists badge-icons pull-right">
 	<li><a href="#"><i class="fa fa-shopping-cart"></i></a> 
@@ -38,8 +43,15 @@
 							class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">Xem Giỏ Hàng</a>
 					</div>
 					<div class="col-xs-6">
-						<a href="${pageContext.request.contextPath}/member/order"
-							class="btn-u btn-u-sea-shop btn-block">Thanh Toán</a>
+						<c:choose>
+							<c:when test="${total == '0'}">
+							<button class="btn-u btn-u-sea-shop btn-block" onclick="testAlertDialog()">Thanh Toán</button>
+							</c:when>
+							<c:otherwise>
+							<a href="${pageContext.request.contextPath}/member/order"
+								class="btn-u btn-u-sea-shop btn-block">Thanh Toán</a>
+							</c:otherwise>							
+						</c:choose>
 					</div>
 				</div>
 			</li>

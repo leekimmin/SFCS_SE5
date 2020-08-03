@@ -174,6 +174,7 @@
 								</div>
 								<ul class="list-inline total-result">
 									<li class="total-price">
+										<br>
 										<h4>Tổng Tiền:</h4>
 										<c:set var="total" value="${0}" /> 
 										<c:forEach items="${sessionScope.cart}" var="map">
@@ -183,13 +184,17 @@
 											<span><f:formatNumber value="${total}" type="currency"/></span>
 										</div>	
 										<br>
-										<c:if test="${p.discount != '0'}">
-											<span class="title-price line-through">	
-												<f:formatNumber value="${p.price}" type="currency"/>
-											</span>
-										</c:if>
-										<div><a href="${pageContext.request.contextPath}/member/order"
-											class="buttonx btn-u btn-u-sea-shop btn-block">Thanh Toán</a></div>
+										<div>						
+											<c:choose>
+												<c:when test="${total == '0'}">
+													<button class="btn-u btn-u-sea-shop btn-block" onclick="testAlertDialog()">Thanh Toán</button>
+												</c:when>
+												<c:otherwise>
+												<a href="${pageContext.request.contextPath}/member/order"
+													class="btn-u btn-u-sea-shop btn-block">Thanh Toán</a>
+												</c:otherwise>							
+											</c:choose>
+										</div>
 									</li>
 								</ul>
 							</div>
