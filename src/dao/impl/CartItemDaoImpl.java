@@ -31,18 +31,17 @@ public class CartItemDaoImpl extends JDBCConnection implements CartItemDao {
 	
 	@Override
 	public void insert(CartItem cartItem) {
-		String sql = "INSERT INTO order_items (order_item_id, order_id, product_id, quantity, unit_price) VALUES (?,?,?,?,?)";
+		String sql = "INSERT INTO order_items (order_id, product_id, quantity, unit_price) VALUES (?,?,?,?)";
 		Connection con = super.getJDBCConnection();
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 
-			ps.setInt(1, cartItem.getId());
-			ps.setInt(2, cartItem.getCart().getId());
-			ps.setInt(3, cartItem.getProduct().getId());
-			ps.setInt(4, cartItem.getQuantity());
-			ps.setLong(5, cartItem.getUnitPrice());
-
+			ps.setInt(1, cartItem.getCart().getId());
+			ps.setInt(2, cartItem.getProduct().getId());
+			ps.setInt(3, cartItem.getQuantity());
+			ps.setLong(4, cartItem.getUnitPrice());
+			
 			ps.executeUpdate();
 			
 		} catch (SQLException e) {

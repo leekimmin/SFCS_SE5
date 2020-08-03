@@ -102,9 +102,9 @@
 											<span>${map.value.product.des }</span>
 										</div>
 									</td>
-									<td><f:formatNumber value="${map.value.product.price }" type="currency"/></td>
+									<td><f:formatNumber value="${map.value.product.price*(100 - map.value.product.discount) / 100 }" type="currency"/></td>
 									<td>${map.value.quantity }</td>
-									<td class="shop-red"><f:formatNumber value="${map.value.product.price * map.value.quantity }" type="currency"/></td>
+									<td class="shop-red"><f:formatNumber value="${map.value.product.price * map.value.quantity*(100 - map.value.product.discount) / 100 }" type="currency"/></td>
 									<td><a href="${pageContext.request.contextPath}/member/cart/remove?pId=${map.value.product.id}">
 										<button type="button" class="close">
 											<span>&times;</span><span class="sr-only">Đóng</span>
@@ -119,7 +119,7 @@
 								<td></td>
 									<c:set var="total" value="${0}"/> 
 									<c:forEach items="${sessionScope.cart}" var="map">
-										<c:set var="total" value="${total + map.value.quantity * map.value.product.price}" />
+										<c:set var="total" value="${total + map.value.quantity * map.value.product.price*(100 - map.value.product.discount) / 100}" />
 									</c:forEach>	
 								<td class="shop-red"><f:formatNumber value="${total}" type="currency"/></td>
 								<td></td>
@@ -131,7 +131,6 @@
 					<div class="header-tags">
 						<div class="overflow-h">
 							<h2>Thanh Toán</h2>
-							<i class="rounded-x fa fa-credit-card"></i>
 						</div>
 					</div>			
 					<section>
@@ -139,30 +138,60 @@
 							<div class="col-md-6 md-margin-bottom-50">
 								<h2 class="title-type">Chọn phương thức thanh toán </h2>
 								<!-- Accordion -->
-								<div class="accordion-v2">
-									<div class="panel-group" id="accordion">								
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-													Thanh toán bằng MoMo
-												</h4>
-											</div>
-											<div id="collapseTwo" class="panel-collapse collapse">
-												<div class="content1 margin-left-10">
-													<a href="https://test-payment.momo.vn/gw_payment/payment/qr?partnerCode=MOMOBKUN20180529&accessKey=klm05TvNBzhg7h7j&requestId=1596009679&amount=100000&orderId=1596009679&signature=fd968e65f2c825844026dea47f49a2475e5501074ccd29834f4eb652f58f7256&requestType=captureMoMoWallet">
-														<img src="${url}/static/img/LogoMomo.png" alt="MoMo">
-													</a>
+									<div class="accordion-v2">
+										<div class="panel-group" id="accordion">
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h4 class="panel-title">
+														<a data-toggle="collapse" data-parent="#accordion"
+															href="#collapseOne"> <i class="fa fa-credit-card"></i>
+															Thanh toán bằng MoMo
+														</a>
+													</h4>
 												</div>
-												<div class="content2 margin-left-10">
-													<div>Mã nhà cung cấp: MOMO9P7W200780</div>
-													<div>Nhà cung cấp: Đại học Bách Khoa TP.HCM</div>
+												<div id="collapseOne" class="panel-collapse collapse in">
+													<div class="panel-body cus-form-horizontal">
+														<div class="content1 margin-left-10">
+															<a href="${pageContext.request.contextPath}/member/order">
+																<img src="${url}/static/img/LogoMomo.png" alt="MoMo">
+															</a>
+														</div>
+														<div class="content2 margin-left-10">
+															<div>Mã nhà cung cấp: MOMO0NLV20200803</div>
+															<div>Nhà cung cấp: Smart Food Court System - Đại học Bách Khoa</div>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
 								<!-- End Accordion -->
+								<div class="coupon-code">
+									<h3>Mã giảm giá</h3>
+									<p>Nhập mã giảm giá của bạn:</p>
+									<input class="form-control margin-bottom-10" name="code" type="text">
+									<button type="button" class="btn-u btn-u-sea-shop">Áp dụng</button>
+								</div>
+								<ul class="list-inline total-result">
+									<li class="total-price">
+										<h4>Tổng Tiền:</h4>
+										<c:set var="total" value="${0}" /> 
+										<c:forEach items="${sessionScope.cart}" var="map">
+											<c:set var="total" value="${total + map.value.quantity * map.value.product.price*(100 - map.value.product.discount) / 100}" />
+										</c:forEach>
+										<div class="total-result-in">
+											<span><f:formatNumber value="${total}" type="currency"/></span>
+										</div>	
+										<br>
+										<c:if test="${p.discount != '0'}">
+											<span class="title-price line-through">	
+												<f:formatNumber value="${p.price}" type="currency"/>
+											</span>
+										</c:if>
+										<div><a href="${pageContext.request.contextPath}/member/order"
+											class="buttonx btn-u btn-u-sea-shop btn-block">Thanh Toán</a></div>
+									</li>
+								</ul>
 							</div>
 							
 							<div class="col-md-6">
@@ -235,34 +264,7 @@
 								<!-- End Accordion -->
 							</div>
 						</div>
-					</section>	
-					<div class="coupon-code">
-						<div class="row">
-							<div class="col-sm-4 sm-margin-bottom-30">
-								<h3>Mã giảm giá</h3>
-								<p>Nhập mã giảm giá của bạn:</p>
-								<input class="form-control margin-bottom-10" name="code" type="text">
-								<button type="button" class="btn-u btn-u-sea-shop">Áp dụng</button>
-							</div>
-							<div class="col-sm-3 col-sm-offset-5">
-								<ul class="list-inline total-result">
-									<li class="total-price">
-										<h4>Tổng Tiền:</h4>
-										<c:set var="total" value="${0}" /> 
-										<c:forEach items="${sessionScope.cart}" var="map">
-											<c:set var="total" value="${total + map.value.quantity * map.value.product.price}" />
-										</c:forEach>
-										<div class="total-result-in">
-											<span><f:formatNumber value="${total}" type="currency"/></span>
-										</div>	
-										<br>			
-										<div><a href="${pageContext.request.contextPath}/member/order"
-											class="buttonx btn-u btn-u-sea-shop btn-block">Thanh Toán</a></div>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>			
+					</section>
 				</div>
 			</form>
 		</div>

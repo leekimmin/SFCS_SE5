@@ -30,6 +30,11 @@ import service.impl.UserServiceImpl;
 import tools.SendMail;
 import util.RandomUUID;
 
+import momo.allinone.models.CaptureMoMoResponse;
+import momo.allinone.processor.allinone.CaptureMoMo;
+import momo.shared.sharedmodels.Environment;
+import momo.shared.utils.LogUtils;
+
 @WebServlet(urlPatterns = "/member/order")
 public class OrderController extends HttpServlet {
 	UserService userService = new UserServiceImpl();
@@ -46,30 +51,61 @@ public class OrderController extends HttpServlet {
 		cart.setBuyer(buyer);
 		cart.setBuyDate(new java.sql.Date(time));
 		cartService.insert(cart);
+		
+		LogUtils.init();
+        String requestId = String.valueOf(System.currentTimeMillis());
+        String orderId = "SFCS" + getAlphaNumericString(10);
+        long amount = 0;
+        
+        String orderInfo = "Thanh toán với MoMo";
+        String returnURL = "http://localhost:8080/SFCS";
+        String notifyURL = "http://localhost:8080/SFCS";
+        String extraData = "";
+        // String bankCode = "SML";
 
 		Object objCart = session.getAttribute("cart");
 		if (objCart != null) {
-			// ep ve dung kieu cua no khi them vao o phan them vao gio hang controller
 			Map<Integer, CartItem> map = (Map<Integer, CartItem>) objCart;
-
 			for (CartItem cartItem : map.values()) {
 				cartItem.setCart(cart);
-				int confirm = JOptionPane.showConfirmDialog(null, "Vui lòng xác nhận thanh toán đơn hàng!");
-				if (confirm == 0) {
-					JOptionPane.showMessageDialog(null, "Thanh toán thành công, Vui lòng đợi món ăn chuẩn bị!");
-					cartItemService.insert(cartItem);	
-				}
-				//SendMail sm = new SendMail();
-				//sm.sendMail(cart.getBuyer().getEmail(), "SFCS", "Thanh toán thành công, Vui lòng đợi món ăn được chuẩn bị! ");		
+				amount+=cartItem.getUnitPrice()*cartItem.getQuantity()*(100-cartItem.getProduct().getDiscount())/100;
+				cartItemService.insert(cartItem);
 			}
-
+			
 		}
-		session.removeAttribute("cart");
-		resp.sendRedirect(req.getContextPath() + "/welcome");
+		
+        Environment environment = Environment.selectEnv("dev", Environment.ProcessType.PAY_GATE);
+        
+        CaptureMoMoResponse captureMoMoResponse;
+		try {
+			captureMoMoResponse = CaptureMoMo.process(environment, orderId, requestId, Long.toString(amount), orderInfo, returnURL, notifyURL, extraData);
+	        String url = captureMoMoResponse.getPayUrl();
+	        session.removeAttribute("cart");
+	        resp.sendRedirect(url);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doGet(req, resp);
 	}
+	
+	static String getAlphaNumericString(int n) { 
+        String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                    + "0123456789"
+                                    + "abcdefghijklmnopqrstuvxyz"; 
+        StringBuilder sb = new StringBuilder(n); 
+  
+        for (int i = 0; i < n; i++) { 
+            int index 
+                = (int)(AlphaNumericString.length() 
+                        * Math.random()); 
+            sb.append(AlphaNumericString 
+                          .charAt(index)); 
+        } 
+  
+        return sb.toString(); 
+    } 
 }

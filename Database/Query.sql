@@ -54,15 +54,7 @@ CREATE TABLE `SFCS`.`users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 INSERT INTO users (first_name, last_name, birth_date, gender, email, username, password, role_id) 
 VALUES 
-	('Quy', 'Nguyen', '2000-09-25', 'M', 'quy@gmail.com', 'admin1', '123456', 2),
-    ('Son', 'Le', '2000-06-05', 'M', 'son@gmail.com', 'admin2', '123456', 2),
-    ('Tan', 'Chau', '2000-02-17', 'M', 'tan@gmail.com', 'admin3', '123456', 2),
-    ('Minh', 'Ly', '2000-09-17', 'M', 'minh@gmail.com', 'admin4', '123456', 2),
-    ('Hung', 'To', '2000-06-15', 'M', 'hung@gmail.com', 'admin5', '123456', 2),
-    ('Ans', 'Bean', '1995-07-01', 'F', 'ans@yahoo.com', 'AB', '123', 3),
-    ('Amelia', 'James', '1993-10-11', 'F', 'amelia@gmail.com', 'AJ', '123', 3),
-    ('Josh', 'Kaism', '1992-12-08', 'M', 'josh@gmail.com', 'JK', 'qwerty', 4),
-    ('Mana', 'Lane', '1993-01-30', 'F', 'mana@yahoo.com', 'ML', 'qwerty', 5);
+	('admin', 'admin', '2000-01-20', 'M', 'admin@gmail.com', 'admin', '123456', 2);
 
 -- ----------------------------------------------------------------------------
 -- Table SFCS.stalls
@@ -127,7 +119,7 @@ CREATE TABLE `SFCS`.`products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 INSERT INTO products (name, price, quantity, discount, category_id, stall_id, image) 
 VALUES 
-	('Phở Bò Tái Chín', 60000, 50, 20, 1, 2, '../../img/phobo.jpg'),
+	('Phở Bò Tái Chín', 60000, 50, 20, 1, 2, '../img/phobo.jpg'),
 	('Cơm Gà Xối Mỡ', 25000, 40, DEFAULT, 1, 1, '../img/comga.jpg'),
     ('Kimbap', 35000, 40, DEFAULT, 6, 8, '../img/kimbap.jpg'),
     ('Lẩu Cua Cà Ri', 73000, 20, 10, 3, 3, '../img/laucua.jpg'),
