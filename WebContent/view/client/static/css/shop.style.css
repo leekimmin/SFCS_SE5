@@ -1872,13 +1872,13 @@ li:first-child {
 /*Quantity Field Form*/
 .shopping-cart .quantity-button {
 	color: #888;
-	width: 45px;
-	height: 40px;
-	padding: 5px;
+	width: 30px;
+	height: 30px;
+	padding: 4px;
 	border: none;
 	outline: none;
 	cursor: pointer;
-	font-size: 18px;
+	font-size: 15px;
 	background: #eee;
 	text-align: center;
 	font-weight: normal;
@@ -1888,11 +1888,11 @@ li:first-child {
 }
 
 .shopping-cart .quantity-field {
-	width: 45px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	outline: none;
 	margin: 0 -4px;
-	font-size: 18px;
+	font-size: 14px;
 	text-align: center;
 	display: inline-block;
 	border: 1px solid #eee;
